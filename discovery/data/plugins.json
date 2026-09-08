@@ -1,0 +1,1376 @@
+{
+ "items": [
+  {
+   "plugin": "cadoc_3026",
+   "file": "backend/plugins/cadoc_3026/plugin.py",
+   "name": "Cadoc3026Plugin",
+   "tipo": "classe",
+   "papel": "outro",
+   "lines": 28,
+   "norm_len": 0
+  },
+  {
+   "plugin": "cadoc_3026",
+   "file": "backend/plugins/cadoc_3026/scr3026_generator.py",
+   "name": "generate_doc3026_xml",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 34,
+   "norm_len": 495
+  },
+  {
+   "plugin": "cadoc_3026",
+   "file": "backend/plugins/cadoc_3026/validator_3026.py",
+   "name": "validate_3026",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 63,
+   "norm_len": 1402
+  },
+  {
+   "plugin": "cadoc_3026",
+   "file": "backend/plugins/cadoc_3026/engine/builder.py",
+   "name": "build_doc3026",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 48,
+   "norm_len": 347
+  },
+  {
+   "plugin": "cadoc_3026",
+   "file": "backend/plugins/cadoc_3026/engine/selector.py",
+   "name": "select_conglomerados",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 48,
+   "norm_len": 463
+  },
+  {
+   "plugin": "cadoc_3026",
+   "file": "backend/plugins/cadoc_3026/engine/selector.py",
+   "name": "clientes_sem_conglomerado",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 21,
+   "norm_len": 112
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/completude.py",
+   "name": "modalidade_valida",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 3,
+   "norm_len": 55
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/completude.py",
+   "name": "leiaute_suporta_rendmes",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 10,
+   "norm_len": 135
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/completude.py",
+   "name": "_classe_modalidade",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 4,
+   "norm_len": 86
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/completude.py",
+   "name": "exige_rendmes",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 18,
+   "norm_len": 305
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/completude.py",
+   "name": "aplicar_rendimento",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 11,
+   "norm_len": 209
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/completude.py",
+   "name": "avaliar_completude",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 46,
+   "norm_len": 1149
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/plugin.py",
+   "name": "Cadoc3040Plugin",
+   "tipo": "classe",
+   "papel": "outro",
+   "lines": 25,
+   "norm_len": 0
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/schema.py",
+   "name": "validate_field",
+   "tipo": "funcao",
+   "papel": "outro",
+   "lines": 62,
+   "norm_len": 1724
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/schema.py",
+   "name": "validate_header",
+   "tipo": "funcao",
+   "papel": "outro",
+   "lines": 6,
+   "norm_len": 153
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/schema.py",
+   "name": "validate_client",
+   "tipo": "funcao",
+   "papel": "outro",
+   "lines": 27,
+   "norm_len": 740
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/schema.py",
+   "name": "validate_operation",
+   "tipo": "funcao",
+   "papel": "outro",
+   "lines": 54,
+   "norm_len": 1378
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/scr3042_generator.py",
+   "name": "generate_doc3042_xml",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 57,
+   "norm_len": 1158
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/scr_generator.py",
+   "name": "bloco_4966_defaults",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 16,
+   "norm_len": 453
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/scr_generator.py",
+   "name": "_digits",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 2,
+   "norm_len": 58
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/scr_generator.py",
+   "name": "_dec",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 4,
+   "norm_len": 77
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/scr_generator.py",
+   "name": "_fmt2",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 2,
+   "norm_len": 27
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/scr_generator.py",
+   "name": "_class",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 3,
+   "norm_len": 54
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/scr_generator.py",
+   "name": "_prov",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 3,
+   "norm_len": 123
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/scr_generator.py",
+   "name": "_faixa_valor",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 13,
+   "norm_len": 120
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/scr_generator.py",
+   "name": "_build_agreg_elements",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 40,
+   "norm_len": 1356
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/scr_generator.py",
+   "name": "compute_ipoc",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 18,
+   "norm_len": 296
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/scr_generator.py",
+   "name": "_cli_identity",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 35,
+   "norm_len": 503
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/scr_generator.py",
+   "name": "compute_ipoc_map",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 23,
+   "norm_len": 392
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/scr_generator.py",
+   "name": "_build_cli_element",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 30,
+   "norm_len": 526
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/scr_generator.py",
+   "name": "_build_op_element",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 65,
+   "norm_len": 1237
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/scr_generator.py",
+   "name": "generate_doc3040_xml",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 57,
+   "norm_len": 1034
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/validator.py",
+   "name": "validate_schema_3040",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 13,
+   "norm_len": 283
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/validator.py",
+   "name": "validate_business_rules_3040",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 60,
+   "norm_len": 1559
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/validator_3042.py",
+   "name": "validate_3042",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 65,
+   "norm_len": 1879
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/xsd_validator.py",
+   "name": "_schema",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 2,
+   "norm_len": 50
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/xsd_validator.py",
+   "name": "validate_3040_xml",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 16,
+   "norm_len": 334
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/builder.py",
+   "name": "_dec",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 4,
+   "norm_len": 89
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/builder.py",
+   "name": "particionar_por_cliente",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 16,
+   "norm_len": 377
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/builder.py",
+   "name": "build_clientes",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 66,
+   "norm_len": 1711
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/own_validator.py",
+   "name": "_err",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 2,
+   "norm_len": 65
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/own_validator.py",
+   "name": "_is_error",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 2,
+   "norm_len": 63
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/own_validator.py",
+   "name": "validate_document_3040",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 30,
+   "norm_len": 501
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/substituicao_parcial.py",
+   "name": "_op_payload",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 3,
+   "norm_len": 65
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/substituicao_parcial.py",
+   "name": "diff_3042",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 71,
+   "norm_len": 1141
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/synthetic.py",
+   "name": "_modalidade_sintetica_ok",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 6,
+   "norm_len": 174
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/synthetic.py",
+   "name": "_rand_inicio",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 4,
+   "norm_len": 88
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/synthetic.py",
+   "name": "_dv_mod11",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 4,
+   "norm_len": 120
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/synthetic.py",
+   "name": "cpf_check_digits",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 5,
+   "norm_len": 111
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/synthetic.py",
+   "name": "cnpj_check_digits",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 7,
+   "norm_len": 160
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/synthetic.py",
+   "name": "is_valid_cpf",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 4,
+   "norm_len": 96
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/synthetic.py",
+   "name": "is_valid_cnpj",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 4,
+   "norm_len": 103
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/synthetic.py",
+   "name": "_gen_cpf",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 3,
+   "norm_len": 93
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/synthetic.py",
+   "name": "_gen_cnpj",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 3,
+   "norm_len": 103
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/synthetic.py",
+   "name": "_fmt_n2",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 4,
+   "norm_len": 94
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/synthetic.py",
+   "name": "_fmt_field",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 10,
+   "norm_len": 228
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/synthetic.py",
+   "name": "_build_line",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 5,
+   "norm_len": 129
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/synthetic.py",
+   "name": "generate_synthetic_3040",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 73,
+   "norm_len": 2319
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/transmitido_snapshot.py",
+   "name": "parse_doc3040_xml",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 22,
+   "norm_len": 75
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/transmitido_snapshot.py",
+   "name": "_parse_root",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 36,
+   "norm_len": 1151
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/transmitido_snapshot.py",
+   "name": "transmitido_3040",
+   "tipo": "funcao",
+   "papel": "outro",
+   "lines": 37,
+   "norm_len": 738
+  },
+  {
+   "plugin": "cadoc_3040",
+   "file": "backend/plugins/cadoc_3040/engine/transmitido_snapshot.py",
+   "name": "operacoes_transmitidas",
+   "tipo": "funcao",
+   "papel": "outro",
+   "lines": 8,
+   "norm_len": 90
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/plugin.py",
+   "name": "Cadoc3044Plugin",
+   "tipo": "classe",
+   "papel": "outro",
+   "lines": 25,
+   "norm_len": 0
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/schema.py",
+   "name": "validate_event",
+   "tipo": "funcao",
+   "papel": "outro",
+   "lines": 42,
+   "norm_len": 1064
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/validator.py",
+   "name": "validate_schema_3044",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 6,
+   "norm_len": 110
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/validator.py",
+   "name": "validate_business_rules_3044",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 59,
+   "norm_len": 1238
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/consolidator.py",
+   "name": "_to_dec",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 11,
+   "norm_len": 212
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/consolidator.py",
+   "name": "_to_iso_date",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 10,
+   "norm_len": 211
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/consolidator.py",
+   "name": "_lpad_class3050",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 5,
+   "norm_len": 91
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/consolidator.py",
+   "name": "parse_ops_from_payload",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 68,
+   "norm_len": 1814
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/consolidator.py",
+   "name": "_aggregate_mov",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 32,
+   "norm_len": 998
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/consolidator.py",
+   "name": "consolidate_ops",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 65,
+   "norm_len": 2305
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/consolidator.py",
+   "name": "normalize",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 21,
+   "norm_len": 525
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/consolidator.py",
+   "name": "consolidate",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 20,
+   "norm_len": 562
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/layouts.py",
+   "name": "LayoutField",
+   "tipo": "classe",
+   "papel": "parser de entrada",
+   "lines": 11,
+   "norm_len": 0
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/layouts.py",
+   "name": "Layout",
+   "tipo": "classe",
+   "papel": "parser de entrada",
+   "lines": 10,
+   "norm_len": 0
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/layouts.py",
+   "name": "_build_layout",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 8,
+   "norm_len": 239
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/layouts.py",
+   "name": "get_layout",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 5,
+   "norm_len": 98
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/own_validator.py",
+   "name": "_err",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 2,
+   "norm_len": 59
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/own_validator.py",
+   "name": "_date_only",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 4,
+   "norm_len": 40
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/own_validator.py",
+   "name": "validate_document",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 53,
+   "norm_len": 1564
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/portability_parser.py",
+   "name": "_iso",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 9,
+   "norm_len": 212
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/portability_parser.py",
+   "name": "parse_portability",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 14,
+   "norm_len": 273
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/positional_parser.py",
+   "name": "_parse_a",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 3,
+   "norm_len": 33
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/positional_parser.py",
+   "name": "_parse_a10",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 12,
+   "norm_len": 258
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/positional_parser.py",
+   "name": "_parse_n",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 3,
+   "norm_len": 89
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/positional_parser.py",
+   "name": "_parse_n2",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 11,
+   "norm_len": 256
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/positional_parser.py",
+   "name": "_parse_field",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 13,
+   "norm_len": 259
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/positional_parser.py",
+   "name": "parse_line",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 17,
+   "norm_len": 192
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/positional_parser.py",
+   "name": "parse_file",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 5,
+   "norm_len": 68
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/positional_parser.py",
+   "name": "parse_file_enumerado",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 13,
+   "norm_len": 156
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/rules.py",
+   "name": "_dec",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 7,
+   "norm_len": 84
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/rules.py",
+   "name": "_approx_equal",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 2,
+   "norm_len": 24
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/rules.py",
+   "name": "_janela_limite",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 10,
+   "norm_len": 253
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/rules.py",
+   "name": "status_to_atraso",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 7,
+   "norm_len": 133
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/rules.py",
+   "name": "must_zero_saldo",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 3,
+   "norm_len": 78
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/rules.py",
+   "name": "is_reneg",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 2,
+   "norm_len": 62
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/rules.py",
+   "name": "IPOCState",
+   "tipo": "classe",
+   "papel": "regra de negocio",
+   "lines": 16,
+   "norm_len": 0
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/rules.py",
+   "name": "build_states",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 50,
+   "norm_len": 1480
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/rules.py",
+   "name": "HistoryLookup",
+   "tipo": "classe",
+   "papel": "regra de negocio",
+   "lines": 16,
+   "norm_len": 0
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/rules.py",
+   "name": "_build_concessoes",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 28,
+   "norm_len": 1012
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/rules.py",
+   "name": "_build_pagamentos",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 44,
+   "norm_len": 1245
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/rules.py",
+   "name": "_apply_janela_movimentos",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 18,
+   "norm_len": 433
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/rules.py",
+   "name": "_apply_troca_titularidade",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 42,
+   "norm_len": 1273
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/rules.py",
+   "name": "build_operations",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 55,
+   "norm_len": 1276
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/rules.py",
+   "name": "build_carta_fianca_operations",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 22,
+   "norm_len": 371
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/rules.py",
+   "name": "operacoes_por_role",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 8,
+   "norm_len": 227
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/validator_client.py",
+   "name": "ValidatorClient",
+   "tipo": "classe",
+   "papel": "validacao externa",
+   "lines": 73,
+   "norm_len": 0
+  },
+  {
+   "plugin": "cadoc_3044",
+   "file": "backend/plugins/cadoc_3044/engine/validator_client.py",
+   "name": "validador_meta",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 6,
+   "norm_len": 166
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/equivalencia.py",
+   "name": "EquivalenciaRule",
+   "tipo": "classe",
+   "papel": "regra de negocio",
+   "lines": 10,
+   "norm_len": 0
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/equivalencia.py",
+   "name": "_normalize_label",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 11,
+   "norm_len": 162
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/equivalencia.py",
+   "name": "resolve_label",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 10,
+   "norm_len": 156
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/equivalencia.py",
+   "name": "_parse_modalidade_3040",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 17,
+   "norm_len": 252
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/equivalencia.py",
+   "name": "codigos_3040_para_modalidade",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 23,
+   "norm_len": 306
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/equivalencia.py",
+   "name": "coverage",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 10,
+   "norm_len": 278
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/layout_v11.py",
+   "name": "_xsd_root",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 2,
+   "norm_len": 43
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/layout_v11.py",
+   "name": "_load",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 43,
+   "norm_len": 852
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/layout_v11.py",
+   "name": "_type_scales",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 23,
+   "norm_len": 414
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/layout_v11.py",
+   "name": "_load_scales",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 26,
+   "norm_len": 508
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/layout_v11.py",
+   "name": "attr_scale",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 8,
+   "norm_len": 23
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/layout_v11.py",
+   "name": "all_modalities",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 7,
+   "norm_len": 40
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/layout_v11.py",
+   "name": "attrs_for_model",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 21,
+   "norm_len": 330
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/layout_v11.py",
+   "name": "model_of",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 7,
+   "norm_len": 49
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/layout_v11.py",
+   "name": "model_for",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 28,
+   "norm_len": 473
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/layout_v11.py",
+   "name": "container_children",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 9,
+   "norm_len": 73
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/layout_v11.py",
+   "name": "placement_for",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 61,
+   "norm_len": 1199
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/plugin.py",
+   "name": "Cadoc3050Plugin",
+   "tipo": "classe",
+   "papel": "outro",
+   "lines": 28,
+   "norm_len": 0
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/scr3050_generator.py",
+   "name": "_fmt_attr",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 19,
+   "norm_len": 257
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/scr3050_generator.py",
+   "name": "_emit_modalidades",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 8,
+   "norm_len": 223
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/scr3050_generator.py",
+   "name": "_emit_credito",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 22,
+   "norm_len": 529
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/scr3050_generator.py",
+   "name": "generate_doc3050_xml",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 52,
+   "norm_len": 1091
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/xsd_validator_3050.py",
+   "name": "_schema",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 2,
+   "norm_len": 50
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/xsd_validator_3050.py",
+   "name": "validate_3050_xml",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 16,
+   "norm_len": 334
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/engine/aggregator.py",
+   "name": "_q",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 9,
+   "norm_len": 93
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/engine/aggregator.py",
+   "name": "_weighted_mean",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 10,
+   "norm_len": 164
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/engine/aggregator.py",
+   "name": "_composite_charge",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 22,
+   "norm_len": 243
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/engine/aggregator.py",
+   "name": "_compute",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 96,
+   "norm_len": 2058
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/engine/aggregator.py",
+   "name": "aggregate",
+   "tipo": "funcao",
+   "papel": "regra de negocio",
+   "lines": 43,
+   "norm_len": 877
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/engine/builder.py",
+   "name": "normalize_tel_contato",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 32,
+   "norm_len": 544
+  },
+  {
+   "plugin": "cadoc_3050",
+   "file": "backend/plugins/cadoc_3050/engine/builder.py",
+   "name": "build_doc_txb",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 84,
+   "norm_len": 1503
+  },
+  {
+   "plugin": "cadoc_cosif",
+   "file": "backend/plugins/cadoc_cosif/cosif_generator.py",
+   "name": "gerar_cosif_xml",
+   "tipo": "funcao",
+   "papel": "gerador de saida",
+   "lines": 14,
+   "norm_len": 297
+  },
+  {
+   "plugin": "cadoc_cosif",
+   "file": "backend/plugins/cadoc_cosif/cosif_parser.py",
+   "name": "_to_dec",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 13,
+   "norm_len": 305
+  },
+  {
+   "plugin": "cadoc_cosif",
+   "file": "backend/plugins/cadoc_cosif/cosif_parser.py",
+   "name": "parse_cosif_xml",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 26,
+   "norm_len": 532
+  },
+  {
+   "plugin": "cadoc_cosif",
+   "file": "backend/plugins/cadoc_cosif/cosif_parser.py",
+   "name": "parse_9011_json",
+   "tipo": "funcao",
+   "papel": "parser de entrada",
+   "lines": 21,
+   "norm_len": 506
+  },
+  {
+   "plugin": "cadoc_cosif",
+   "file": "backend/plugins/cadoc_cosif/plugin.py",
+   "name": "CadocCosifPlugin",
+   "tipo": "classe",
+   "papel": "outro",
+   "lines": 37,
+   "norm_len": 0
+  },
+  {
+   "plugin": "cadoc_cosif",
+   "file": "backend/plugins/cadoc_cosif/xsd_validator_cosif.py",
+   "name": "_schema_for",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 5,
+   "norm_len": 121
+  },
+  {
+   "plugin": "cadoc_cosif",
+   "file": "backend/plugins/cadoc_cosif/xsd_validator_cosif.py",
+   "name": "has_schema",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 3,
+   "norm_len": 45
+  },
+  {
+   "plugin": "cadoc_cosif",
+   "file": "backend/plugins/cadoc_cosif/xsd_validator_cosif.py",
+   "name": "validate_cosif_leiaute",
+   "tipo": "funcao",
+   "papel": "validacao externa",
+   "lines": 19,
+   "norm_len": 380
+  }
+ ],
+ "pairs": [
+  {
+   "ratio": 1.0,
+   "a": "cadoc_3040::validate_3040_xml",
+   "b": "cadoc_3050::validate_3050_xml"
+  },
+  {
+   "ratio": 0.863,
+   "a": "cadoc_3040::validate_3040_xml",
+   "b": "cadoc_cosif::validate_cosif_leiaute"
+  },
+  {
+   "ratio": 0.863,
+   "a": "cadoc_3050::validate_3050_xml",
+   "b": "cadoc_cosif::validate_cosif_leiaute"
+  },
+  {
+   "ratio": 0.675,
+   "a": "cadoc_3040::validate_field",
+   "b": "cadoc_3044::validate_event"
+  }
+ ],
+ "repetidos": {
+  "_dec": [
+   "cadoc_3040",
+   "cadoc_3044"
+  ],
+  "_schema": [
+   "cadoc_3040",
+   "cadoc_3050"
+  ],
+  "_err": [
+   "cadoc_3040",
+   "cadoc_3044"
+  ],
+  "_to_dec": [
+   "cadoc_3044",
+   "cadoc_cosif"
+  ]
+ }
+}

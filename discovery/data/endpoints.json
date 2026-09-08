@@ -1,0 +1,5051 @@
+[
+ {
+  "file": "admin.py",
+  "method": "GET",
+  "path": "/api/admin/tenants",
+  "func": "list_tenants",
+  "lines": 10,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/audit",
+   "/admin/gestao",
+   "/admin/ingestao",
+   "/admin/operations",
+   "/admin/tenants/new"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_admin_routes.py"
+  ]
+ },
+ {
+  "file": "admin.py",
+  "method": "POST",
+  "path": "/api/admin/tenants",
+  "func": "create_tenant_wizard",
+  "lines": 71,
+  "stores": [
+   "postgres"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/audit",
+   "/admin/gestao",
+   "/admin/ingestao",
+   "/admin/operations",
+   "/admin/tenants/new"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_admin_routes.py"
+  ]
+ },
+ {
+  "file": "admin.py",
+  "method": "GET",
+  "path": "/api/admin/tenants/{}",
+  "func": "get_tenant_detail",
+  "lines": 10,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_admin_routes.py"
+  ]
+ },
+ {
+  "file": "admin.py",
+  "method": "PATCH",
+  "path": "/api/admin/tenants/{}",
+  "func": "update_tenant",
+  "lines": 14,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_admin_routes.py"
+  ]
+ },
+ {
+  "file": "admin.py",
+  "method": "PUT",
+  "path": "/api/admin/tenants/{}/rc18",
+  "func": "set_tenant_rc18",
+  "lines": 23,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "admin.py",
+  "method": "POST",
+  "path": "/api/admin/tenants/{}/suspend",
+  "func": "suspend_tenant",
+  "lines": 10,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_admin_routes.py"
+  ]
+ },
+ {
+  "file": "admin.py",
+  "method": "POST",
+  "path": "/api/admin/tenants/{}/reactivate",
+  "func": "reactivate_tenant",
+  "lines": 20,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_admin_routes.py"
+  ]
+ },
+ {
+  "file": "admin.py",
+  "method": "POST",
+  "path": "/api/admin/tenants/{}/cancel-deletion",
+  "func": "cancel_tenant_deletion",
+  "lines": 22,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "admin.py",
+  "method": "POST",
+  "path": "/api/admin/tenants/{}/delete",
+  "func": "schedule_tenant_deletion",
+  "lines": 43,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "admin.py",
+  "method": "POST",
+  "path": "/api/admin/tenants/{}/setup-steps/{}",
+  "func": "set_setup_step_override",
+  "lines": 35,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_admin_routes.py"
+  ]
+ },
+ {
+  "file": "admin.py",
+  "method": "GET",
+  "path": "/api/admin/tenants/{}/users",
+  "func": "list_tenant_users",
+  "lines": 7,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_admin_routes.py"
+  ]
+ },
+ {
+  "file": "admin.py",
+  "method": "POST",
+  "path": "/api/admin/tenants/{}/users",
+  "func": "create_tenant_user",
+  "lines": 33,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_admin_routes.py"
+  ]
+ },
+ {
+  "file": "admin.py",
+  "method": "PATCH",
+  "path": "/api/admin/users/{}",
+  "func": "update_any_user",
+  "lines": 22,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_admin_routes.py"
+  ]
+ },
+ {
+  "file": "admin.py",
+  "method": "POST",
+  "path": "/api/admin/tenants/{}/users/{}/resend-invite",
+  "func": "resend_invite",
+  "lines": 22,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_admin_routes.py"
+  ]
+ },
+ {
+  "file": "admin.py",
+  "method": "POST",
+  "path": "/api/admin/tenants/{}/users/{}/send-reset-link",
+  "func": "send_reset_link",
+  "lines": 30,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "admin.py",
+  "method": "POST",
+  "path": "/api/admin/tenants/{}/impersonate",
+  "func": "impersonate_tenant",
+  "lines": 37,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin"
+  ],
+  "e2e": [
+   "49-rep80-versoes-schema.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_admin_routes.py"
+  ]
+ },
+ {
+  "file": "admin.py",
+  "method": "POST",
+  "path": "/api/admin/impersonate/end",
+  "func": "end_impersonation",
+  "lines": 15,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_admin_routes.py"
+  ]
+ },
+ {
+  "file": "admin.py",
+  "method": "GET",
+  "path": "/api/admin/audit",
+  "func": "list_audit",
+  "lines": 17,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/audit",
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_admin_routes.py"
+  ]
+ },
+ {
+  "file": "admin.py",
+  "method": "GET",
+  "path": "/api/admin/sftp/status",
+  "func": "sftp_status",
+  "lines": 15,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/sftp",
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "admin.py",
+  "method": "POST",
+  "path": "/api/admin/sftp/tenants/{}/reset-password",
+  "func": "sftp_reset_password",
+  "lines": 51,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/sftp",
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "admin.py",
+  "method": "POST",
+  "path": "/api/admin/sftp/provision",
+  "func": "sftp_provision",
+  "lines": 93,
+  "stores": [
+   "postgres"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/sftp"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "audit.py",
+  "method": "GET",
+  "path": "/api/audit/events",
+  "func": "list_audit_events",
+  "lines": 14,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/audit"
+  ],
+  "e2e": [
+   "31-regressao-qualidade-pilares.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_audit_lineage_real.py",
+   "tests/api/test_quality_routes.py"
+  ]
+ },
+ {
+  "file": "audit.py",
+  "method": "GET",
+  "path": "/api/audit/actions",
+  "func": "list_audit_actions",
+  "lines": 7,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/audit"
+  ],
+  "e2e": [
+   "31-regressao-qualidade-pilares.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "audit.py",
+  "method": "GET",
+  "path": "/api/audit/events.csv",
+  "func": "export_audit_events_csv",
+  "lines": 19,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "auth.py",
+  "method": "POST",
+  "path": "/api/auth/login",
+  "func": "login",
+  "lines": 67,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/login"
+  ],
+  "e2e": [
+   "49-rep80-versoes-schema.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_auth.py",
+   "tests/api/test_auth_cookies.py",
+   "tests/api/test_auth_multitenant.py",
+   "tests/api/test_login_happy_path.py",
+   "tests/api/test_rate_limit_auth.py"
+  ]
+ },
+ {
+  "file": "auth.py",
+  "method": "POST",
+  "path": "/api/auth/refresh",
+  "func": "refresh_token",
+  "lines": 117,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/",
+   "/admin",
+   "/admin/audit",
+   "/admin/cosif-plano",
+   "/admin/gestao",
+   "/admin/ingestao",
+   "/admin/moat",
+   "/admin/operations",
+   "/admin/radar",
+   "/admin/reportes",
+   "/admin/schema-versions",
+   "/admin/sftp",
+   "/admin/tenants/[id]",
+   "/admin/tenants/new",
+   "/admin/validador",
+   "/audit",
+   "/bcb",
+   "/cadoc-3026",
+   "/cadoc-3040",
+   "/cadoc-3040/[reference_period]",
+   "/cadoc-3040/[reference_period]/retificacao",
+   "/cadoc-3044",
+   "/cadoc-3050",
+   "/cadoc-cosif",
+   "/change-password",
+   "/compliance",
+   "/compliance/manifestacoes",
+   "/corrective",
+   "/distribution",
+   "/lgpd",
+   "/login",
+   "/onboarding",
+   "/pecld",
+   "/policy",
+   "/quality",
+   "/quality/dictionary",
+   "/quality/indicios",
+   "/quality/lineage",
+   "/quality/reconciliation",
+   "/quality/reconciliation/[id]",
+   "/quality/reconciliation/conciliar",
+   "/quality/reports",
+   "/quality/reports/[id]",
+   "/quality/reports/recipients",
+   "/quality/retifications",
+   "/rc18",
+   "/settings/competencia-inicial",
+   "/settings/contrato-dados",
+   "/settings/data-sources",
+   "/settings/director",
+   "/settings/governance",
+   "/settings/instituicao",
+   "/settings/sftp",
+   "/settings/users",
+   "/setup"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_auth.py",
+   "tests/api/test_login_happy_path.py"
+  ]
+ },
+ {
+  "file": "auth.py",
+  "method": "POST",
+  "path": "/api/auth/logout",
+  "func": "logout",
+  "lines": 15,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/",
+   "/admin",
+   "/admin/audit",
+   "/admin/cosif-plano",
+   "/admin/gestao",
+   "/admin/ingestao",
+   "/admin/moat",
+   "/admin/operations",
+   "/admin/radar",
+   "/admin/reportes",
+   "/admin/schema-versions",
+   "/admin/sftp",
+   "/admin/tenants/[id]",
+   "/admin/tenants/new",
+   "/admin/validador",
+   "/audit",
+   "/bcb",
+   "/cadoc-3026",
+   "/cadoc-3040",
+   "/cadoc-3040/[reference_period]",
+   "/cadoc-3040/[reference_period]/retificacao",
+   "/cadoc-3044",
+   "/cadoc-3050",
+   "/cadoc-cosif",
+   "/change-password",
+   "/compliance",
+   "/compliance/manifestacoes",
+   "/corrective",
+   "/distribution",
+   "/lgpd",
+   "/login",
+   "/onboarding",
+   "/pecld",
+   "/policy",
+   "/quality",
+   "/quality/dictionary",
+   "/quality/indicios",
+   "/quality/lineage",
+   "/quality/reconciliation",
+   "/quality/reconciliation/[id]",
+   "/quality/reconciliation/conciliar",
+   "/quality/reports",
+   "/quality/reports/[id]",
+   "/quality/reports/recipients",
+   "/quality/retifications",
+   "/rc18",
+   "/settings/competencia-inicial",
+   "/settings/contrato-dados",
+   "/settings/data-sources",
+   "/settings/director",
+   "/settings/governance",
+   "/settings/instituicao",
+   "/settings/sftp",
+   "/settings/users",
+   "/setup"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_auth_cookies.py"
+  ]
+ },
+ {
+  "file": "auth.py",
+  "method": "POST",
+  "path": "/api/auth/forgot-password",
+  "func": "forgot_password",
+  "lines": 14,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/forgot-password"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_auth_forgot_password.py",
+   "tests/api/test_rate_limit_auth.py"
+  ]
+ },
+ {
+  "file": "auth.py",
+  "method": "POST",
+  "path": "/api/auth/reset-password",
+  "func": "reset_password",
+  "lines": 16,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/reset-password"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_auth_forgot_password.py"
+  ]
+ },
+ {
+  "file": "bacen_ciclo.py",
+  "method": "POST",
+  "path": "/api/bacen-ciclo/submissions/{}/protocolo",
+  "func": "registrar_protocolo",
+  "lines": 50,
+  "stores": [
+   "EventStore"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/retifications"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_bacen_ciclo.py"
+  ]
+ },
+ {
+  "file": "bacen_ciclo.py",
+  "method": "POST",
+  "path": "/api/bacen-ciclo/submissions/{}/retorno",
+  "func": "registrar_retorno",
+  "lines": 72,
+  "stores": [],
+  "tasks": [
+   "processar_veredito"
+  ],
+  "guard": true,
+  "front": [
+   "/quality/retifications"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_bacen_ciclo.py"
+  ]
+ },
+ {
+  "file": "bacen_ciclo.py",
+  "method": "GET",
+  "path": "/api/bacen-ciclo/pendentes",
+  "func": "listar_pendentes",
+  "lines": 8,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/retifications"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_bacen_ciclo.py"
+  ]
+ },
+ {
+  "file": "bacen_ciclo.py",
+  "method": "GET",
+  "path": "/api/bacen-ciclo/submissions/{}/ciclo",
+  "func": "ver_ciclo",
+  "lines": 18,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/retifications"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_bacen_ciclo.py"
+  ]
+ },
+ {
+  "file": "bcb.py",
+  "method": "GET",
+  "path": "/api/bcb/communications",
+  "func": "list_communications",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/bcb"
+  ],
+  "e2e": [
+   "06-mais-fluxos.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "bcb.py",
+  "method": "POST",
+  "path": "/api/bcb/communications",
+  "func": "create_communication",
+  "lines": 12,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/bcb"
+  ],
+  "e2e": [
+   "06-mais-fluxos.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "bcb.py",
+  "method": "GET",
+  "path": "/api/bcb/communications/{}",
+  "func": "get_communication",
+  "lines": 9,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "bcb.py",
+  "method": "PUT",
+  "path": "/api/bcb/communications/{}",
+  "func": "update_communication",
+  "lines": 12,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "bcb.py",
+  "method": "POST",
+  "path": "/api/bcb/communications/{}/approve",
+  "func": "approve_communication",
+  "lines": 19,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/bcb"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "bcb.py",
+  "method": "POST",
+  "path": "/api/bcb/communications/{}/mark-sent",
+  "func": "mark_sent",
+  "lines": 21,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/bcb"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "bcb.py",
+  "method": "GET",
+  "path": "/api/bcb/communications/{}/pacote.zip",
+  "func": "pacote_zip",
+  "lines": 30,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/bcb"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "bcb.py",
+  "method": "GET",
+  "path": "/api/bcb/check/{}",
+  "func": "check_pending_issues",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "calendario.py",
+  "method": "GET",
+  "path": "/api/calendario",
+  "func": "calendario",
+  "lines": 11,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_calendario_route.py",
+   "tests/demo/test_block_documents.py",
+   "tests/demo/test_rotas.py"
+  ]
+ },
+ {
+  "file": "calendario.py",
+  "method": "GET",
+  "path": "/api/calendario/3044/{}",
+  "func": "calendario_3044_dias",
+  "lines": 17,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "corrective.py",
+  "method": "GET",
+  "path": "/api/corrective/issues",
+  "func": "list_issues",
+  "lines": 7,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/corrective"
+  ],
+  "e2e": [
+   "05-mutacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_corrective_routes.py"
+  ]
+ },
+ {
+  "file": "corrective.py",
+  "method": "GET",
+  "path": "/api/corrective/dashboard",
+  "func": "get_dashboard",
+  "lines": 5,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/corrective"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "corrective.py",
+  "method": "POST",
+  "path": "/api/corrective/issues",
+  "func": "create_issue",
+  "lines": 11,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/corrective"
+  ],
+  "e2e": [
+   "05-mutacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_corrective_routes.py"
+  ]
+ },
+ {
+  "file": "corrective.py",
+  "method": "GET",
+  "path": "/api/corrective/issues/{}",
+  "func": "get_issue",
+  "lines": 10,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/corrective"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_corrective_routes.py"
+  ]
+ },
+ {
+  "file": "corrective.py",
+  "method": "PUT",
+  "path": "/api/corrective/issues/{}",
+  "func": "update_issue",
+  "lines": 12,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/corrective"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_corrective_routes.py"
+  ]
+ },
+ {
+  "file": "corrective.py",
+  "method": "POST",
+  "path": "/api/corrective/issues/{}/resolve",
+  "func": "resolve_issue",
+  "lines": 14,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/corrective"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "corrective.py",
+  "method": "GET",
+  "path": "/api/corrective/issues/{}/plans",
+  "func": "list_plans",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/corrective"
+  ],
+  "e2e": [
+   "05-mutacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_corrective_routes.py"
+  ]
+ },
+ {
+  "file": "corrective.py",
+  "method": "POST",
+  "path": "/api/corrective/issues/{}/plans",
+  "func": "create_plan",
+  "lines": 10,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/corrective"
+  ],
+  "e2e": [
+   "05-mutacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_corrective_routes.py"
+  ]
+ },
+ {
+  "file": "corrective.py",
+  "method": "POST",
+  "path": "/api/corrective/plans/{}/approve",
+  "func": "approve_plan",
+  "lines": 19,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/corrective"
+  ],
+  "e2e": [
+   "05-mutacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_corrective_routes.py"
+  ]
+ },
+ {
+  "file": "corrective.py",
+  "method": "POST",
+  "path": "/api/corrective/plans/{}/complete",
+  "func": "complete_plan",
+  "lines": 12,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/corrective"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_corrective_routes.py"
+  ]
+ },
+ {
+  "file": "correlations.py",
+  "method": "POST",
+  "path": "/api/correlations/items/justificar",
+  "func": "justificar_indicio",
+  "lines": 12,
+  "stores": [
+   "CorrelationAnnotationStore"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/indicios"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "correlations.py",
+  "method": "POST",
+  "path": "/api/correlations/items/corretiva",
+  "func": "corretiva_indicio",
+  "lines": 19,
+  "stores": [
+   "CorrelationAnnotationStore"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/indicios"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "correlations.py",
+  "method": "GET",
+  "path": "/api/correlations",
+  "func": "listar_correlacoes",
+  "lines": 15,
+  "stores": [
+   "CorrelationAnnotationStore",
+   "CorrelationStore"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/indicios"
+  ],
+  "e2e": [
+   "38-cosif-indicios.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_correlations_run.py"
+  ]
+ },
+ {
+  "file": "correlations.py",
+  "method": "POST",
+  "path": "/api/correlations/run",
+  "func": "rodar_correlacoes",
+  "lines": 19,
+  "stores": [
+   "CorrelationStore"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/indicios"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_correlations_run.py"
+  ]
+ },
+ {
+  "file": "cosif.py",
+  "method": "POST",
+  "path": "/api/cosif/upload",
+  "func": "upload_cosif",
+  "lines": 54,
+  "stores": [],
+  "tasks": [
+   "process_cosif_file"
+  ],
+  "guard": true,
+  "front": [
+   "/cadoc-cosif"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "cosif.py",
+  "method": "POST",
+  "path": "/api/cosif/generate",
+  "func": "generate_cosif",
+  "lines": 76,
+  "stores": [
+   "CosifPlanoStore",
+   "cosif_plano_store"
+  ],
+  "tasks": [
+   "process_cosif_file"
+  ],
+  "guard": true,
+  "front": [
+   "/cadoc-cosif"
+  ],
+  "e2e": [],
+  "backref": [
+   "backend/demo/blocks/sources.py"
+  ]
+ },
+ {
+  "file": "cosif.py",
+  "method": "GET",
+  "path": "/api/cosif/documents",
+  "func": "list_cosif_documents",
+  "lines": 32,
+  "stores": [
+   "CosifStore",
+   "cosif_store"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-cosif"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "cosif_plano.py",
+  "method": "POST",
+  "path": "/api/admin/cosif-plano",
+  "func": "upload_oficial",
+  "lines": 19,
+  "stores": [
+   "AdminAuditStore",
+   "CosifPlanoStore",
+   "admin_store"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/cosif-plano"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "cosif_plano.py",
+  "method": "POST",
+  "path": "/api/admin/cosif-plano/sync",
+  "func": "sincronizar_bcb",
+  "lines": 16,
+  "stores": [
+   "AdminAuditStore",
+   "CosifPlanoStore",
+   "admin_store"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/cosif-plano"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "cosif_plano.py",
+  "method": "GET",
+  "path": "/api/admin/cosif-plano/versions",
+  "func": "listar_versoes",
+  "lines": 8,
+  "stores": [
+   "postgres"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/cosif-plano"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "cosif_plano.py",
+  "method": "POST",
+  "path": "/api/cosif-plano",
+  "func": "upload_tenant",
+  "lines": 13,
+  "stores": [
+   "CosifPlanoStore"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "cosif_plano.py",
+  "method": "DELETE",
+  "path": "/api/cosif-plano",
+  "func": "remover_override",
+  "lines": 7,
+  "stores": [
+   "CosifPlanoStore"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "cosif_plano.py",
+  "method": "GET",
+  "path": "/api/cosif-plano",
+  "func": "status_override",
+  "lines": 4,
+  "stores": [
+   "CosifPlanoStore"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "data_contract.py",
+  "method": "GET",
+  "path": "/api/data-contracts/preview",
+  "func": "preview",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/contrato-dados"
+  ],
+  "e2e": [
+   "33-centro-operacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_data_contract.py"
+  ]
+ },
+ {
+  "file": "data_contract.py",
+  "method": "POST",
+  "path": "/api/data-contracts/emitir",
+  "func": "emitir",
+  "lines": 11,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/contrato-dados"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_data_contract.py"
+  ]
+ },
+ {
+  "file": "data_contract.py",
+  "method": "GET",
+  "path": "/api/data-contracts",
+  "func": "listar",
+  "lines": 3,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/contrato-dados"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "data_contract.py",
+  "method": "GET",
+  "path": "/api/data-contracts/{}/download",
+  "func": "download",
+  "lines": 15,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/contrato-dados"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_data_contract.py"
+  ]
+ },
+ {
+  "file": "data_sources.py",
+  "method": "POST",
+  "path": "/api/data-sources/preview-mapping",
+  "func": "preview_mapping",
+  "lines": 45,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/data-sources"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "data_sources.py",
+  "method": "GET",
+  "path": "/api/data-sources/layout-catalog/{}",
+  "func": "layout_catalog",
+  "lines": 15,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/data-sources"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "data_sources.py",
+  "method": "GET",
+  "path": "/api/data-sources",
+  "func": "list_data_sources",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/data-sources"
+  ],
+  "e2e": [
+   "07-import-3040.spec.ts",
+   "14-cadoc-3050.spec.ts",
+   "15-cadoc-3026.spec.ts",
+   "23-regressao-setup.spec.ts",
+   "24-regressao-3040.spec.ts",
+   "26-regressao-3050.spec.ts",
+   "28-regressao-conciliacoes.spec.ts",
+   "30-regressao-retificacao-3042.spec.ts",
+   "34-pecld.spec.ts",
+   "35-scr-eventos.spec.ts"
+  ],
+  "backref": [
+   "backend/services/data_source_folders.py",
+   "tests/api/test_auth_admin.py",
+   "tests/demo/test_rotas.py"
+  ]
+ },
+ {
+  "file": "data_sources.py",
+  "method": "POST",
+  "path": "/api/data-sources",
+  "func": "create_data_source",
+  "lines": 35,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/data-sources"
+  ],
+  "e2e": [
+   "07-import-3040.spec.ts",
+   "14-cadoc-3050.spec.ts",
+   "15-cadoc-3026.spec.ts",
+   "23-regressao-setup.spec.ts",
+   "24-regressao-3040.spec.ts",
+   "26-regressao-3050.spec.ts",
+   "28-regressao-conciliacoes.spec.ts",
+   "30-regressao-retificacao-3042.spec.ts",
+   "34-pecld.spec.ts",
+   "35-scr-eventos.spec.ts"
+  ],
+  "backref": [
+   "backend/services/data_source_folders.py",
+   "tests/api/test_auth_admin.py",
+   "tests/demo/test_rotas.py"
+  ]
+ },
+ {
+  "file": "data_sources.py",
+  "method": "PATCH",
+  "path": "/api/data-sources/{}",
+  "func": "update_data_source",
+  "lines": 37,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/data-sources"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_auth_admin.py"
+  ]
+ },
+ {
+  "file": "dictionary.py",
+  "method": "GET",
+  "path": "/api/dictionary",
+  "func": "list_all_entries",
+  "lines": 9,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/dictionary"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_quality_routes.py"
+  ]
+ },
+ {
+  "file": "dictionary.py",
+  "method": "GET",
+  "path": "/api/dictionary/{}",
+  "func": "get_entries_by_type",
+  "lines": 7,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/dictionary"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_quality_routes.py"
+  ]
+ },
+ {
+  "file": "dictionary.py",
+  "method": "POST",
+  "path": "/api/dictionary/{}",
+  "func": "create_entry",
+  "lines": 14,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/dictionary"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_quality_routes.py"
+  ]
+ },
+ {
+  "file": "dictionary.py",
+  "method": "PUT",
+  "path": "/api/dictionary/{}/{}",
+  "func": "update_entry",
+  "lines": 22,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/dictionary"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "distribution.py",
+  "method": "GET",
+  "path": "/api/reports/recipients",
+  "func": "list_recipients",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/distribution",
+   "/quality/reports/recipients"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "distribution.py",
+  "method": "POST",
+  "path": "/api/reports/recipients",
+  "func": "create_recipient",
+  "lines": 9,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/distribution",
+   "/quality/reports/recipients"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "distribution.py",
+  "method": "PUT",
+  "path": "/api/reports/recipients/{}",
+  "func": "update_recipient",
+  "lines": 10,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/distribution",
+   "/quality/reports/recipients"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "distribution.py",
+  "method": "DELETE",
+  "path": "/api/reports/recipients/{}",
+  "func": "deactivate_recipient",
+  "lines": 9,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/distribution",
+   "/quality/reports/recipients"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "distribution.py",
+  "method": "GET",
+  "path": "/api/reports/distributions",
+  "func": "list_distributions",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/distribution",
+   "/quality/reports/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "distribution.py",
+  "method": "GET",
+  "path": "/api/reports/distributions/dashboard",
+  "func": "get_distribution_dashboard",
+  "lines": 5,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/distribution",
+   "/quality/reports"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "distribution.py",
+  "method": "POST",
+  "path": "/api/reports/distributions",
+  "func": "create_distribution",
+  "lines": 8,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/distribution",
+   "/quality/reports/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "distribution.py",
+  "method": "GET",
+  "path": "/api/reports/distributions/{}",
+  "func": "get_distribution",
+  "lines": 12,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reports/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "distribution.py",
+  "method": "POST",
+  "path": "/api/reports/distributions/{}/send",
+  "func": "send_distribution",
+  "lines": 15,
+  "stores": [],
+  "tasks": [
+   "send_report_emails"
+  ],
+  "guard": true,
+  "front": [
+   "/quality/reports/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "distribution.py",
+  "method": "POST",
+  "path": "/api/reports/acknowledgments/{}/confirm",
+  "func": "confirm_acknowledgment",
+  "lines": 12,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "distribution.py",
+  "method": "POST",
+  "path": "/api/reports/semestrais/generate",
+  "func": "generate_report",
+  "lines": 24,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reports"
+  ],
+  "e2e": [
+   "05-mutacoes.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "distribution.py",
+  "method": "GET",
+  "path": "/api/reports/semestrais",
+  "func": "list_reports",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reports"
+  ],
+  "e2e": [
+   "05-mutacoes.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "distribution.py",
+  "method": "GET",
+  "path": "/api/reports/semestrais/{}",
+  "func": "get_report",
+  "lines": 10,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reports/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "distribution.py",
+  "method": "GET",
+  "path": "/api/reports/semestrais/{}/pdf",
+  "func": "download_report_pdf",
+  "lines": 26,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reports/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "document_types.py",
+  "method": "GET",
+  "path": "/api/admin/document-types",
+  "func": "list_document_types",
+  "lines": 5,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin",
+   "/admin/reportes",
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_document_types_admin.py"
+  ]
+ },
+ {
+  "file": "document_types.py",
+  "method": "POST",
+  "path": "/api/admin/document-types",
+  "func": "create_document_type",
+  "lines": 27,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin",
+   "/admin/reportes",
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_document_types_admin.py"
+  ]
+ },
+ {
+  "file": "document_types.py",
+  "method": "PATCH",
+  "path": "/api/admin/document-types/{}",
+  "func": "update_document_type",
+  "lines": 50,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/reportes"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "engine3026.py",
+  "method": "GET",
+  "path": "/api/engine3026/year-status",
+  "func": "year_status",
+  "lines": 43,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3026"
+  ],
+  "e2e": [
+   "15-cadoc-3026.spec.ts",
+   "27-regressao-3026.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_engine3026_routes.py"
+  ]
+ },
+ {
+  "file": "engine3026.py",
+  "method": "GET",
+  "path": "/api/engine3026/source-summary",
+  "func": "source_summary",
+  "lines": 19,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_engine3026_routes.py"
+  ]
+ },
+ {
+  "file": "engine3026.py",
+  "method": "POST",
+  "path": "/api/engine3026/upload",
+  "func": "upload_3026",
+  "lines": 44,
+  "stores": [],
+  "tasks": [
+   "process_3026_file"
+  ],
+  "guard": true,
+  "front": [
+   "/cadoc-3026"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_engine3026_routes.py"
+  ]
+ },
+ {
+  "file": "engine3026.py",
+  "method": "GET",
+  "path": "/api/engine3026/reconciliation",
+  "func": "reconciliation",
+  "lines": 23,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [
+   "27-regressao-3026.spec.ts",
+   "28-regressao-conciliacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_engine3026_routes.py"
+  ]
+ },
+ {
+  "file": "engine3026.py",
+  "method": "POST",
+  "path": "/api/engine3026/consolidate",
+  "func": "consolidate_endpoint",
+  "lines": 12,
+  "stores": [],
+  "tasks": [
+   "consolidate_3026"
+  ],
+  "guard": true,
+  "front": [
+   "/cadoc-3026"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_engine3026_routes.py"
+  ]
+ },
+ {
+  "file": "engine3026.py",
+  "method": "GET",
+  "path": "/api/engine3026/document",
+  "func": "document",
+  "lines": 15,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_engine3026_routes.py"
+  ]
+ },
+ {
+  "file": "engine3026.py",
+  "method": "GET",
+  "path": "/api/engine3026/documents/{}/download",
+  "func": "download_document",
+  "lines": 26,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3026"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "engine3040.py",
+  "method": "GET",
+  "path": "/api/engine3040/competencias",
+  "func": "list_competencias",
+  "lines": 205,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040"
+  ],
+  "e2e": [
+   "42-setup-gate.spec.ts",
+   "43-esteira-3040.spec.ts",
+   "44-listagem-3040.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "engine3040.py",
+  "method": "POST",
+  "path": "/api/engine3040/responsavel",
+  "func": "set_responsavel_competencia",
+  "lines": 33,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "engine3040.py",
+  "method": "POST",
+  "path": "/api/engine3040/dev/forcar-homologacao",
+  "func": "dev_forcar_homologacao",
+  "lines": 50,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]",
+   "/cadoc-3040/[reference_period]/retificacao"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "engine3040.py",
+  "method": "GET",
+  "path": "/api/engine3040/historico",
+  "func": "historico_competencia",
+  "lines": 80,
+  "stores": [
+   "mov3040_store"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040",
+   "/cadoc-3040/[reference_period]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "engine3040.py",
+  "method": "GET",
+  "path": "/api/engine3040/month-status",
+  "func": "month_status",
+  "lines": 158,
+  "stores": [
+   "Rendimento3040Store",
+   "rendimento3040_store"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]"
+  ],
+  "e2e": [
+   "07-import-3040.spec.ts",
+   "16-cadoc-3042.spec.ts",
+   "24-regressao-3040.spec.ts",
+   "28-regressao-conciliacoes.spec.ts",
+   "30-regressao-retificacao-3042.spec.ts",
+   "41-rep19-link-fechamento.spec.ts",
+   "43-esteira-3040.spec.ts",
+   "44-listagem-3040.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_engine3040_routes.py"
+  ]
+ },
+ {
+  "file": "engine3040.py",
+  "method": "GET",
+  "path": "/api/engine3040/source-summary",
+  "func": "source_summary",
+  "lines": 12,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]",
+   "/cadoc-3040/[reference_period]/retificacao"
+  ],
+  "e2e": [
+   "24-regressao-3040.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "engine3040.py",
+  "method": "GET",
+  "path": "/api/engine3040/registros",
+  "func": "registros",
+  "lines": 34,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "engine3040.py",
+  "method": "GET",
+  "path": "/api/engine3040/registros/resumo",
+  "func": "registros_resumo",
+  "lines": 12,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "engine3040.py",
+  "method": "GET",
+  "path": "/api/engine3040/registros/export",
+  "func": "registros_export",
+  "lines": 60,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "engine3040.py",
+  "method": "GET",
+  "path": "/api/engine3040/operacao",
+  "func": "operacao_lookup",
+  "lines": 12,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]",
+   "/cadoc-3040/[reference_period]/retificacao"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "engine3040.py",
+  "method": "GET",
+  "path": "/api/engine3040/modelo-extrato",
+  "func": "modelo_extrato_3040",
+  "lines": 15,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]",
+   "/cadoc-3040/[reference_period]/retificacao"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "engine3040.py",
+  "method": "POST",
+  "path": "/api/engine3040/upload",
+  "func": "upload_3040",
+  "lines": 127,
+  "stores": [
+   "DataSourceStore",
+   "data_source_store"
+  ],
+  "tasks": [
+   "process_3040_file"
+  ],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]",
+   "/cadoc-3040/[reference_period]/retificacao"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_3040_competencia_concluida.py",
+   "tests/api/test_engine3040_routes.py"
+  ]
+ },
+ {
+  "file": "engine3040.py",
+  "method": "POST",
+  "path": "/api/engine3040/imports/delete",
+  "func": "delete_imports_3040",
+  "lines": 91,
+  "stores": [],
+  "tasks": [
+   "consolidate_3040"
+  ],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]",
+   "/cadoc-3040/[reference_period]/retificacao"
+  ],
+  "e2e": [
+   "24-regressao-3040.spec.ts",
+   "28-regressao-conciliacoes.spec.ts",
+   "30-regressao-retificacao-3042.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "engine3040.py",
+  "method": "POST",
+  "path": "/api/engine3040/consolidate",
+  "func": "consolidate_endpoint",
+  "lines": 61,
+  "stores": [],
+  "tasks": [
+   "consolidate_3040"
+  ],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]",
+   "/cadoc-3040/[reference_period]/retificacao"
+  ],
+  "e2e": [
+   "30-regressao-retificacao-3042.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_engine3040_routes.py"
+  ]
+ },
+ {
+  "file": "engine3040.py",
+  "method": "GET",
+  "path": "/api/engine3040/documents/{}/download",
+  "func": "download_document",
+  "lines": 35,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]",
+   "/cadoc-3040/[reference_period]/retificacao"
+  ],
+  "e2e": [
+   "07-import-3040.spec.ts",
+   "24-regressao-3040.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_engine3040_routes.py"
+  ]
+ },
+ {
+  "file": "engine3044.py",
+  "method": "GET",
+  "path": "/api/engine3044/day-status",
+  "func": "day_status",
+  "lines": 69,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3044"
+  ],
+  "e2e": [
+   "03-consolida-baixa.spec.ts",
+   "08-import-react-go.spec.ts",
+   "09-3044-ver-linhas-excluir.spec.ts",
+   "25-regressao-3044.spec.ts",
+   "35-scr-eventos.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_engine3044_routes.py"
+  ]
+ },
+ {
+  "file": "engine3044.py",
+  "method": "GET",
+  "path": "/api/engine3044/lines",
+  "func": "list_lines",
+  "lines": 23,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3044"
+  ],
+  "e2e": [
+   "25-regressao-3044.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "engine3044.py",
+  "method": "POST",
+  "path": "/api/engine3044/consolidate",
+  "func": "consolidate",
+  "lines": 37,
+  "stores": [],
+  "tasks": [
+   "consolidate_3044"
+  ],
+  "guard": true,
+  "front": [
+   "/cadoc-3044"
+  ],
+  "e2e": [
+   "03-consolida-baixa.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_engine3044_routes.py"
+  ]
+ },
+ {
+  "file": "engine3044.py",
+  "method": "POST",
+  "path": "/api/engine3044/imports/delete",
+  "func": "delete_imports",
+  "lines": 40,
+  "stores": [],
+  "tasks": [
+   "consolidate_3044"
+  ],
+  "guard": true,
+  "front": [
+   "/cadoc-3044"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "engine3044.py",
+  "method": "GET",
+  "path": "/api/engine3044/documents/{}/download",
+  "func": "download_document",
+  "lines": 40,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3044"
+  ],
+  "e2e": [
+   "03-consolida-baixa.spec.ts",
+   "25-regressao-3044.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_engine3044_routes.py"
+  ]
+ },
+ {
+  "file": "engine3044.py",
+  "method": "POST",
+  "path": "/api/engine3044/exclusions",
+  "func": "add_exclusions",
+  "lines": 23,
+  "stores": [],
+  "tasks": [
+   "consolidate_3044"
+  ],
+  "guard": true,
+  "front": [
+   "/cadoc-3044"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_engine3044_routes.py"
+  ]
+ },
+ {
+  "file": "engine3044.py",
+  "method": "GET",
+  "path": "/api/engine3044/exclusions",
+  "func": "list_exclusions",
+  "lines": 5,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3044"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_engine3044_routes.py"
+  ]
+ },
+ {
+  "file": "engine3044.py",
+  "method": "POST",
+  "path": "/api/engine3044/upload",
+  "func": "upload_3044",
+  "lines": 87,
+  "stores": [
+   "DataSourceStore",
+   "data_source_store"
+  ],
+  "tasks": [
+   "process_3044_file"
+  ],
+  "guard": true,
+  "front": [
+   "/cadoc-3044"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_engine3044_routes.py"
+  ]
+ },
+ {
+  "file": "engine3050.py",
+  "method": "GET",
+  "path": "/api/engine3050/week-status",
+  "func": "week_status",
+  "lines": 50,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3050"
+  ],
+  "e2e": [
+   "14-cadoc-3050.spec.ts",
+   "26-regressao-3050.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_engine3050_routes.py"
+  ]
+ },
+ {
+  "file": "engine3050.py",
+  "method": "GET",
+  "path": "/api/engine3050/source-summary",
+  "func": "source_summary",
+  "lines": 15,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_engine3050_routes.py"
+  ]
+ },
+ {
+  "file": "engine3050.py",
+  "method": "POST",
+  "path": "/api/engine3050/upload",
+  "func": "upload_3050",
+  "lines": 45,
+  "stores": [],
+  "tasks": [
+   "process_3050_file"
+  ],
+  "guard": true,
+  "front": [
+   "/cadoc-3050"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_engine3050_routes.py"
+  ]
+ },
+ {
+  "file": "engine3050.py",
+  "method": "GET",
+  "path": "/api/engine3050/reconciliation",
+  "func": "reconciliation",
+  "lines": 23,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3050"
+  ],
+  "e2e": [
+   "28-regressao-conciliacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_engine3050_routes.py"
+  ]
+ },
+ {
+  "file": "engine3050.py",
+  "method": "POST",
+  "path": "/api/engine3050/consolidate",
+  "func": "consolidate_endpoint",
+  "lines": 47,
+  "stores": [],
+  "tasks": [
+   "consolidate_3050"
+  ],
+  "guard": true,
+  "front": [
+   "/cadoc-3050"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_engine3050_routes.py"
+  ]
+ },
+ {
+  "file": "engine3050.py",
+  "method": "GET",
+  "path": "/api/engine3050/document",
+  "func": "document",
+  "lines": 15,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_engine3050_routes.py"
+  ]
+ },
+ {
+  "file": "engine3050.py",
+  "method": "GET",
+  "path": "/api/engine3050/documents/{}/download",
+  "func": "download_document",
+  "lines": 15,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3050"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "governance.py",
+  "method": "GET",
+  "path": "/api/governance/config",
+  "func": "get_config",
+  "lines": 3,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/governance"
+  ],
+  "e2e": [
+   "05-mutacoes.spec.ts",
+   "31-regressao-qualidade-pilares.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "governance.py",
+  "method": "PUT",
+  "path": "/api/governance/config",
+  "func": "put_config",
+  "lines": 9,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/governance"
+  ],
+  "e2e": [
+   "05-mutacoes.spec.ts",
+   "31-regressao-qualidade-pilares.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "governance.py",
+  "method": "POST",
+  "path": "/api/governance/dossie",
+  "func": "gerar_dossie",
+  "lines": 35,
+  "stores": [
+   "CorrelationStore"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_dossie.py"
+  ]
+ },
+ {
+  "file": "governance.py",
+  "method": "GET",
+  "path": "/api/governance/dossie",
+  "func": "listar_dossies",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_dossie.py"
+  ]
+ },
+ {
+  "file": "governance.py",
+  "method": "GET",
+  "path": "/api/governance/dossie/{}/download",
+  "func": "baixar_dossie",
+  "lines": 15,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_dossie.py"
+  ]
+ },
+ {
+  "file": "lgpd.py",
+  "method": "POST",
+  "path": "/api/lgpd/anonimizar",
+  "func": "anonimizar",
+  "lines": 18,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/lgpd"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "lgpd.py",
+  "method": "GET",
+  "path": "/api/lgpd/access-log",
+  "func": "access_log",
+  "lines": 9,
+  "stores": [
+   "LgpdAccessStore"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/lgpd"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "lineage.py",
+  "method": "GET",
+  "path": "/api/lineage/submissions",
+  "func": "list_submissions",
+  "lines": 10,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/lineage"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_quality_routes.py"
+  ]
+ },
+ {
+  "file": "lineage.py",
+  "method": "GET",
+  "path": "/api/lineage/{}",
+  "func": "get_lineage",
+  "lines": 14,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_quality_routes.py"
+  ]
+ },
+ {
+  "file": "lineage.py",
+  "method": "GET",
+  "path": "/api/lineage/submission/{}",
+  "func": "get_submission_lineage",
+  "lines": 14,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/lineage"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "manifestacoes.py",
+  "method": "POST",
+  "path": "/api/manifestacoes",
+  "func": "registrar",
+  "lines": 20,
+  "stores": [
+   "ManifestacaoStore"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/compliance/manifestacoes"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "manifestacoes.py",
+  "method": "GET",
+  "path": "/api/manifestacoes",
+  "func": "listar",
+  "lines": 4,
+  "stores": [
+   "ManifestacaoStore"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/compliance/manifestacoes"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "manifestacoes.py",
+  "method": "GET",
+  "path": "/api/manifestacoes/export.csv",
+  "func": "export_csv",
+  "lines": 16,
+  "stores": [
+   "ManifestacaoStore"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/compliance/manifestacoes"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "manifestacoes.py",
+  "method": "GET",
+  "path": "/api/manifestacoes/{}",
+  "func": "detalhe",
+  "lines": 10,
+  "stores": [
+   "ManifestacaoStore"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "manifestacoes.py",
+  "method": "POST",
+  "path": "/api/manifestacoes/{}/transicao",
+  "func": "transicao",
+  "lines": 46,
+  "stores": [
+   "ManifestacaoStore"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/compliance/manifestacoes"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "moat.py",
+  "method": "GET",
+  "path": "/api/moat/remediacao",
+  "func": "remediacao",
+  "lines": 4,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/moat"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_moat.py"
+  ]
+ },
+ {
+  "file": "moat.py",
+  "method": "GET",
+  "path": "/api/moat/fingerprints",
+  "func": "fingerprints",
+  "lines": 4,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/moat"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_moat.py"
+  ]
+ },
+ {
+  "file": "moat.py",
+  "method": "GET",
+  "path": "/api/moat/regulatorio",
+  "func": "regulatorio",
+  "lines": 4,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/moat"
+  ],
+  "e2e": [
+   "33-centro-operacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_moat.py"
+  ]
+ },
+ {
+  "file": "onboarding.py",
+  "method": "GET",
+  "path": "/api/onboarding/status",
+  "func": "get_onboarding_status",
+  "lines": 58,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/",
+   "/cadoc-3026",
+   "/cadoc-3040",
+   "/cadoc-3040/[reference_period]",
+   "/cadoc-3044",
+   "/cadoc-3050",
+   "/onboarding",
+   "/quality"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "onboarding.py",
+  "method": "GET",
+  "path": "/api/onboarding/perfis-sugeridos",
+  "func": "perfis_sugeridos_endpoint",
+  "lines": 11,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/onboarding"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_onboarding_m5.py"
+  ]
+ },
+ {
+  "file": "onboarding.py",
+  "method": "POST",
+  "path": "/api/onboarding/perfis-aplicar",
+  "func": "perfis_aplicar",
+  "lines": 58,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/onboarding"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_onboarding_m5.py"
+  ]
+ },
+ {
+  "file": "onboarding.py",
+  "method": "GET",
+  "path": "/api/onboarding/depara-sugerido",
+  "func": "depara_sugerido",
+  "lines": 7,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/onboarding"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_onboarding_m5.py"
+  ]
+ },
+ {
+  "file": "onboarding.py",
+  "method": "POST",
+  "path": "/api/onboarding/depara-aplicar",
+  "func": "depara_aplicar",
+  "lines": 25,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/onboarding"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_onboarding_m5.py"
+  ]
+ },
+ {
+  "file": "onboarding.py",
+  "method": "GET",
+  "path": "/api/onboarding/prontidao",
+  "func": "prontidao",
+  "lines": 18,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/onboarding"
+  ],
+  "e2e": [
+   "33-centro-operacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_onboarding_m5.py"
+  ]
+ },
+ {
+  "file": "operations.py",
+  "method": "GET",
+  "path": "/api/operations/incidents",
+  "func": "list_incidents",
+  "lines": 7,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/operations"
+  ],
+  "e2e": [
+   "33-centro-operacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_operations.py"
+  ]
+ },
+ {
+  "file": "operations.py",
+  "method": "POST",
+  "path": "/api/operations/incidents/{}/assign",
+  "func": "assign_incident",
+  "lines": 17,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/operations"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "operations.py",
+  "method": "POST",
+  "path": "/api/operations/incidents/{}/resolve",
+  "func": "resolve_incident",
+  "lines": 19,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/operations",
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "operations.py",
+  "method": "GET",
+  "path": "/api/operations/obligations",
+  "func": "list_obligations",
+  "lines": 14,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/operations"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "operations.py",
+  "method": "GET",
+  "path": "/api/operations/profiles/{}",
+  "func": "list_profiles",
+  "lines": 9,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin",
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "operations.py",
+  "method": "POST",
+  "path": "/api/operations/profiles",
+  "func": "upsert_profile",
+  "lines": 51,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin",
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [
+   "46-reportes-liberados-gate.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_admin_audit_actions.py",
+   "tests/api/test_profiles_deadline_rule.py"
+  ]
+ },
+ {
+  "file": "operations.py",
+  "method": "GET",
+  "path": "/api/operations/portfolios/{}",
+  "func": "list_carteira",
+  "lines": 8,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "operations.py",
+  "method": "POST",
+  "path": "/api/operations/portfolios",
+  "func": "assign_carteira",
+  "lines": 20,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_admin_audit_actions.py"
+  ]
+ },
+ {
+  "file": "operations.py",
+  "method": "GET",
+  "path": "/api/operations/cockpit",
+  "func": "cockpit",
+  "lines": 47,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin"
+  ],
+  "e2e": [
+   "33-centro-operacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_cockpit.py",
+   "tests/api/test_ingestao.py"
+  ]
+ },
+ {
+  "file": "operations.py",
+  "method": "GET",
+  "path": "/api/operations/tenant/{}",
+  "func": "tenant_ops",
+  "lines": 19,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "operations.py",
+  "method": "GET",
+  "path": "/api/operations/ingestao",
+  "func": "ingestao",
+  "lines": 7,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/ingestao"
+  ],
+  "e2e": [
+   "33-centro-operacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_ingestao.py"
+  ]
+ },
+ {
+  "file": "operations.py",
+  "method": "GET",
+  "path": "/api/operations/radar",
+  "func": "radar",
+  "lines": 5,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/radar"
+  ],
+  "e2e": [
+   "33-centro-operacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_radar.py"
+  ]
+ },
+ {
+  "file": "operations.py",
+  "method": "GET",
+  "path": "/api/operations/radar/badge",
+  "func": "radar_badge",
+  "lines": 5,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_radar.py"
+  ]
+ },
+ {
+  "file": "operations.py",
+  "method": "POST",
+  "path": "/api/operations/radar/{}/review",
+  "func": "radar_review",
+  "lines": 14,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/radar"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "operations.py",
+  "method": "POST",
+  "path": "/api/operations/radar/{}/avaliar",
+  "func": "radar_avaliar",
+  "lines": 8,
+  "stores": [],
+  "tasks": [
+   "assess_regulatory_change"
+  ],
+  "guard": false,
+  "front": [
+   "/admin/radar"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "operations.py",
+  "method": "POST",
+  "path": "/api/operations/radar/verificar",
+  "func": "radar_verificar",
+  "lines": 6,
+  "stores": [],
+  "tasks": [
+   "check_regulatory_versions"
+  ],
+  "guard": false,
+  "front": [
+   "/admin/radar"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "operations.py",
+  "method": "POST",
+  "path": "/api/operations/radar/varredura-web",
+  "func": "radar_varredura_web",
+  "lines": 6,
+  "stores": [],
+  "tasks": [
+   "web_sweep"
+  ],
+  "guard": false,
+  "front": [
+   "/admin/radar"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_radar_web.py"
+  ]
+ },
+ {
+  "file": "operations.py",
+  "method": "POST",
+  "path": "/api/operations/incidents/{}/diagnosticar",
+  "func": "diagnosticar_incidente",
+  "lines": 15,
+  "stores": [],
+  "tasks": [
+   "diagnose_incident"
+  ],
+  "guard": false,
+  "front": [
+   "/admin/operations",
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "operations.py",
+  "method": "GET",
+  "path": "/api/operations/gestao",
+  "func": "gestao_metricas",
+  "lines": 9,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/gestao"
+  ],
+  "e2e": [
+   "33-centro-operacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_gestao.py"
+  ]
+ },
+ {
+  "file": "operations.py",
+  "method": "GET",
+  "path": "/api/operations/gestao/sla-policies",
+  "func": "listar_sla_policies",
+  "lines": 5,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/gestao"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_admin_audit_actions.py",
+   "tests/api/test_gestao.py"
+  ]
+ },
+ {
+  "file": "operations.py",
+  "method": "PUT",
+  "path": "/api/operations/gestao/sla-policies",
+  "func": "atualizar_sla_policy",
+  "lines": 24,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/gestao"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_admin_audit_actions.py",
+   "tests/api/test_gestao.py"
+  ]
+ },
+ {
+  "file": "operations.py",
+  "method": "POST",
+  "path": "/api/operations/gestao/recalcular-abertos",
+  "func": "recalcular_abertos",
+  "lines": 28,
+  "stores": [
+   "EventStore",
+   "ops_event_store"
+  ],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/gestao"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_gestao.py"
+  ]
+ },
+ {
+  "file": "operations.py",
+  "method": "GET",
+  "path": "/api/operations/tenant/{}/engajamento",
+  "func": "get_engajamento",
+  "lines": 17,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [
+   "33-centro-operacoes.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "operations.py",
+  "method": "PUT",
+  "path": "/api/operations/tenant/{}/engajamento",
+  "func": "set_engajamento",
+  "lines": 12,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [
+   "33-centro-operacoes.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "operations.py",
+  "method": "POST",
+  "path": "/api/operations/tenant/{}/engajar",
+  "func": "engajar_agora",
+  "lines": 13,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/tenants/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "operations.py",
+  "method": "GET",
+  "path": "/api/operations/onboarding",
+  "func": "onboarding_overview_endpoint",
+  "lines": 7,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin"
+  ],
+  "e2e": [
+   "33-centro-operacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_onboarding_overview.py"
+  ]
+ },
+ {
+  "file": "painel.py",
+  "method": "GET",
+  "path": "/api/painel/saude",
+  "func": "saude",
+  "lines": 26,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/",
+   "/compliance"
+  ],
+  "e2e": [
+   "04-qualidade-cockpit.spec.ts",
+   "31-regressao-qualidade-pilares.spec.ts"
+  ],
+  "backref": [
+   "tests/demo/test_rotas.py"
+  ]
+ },
+ {
+  "file": "painel.py",
+  "method": "GET",
+  "path": "/api/painel",
+  "func": "get_painel",
+  "lines": 144,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/",
+   "/rc18"
+  ],
+  "e2e": [
+   "29-regressao-rc18-fechamento.spec.ts",
+   "41-rep19-link-fechamento.spec.ts"
+  ],
+  "backref": [
+   "tests/demo/test_rotas.py"
+  ]
+ },
+ {
+  "file": "painel.py",
+  "method": "GET",
+  "path": "/api/painel/alertas",
+  "func": "alertas",
+  "lines": 5,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [],
+  "e2e": [],
+  "backref": [
+   "tests/demo/test_rotas.py"
+  ]
+ },
+ {
+  "file": "painel.py",
+  "method": "POST",
+  "path": "/api/painel/{}/{}/aprovar",
+  "func": "aprovar",
+  "lines": 28,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "painel.py",
+  "method": "POST",
+  "path": "/api/painel/{}/{}/reprovar",
+  "func": "reprovar",
+  "lines": 14,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/",
+   "/rc18"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "painel.py",
+  "method": "POST",
+  "path": "/api/painel/{}/{}/enviar",
+  "func": "enviar",
+  "lines": 61,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/",
+   "/rc18"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "painel.py",
+  "method": "GET",
+  "path": "/api/painel/{}/{}/arquivos.zip",
+  "func": "baixar_arquivos",
+  "lines": 23,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/",
+   "/rc18"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "painel.py",
+  "method": "POST",
+  "path": "/api/painel/{}/{}/aferir",
+  "func": "aferir",
+  "lines": 33,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "painel.py",
+  "method": "POST",
+  "path": "/api/painel/{}/{}/concluir",
+  "func": "concluir",
+  "lines": 20,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "painel.py",
+  "method": "POST",
+  "path": "/api/painel/{}/{}/reabrir",
+  "func": "reabrir",
+  "lines": 22,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "painel.py",
+  "method": "GET",
+  "path": "/api/painel/{}/historico",
+  "func": "historico",
+  "lines": 17,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/rc18"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/demo/test_rotas.py"
+  ]
+ },
+ {
+  "file": "pecld.py",
+  "method": "GET",
+  "path": "/api/pecld/parametros",
+  "func": "get_parametros",
+  "lines": 4,
+  "stores": [
+   "PecldParameterStore"
+  ],
+  "tasks": [],
+  "guard": false,
+  "front": [],
+  "e2e": [
+   "34-pecld.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_pecld_api.py"
+  ]
+ },
+ {
+  "file": "pecld.py",
+  "method": "PUT",
+  "path": "/api/pecld/parametros",
+  "func": "put_parametros",
+  "lines": 13,
+  "stores": [
+   "PecldParameterStore"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [
+   "34-pecld.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_pecld_api.py"
+  ]
+ },
+ {
+  "file": "pecld.py",
+  "method": "POST",
+  "path": "/api/pecld/calcular",
+  "func": "calcular",
+  "lines": 10,
+  "stores": [],
+  "tasks": [
+   "compute_pecld"
+  ],
+  "guard": true,
+  "front": [
+   "/pecld"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "pecld.py",
+  "method": "GET",
+  "path": "/api/pecld/resultado",
+  "func": "resultado",
+  "lines": 11,
+  "stores": [
+   "PecldResultStore"
+  ],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/pecld"
+  ],
+  "e2e": [
+   "34-pecld.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "pecld.py",
+  "method": "GET",
+  "path": "/api/pecld/conciliacao",
+  "func": "conciliacao",
+  "lines": 15,
+  "stores": [
+   "PecldResultStore"
+  ],
+  "tasks": [],
+  "guard": false,
+  "front": [],
+  "e2e": [
+   "34-pecld.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_pecld_api.py"
+  ]
+ },
+ {
+  "file": "policy.py",
+  "method": "GET",
+  "path": "/api/policy/versions",
+  "func": "list_versions",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/policy"
+  ],
+  "e2e": [
+   "05-mutacoes.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "policy.py",
+  "method": "GET",
+  "path": "/api/policy/versions/current",
+  "func": "get_current_version",
+  "lines": 8,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/policy"
+  ],
+  "e2e": [
+   "05-mutacoes.spec.ts",
+   "23-regressao-setup.spec.ts",
+   "31-regressao-qualidade-pilares.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "policy.py",
+  "method": "POST",
+  "path": "/api/policy/versions",
+  "func": "create_version",
+  "lines": 19,
+  "stores": [
+   "policy_store"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/policy"
+  ],
+  "e2e": [
+   "05-mutacoes.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "policy.py",
+  "method": "GET",
+  "path": "/api/policy/versions/{}",
+  "func": "get_version",
+  "lines": 9,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "policy.py",
+  "method": "GET",
+  "path": "/api/policy/reviews",
+  "func": "list_reviews",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/policy"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "policy.py",
+  "method": "GET",
+  "path": "/api/policy/reviews/status",
+  "func": "get_review_status",
+  "lines": 5,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/policy"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "policy.py",
+  "method": "POST",
+  "path": "/api/policy/reviews",
+  "func": "create_review",
+  "lines": 8,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/policy"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "policy.py",
+  "method": "GET",
+  "path": "/api/policy/reviews/{}",
+  "func": "get_review",
+  "lines": 9,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "policy.py",
+  "method": "POST",
+  "path": "/api/policy/reviews/{}/submit",
+  "func": "submit_review",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/policy"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "policy.py",
+  "method": "POST",
+  "path": "/api/policy/reviews/{}/approve",
+  "func": "approve_review",
+  "lines": 17,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/policy"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "policy.py",
+  "method": "POST",
+  "path": "/api/policy/reviews/{}/reject",
+  "func": "reject_review",
+  "lines": 7,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "public_reports.py",
+  "method": "GET",
+  "path": "/api/public/reports/ack/{}/{}",
+  "func": "view_by_token",
+  "lines": 11,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/reports/ack/[tenant_id]/[token]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "public_reports.py",
+  "method": "GET",
+  "path": "/api/public/reports/verificar/{}/{}",
+  "func": "verificar",
+  "lines": 18,
+  "stores": [
+   "DocumentHashStore",
+   "document_hash_store"
+  ],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/verificar/[tenant_id]/[sha256]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "public_reports.py",
+  "method": "POST",
+  "path": "/api/public/reports/ack/{}/{}/confirm",
+  "func": "confirm_by_token",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "public_reports.py",
+  "method": "POST",
+  "path": "/api/public/reports/ack/{}/{}/enviar-codigo",
+  "func": "enviar_codigo",
+  "lines": 20,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/reports/ack/[tenant_id]/[token]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "public_reports.py",
+  "method": "POST",
+  "path": "/api/public/reports/ack/{}/{}/confirmar",
+  "func": "confirmar_com_codigo",
+  "lines": 49,
+  "stores": [
+   "postgres"
+  ],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/reports/ack/[tenant_id]/[token]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "quality.py",
+  "method": "GET",
+  "path": "/api/quality/dashboard",
+  "func": "get_dashboard",
+  "lines": 60,
+  "stores": [
+   "GovernanceConfigStore"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [
+   "04-qualidade-cockpit.spec.ts",
+   "29-regressao-rc18-fechamento.spec.ts",
+   "31-regressao-qualidade-pilares.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_quality_dashboard_real.py",
+   "tests/api/test_quality_routes.py"
+  ]
+ },
+ {
+  "file": "quality.py",
+  "method": "GET",
+  "path": "/api/quality/completude-detail",
+  "func": "completude_detail",
+  "lines": 42,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "quality.py",
+  "method": "GET",
+  "path": "/api/quality/dimensions",
+  "func": "list_dimensions",
+  "lines": 10,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [
+   "29-regressao-rc18-fechamento.spec.ts",
+   "31-regressao-qualidade-pilares.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_quality_routes.py"
+  ]
+ },
+ {
+  "file": "quality.py",
+  "method": "PUT",
+  "path": "/api/quality/dimensions/{}",
+  "func": "update_dimension",
+  "lines": 17,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "quality.py",
+  "method": "GET",
+  "path": "/api/quality/reports",
+  "func": "list_reports",
+  "lines": 15,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_quality_dashboard_real.py"
+  ]
+ },
+ {
+  "file": "quality.py",
+  "method": "POST",
+  "path": "/api/quality/reports/generate",
+  "func": "generate_report",
+  "lines": 11,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "quality.py",
+  "method": "POST",
+  "path": "/api/quality/assess-now",
+  "func": "assess_now",
+  "lines": 29,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality"
+  ],
+  "e2e": [
+   "29-regressao-rc18-fechamento.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "quality.py",
+  "method": "GET",
+  "path": "/api/quality/director",
+  "func": "get_director",
+  "lines": 10,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/director"
+  ],
+  "e2e": [
+   "06-mais-fluxos.spec.ts",
+   "31-regressao-qualidade-pilares.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "quality.py",
+  "method": "POST",
+  "path": "/api/quality/director",
+  "func": "set_director",
+  "lines": 38,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/director"
+  ],
+  "e2e": [
+   "06-mais-fluxos.spec.ts",
+   "31-regressao-qualidade-pilares.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "reconciliation.py",
+  "method": "POST",
+  "path": "/api/reconciliation/origem",
+  "func": "run_origem",
+  "lines": 13,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reconciliation/conciliar"
+  ],
+  "e2e": [
+   "28-regressao-conciliacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_reconciliation_routes.py"
+  ]
+ },
+ {
+  "file": "reconciliation.py",
+  "method": "POST",
+  "path": "/api/reconciliation/contabil",
+  "func": "run_contabil",
+  "lines": 23,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reconciliation/conciliar"
+  ],
+  "e2e": [
+   "06-mais-fluxos.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_reconciliation_routes.py"
+  ]
+ },
+ {
+  "file": "reconciliation.py",
+  "method": "GET",
+  "path": "/api/reconciliation/contabil-config",
+  "func": "contabil_config",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reconciliation/conciliar"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "reconciliation.py",
+  "method": "POST",
+  "path": "/api/reconciliation/contabil/dispensa",
+  "func": "dispensa_contabil",
+  "lines": 23,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reconciliation/conciliar"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_reconciliation_routes.py"
+  ]
+ },
+ {
+  "file": "reconciliation.py",
+  "method": "GET",
+  "path": "/api/reconciliation/contabil-mapping",
+  "func": "get_contabil_mapping",
+  "lines": 5,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reconciliation/conciliar"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "reconciliation.py",
+  "method": "PUT",
+  "path": "/api/reconciliation/contabil-mapping",
+  "func": "put_contabil_mapping",
+  "lines": 12,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reconciliation/conciliar"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "reconciliation.py",
+  "method": "PUT",
+  "path": "/api/reconciliation/contabil-mapping/csv",
+  "func": "put_contabil_mapping_csv",
+  "lines": 14,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reconciliation/conciliar"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "reconciliation.py",
+  "method": "GET",
+  "path": "/api/reconciliation/contabil-mapping/template.csv",
+  "func": "contabil_mapping_template",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reconciliation/conciliar"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "reconciliation.py",
+  "method": "GET",
+  "path": "/api/reconciliation",
+  "func": "list_reconciliations",
+  "lines": 4,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reconciliation"
+  ],
+  "e2e": [
+   "28-regressao-conciliacoes.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "reconciliation.py",
+  "method": "GET",
+  "path": "/api/reconciliation/scoped",
+  "func": "scoped",
+  "lines": 24,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reconciliation/conciliar"
+  ],
+  "e2e": [
+   "28-regressao-conciliacoes.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_reconciliation_scoped.py",
+   "tests/demo/test_rotas.py"
+  ]
+ },
+ {
+  "file": "reconciliation.py",
+  "method": "GET",
+  "path": "/api/reconciliation/{}",
+  "func": "get_reconciliation",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reconciliation/[id]"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "reconciliation.py",
+  "method": "POST",
+  "path": "/api/reconciliation/items/{}/justificar",
+  "func": "justify",
+  "lines": 13,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reconciliation/[id]",
+   "/quality/reconciliation/conciliar"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "reconciliation.py",
+  "method": "POST",
+  "path": "/api/reconciliation/items/{}/corretiva",
+  "func": "to_corrective",
+  "lines": 14,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/quality/reconciliation/[id]",
+   "/quality/reconciliation/conciliar"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "reportes.py",
+  "method": "GET",
+  "path": "/api/reportes/liberados",
+  "func": "list_liberados",
+  "lines": 30,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [],
+  "e2e": [
+   "seed_regressao.py"
+  ],
+  "backref": [
+   "tests/api/test_reportes_liberados.py"
+  ]
+ },
+ {
+  "file": "retification.py",
+  "method": "POST",
+  "path": "/api/retification",
+  "func": "open_retification",
+  "lines": 11,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]/retificacao",
+   "/quality/retifications"
+  ],
+  "e2e": [
+   "06-mais-fluxos.spec.ts",
+   "30-regressao-retificacao-3042.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "retification.py",
+  "method": "GET",
+  "path": "/api/retification",
+  "func": "list_retifications",
+  "lines": 18,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]/retificacao",
+   "/quality/retifications"
+  ],
+  "e2e": [
+   "06-mais-fluxos.spec.ts",
+   "30-regressao-retificacao-3042.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "retification.py",
+  "method": "GET",
+  "path": "/api/retification/history",
+  "func": "history",
+  "lines": 4,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "retification.py",
+  "method": "GET",
+  "path": "/api/retification/context",
+  "func": "retification_context",
+  "lines": 82,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]/retificacao"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "retification.py",
+  "method": "POST",
+  "path": "/api/retification/{}/metodo",
+  "func": "set_metodo",
+  "lines": 34,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]/retificacao"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "retification.py",
+  "method": "POST",
+  "path": "/api/retification/{}/link-document",
+  "func": "link_document",
+  "lines": 13,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "retification.py",
+  "method": "POST",
+  "path": "/api/retification/{}/enviar",
+  "func": "send_retification",
+  "lines": 39,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]/retificacao"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "retification.py",
+  "method": "POST",
+  "path": "/api/retification/{}/gerar-3042",
+  "func": "gerar_3042",
+  "lines": 102,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]/retificacao"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "retification.py",
+  "method": "GET",
+  "path": "/api/retification/{}/3042",
+  "func": "get_3042",
+  "lines": 10,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "retification.py",
+  "method": "GET",
+  "path": "/api/retification/{}/3042/download",
+  "func": "download_3042",
+  "lines": 19,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]/retificacao"
+  ],
+  "e2e": [
+   "30-regressao-retificacao-3042.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "retification.py",
+  "method": "POST",
+  "path": "/api/retification/{}/consolidate",
+  "func": "consolidate_retification",
+  "lines": 43,
+  "stores": [],
+  "tasks": [
+   "consolidate_3040"
+  ],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]/retificacao"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "retification.py",
+  "method": "POST",
+  "path": "/api/retification/{}/cancelar",
+  "func": "cancel_retification",
+  "lines": 21,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3040/[reference_period]/retificacao"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "schema_versions.py",
+  "method": "GET",
+  "path": "/api/admin/schema-versions",
+  "func": "list_schema_versions",
+  "lines": 8,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/schema-versions"
+  ],
+  "e2e": [
+   "49-rep80-versoes-schema.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_schema_versions_routes.py"
+  ]
+ },
+ {
+  "file": "schema_versions.py",
+  "method": "POST",
+  "path": "/api/admin/schema-versions/{}/migrate",
+  "func": "migrate_tenant",
+  "lines": 19,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/schema-versions"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_schema_versions_routes.py"
+  ]
+ },
+ {
+  "file": "schema_versions.py",
+  "method": "POST",
+  "path": "/api/admin/schema-versions/migrate",
+  "func": "migrate_tenants",
+  "lines": 40,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/schema-versions"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_schema_versions_lote.py"
+  ]
+ },
+ {
+  "file": "schema_versions.py",
+  "method": "GET",
+  "path": "/api/admin/schema-versions/{}/drift",
+  "func": "tenant_drift",
+  "lines": 10,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/schema-versions"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_schema_versions_routes.py"
+  ]
+ },
+ {
+  "file": "schema_versions.py",
+  "method": "GET",
+  "path": "/api/schema-version/me",
+  "func": "my_schema_version",
+  "lines": 25,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/admin/schema-versions"
+  ],
+  "e2e": [
+   "49-rep80-versoes-schema.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_schema_versions_impersonate.py"
+  ]
+ },
+ {
+  "file": "setup.py",
+  "method": "GET",
+  "path": "/api/setup/status",
+  "func": "get_setup_status",
+  "lines": 120,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [],
+  "e2e": [
+   "23-regressao-setup.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_painel_sem_gate_de_setup.py",
+   "tests/api/test_setup_status_por_reporte.py",
+   "tests/demo/test_rotas.py"
+  ]
+ },
+ {
+  "file": "setup.py",
+  "method": "GET",
+  "path": "/api/setup/institution",
+  "func": "get_institution",
+  "lines": 16,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/setup"
+  ],
+  "e2e": [
+   "42-setup-gate.spec.ts"
+  ],
+  "backref": []
+ },
+ {
+  "file": "setup.py",
+  "method": "POST",
+  "path": "/api/setup/institution/confirm",
+  "func": "confirm_institution",
+  "lines": 33,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/setup"
+  ],
+  "e2e": [
+   "42-setup-gate.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_setup_auth_contract.py"
+  ]
+ },
+ {
+  "file": "setup.py",
+  "method": "GET",
+  "path": "/api/setup/responsavel-remessa",
+  "func": "get_responsavel_remessa",
+  "lines": 13,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/setup"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_setup_auth_contract.py"
+  ]
+ },
+ {
+  "file": "setup.py",
+  "method": "POST",
+  "path": "/api/setup/responsavel-remessa",
+  "func": "set_responsavel_remessa",
+  "lines": 47,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/setup"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_setup_auth_contract.py"
+  ]
+ },
+ {
+  "file": "setup.py",
+  "method": "GET",
+  "path": "/api/setup/reportes",
+  "func": "list_reportes",
+  "lines": 46,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/bcb",
+   "/cadoc-3026",
+   "/cadoc-3040",
+   "/cadoc-3044",
+   "/cadoc-3050",
+   "/cadoc-cosif",
+   "/corrective",
+   "/lgpd",
+   "/onboarding",
+   "/quality/dictionary",
+   "/quality/lineage",
+   "/quality/retifications",
+   "/settings/contrato-dados",
+   "/settings/data-sources",
+   "/setup"
+  ],
+  "e2e": [
+   "42-setup-gate.spec.ts",
+   "seed_regressao.py"
+  ],
+  "backref": [
+   "tests/api/test_setup_reportes_editavel.py"
+  ]
+ },
+ {
+  "file": "setup.py",
+  "method": "POST",
+  "path": "/api/setup/reportes/reference_period",
+  "func": "set_reference_period",
+  "lines": 44,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/cadoc-3026",
+   "/cadoc-3040",
+   "/cadoc-3044",
+   "/cadoc-3050",
+   "/setup"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_setup_auth_contract.py"
+  ]
+ },
+ {
+  "file": "setup.py",
+  "method": "POST",
+  "path": "/api/setup/reportes/inputs",
+  "func": "declare_input",
+  "lines": 50,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/setup"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_setup_auth_contract.py"
+  ]
+ },
+ {
+  "file": "setup.py",
+  "method": "DELETE",
+  "path": "/api/setup/reportes/inputs/{}",
+  "func": "remove_input",
+  "lines": 10,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/setup"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "setup.py",
+  "method": "GET",
+  "path": "/api/setup/reference_period-inicial",
+  "func": "get_competencia_inicial",
+  "lines": 22,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/settings/competencia-inicial"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_setup_auth_contract.py",
+   "tests/api/test_setup_reportes_editavel.py"
+  ]
+ },
+ {
+  "file": "setup.py",
+  "method": "POST",
+  "path": "/api/setup/reference_period-inicial",
+  "func": "set_competencia_inicial",
+  "lines": 26,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/competencia-inicial"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_setup_auth_contract.py",
+   "tests/api/test_setup_reportes_editavel.py"
+  ]
+ },
+ {
+  "file": "sftp.py",
+  "method": "GET",
+  "path": "/api/sftp/me",
+  "func": "sftp_me",
+  "lines": 50,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/sftp"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "sftp.py",
+  "method": "POST",
+  "path": "/api/sftp/me/keys",
+  "func": "add_sftp_key",
+  "lines": 23,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/sftp"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "sftp.py",
+  "method": "DELETE",
+  "path": "/api/sftp/me/keys",
+  "func": "remove_sftp_key",
+  "lines": 16,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/sftp"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "telemetry.py",
+  "method": "POST",
+  "path": "/api/telemetry/error",
+  "func": "report_frontend_error",
+  "lines": 11,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_telemetry_error.py"
+  ]
+ },
+ {
+  "file": "tenants.py",
+  "method": "GET",
+  "path": "/api/tenants/me",
+  "func": "get_own_tenant",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/",
+   "/quality/reconciliation",
+   "/settings/instituicao"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_tenant_responsavel.py",
+   "tests/api/test_tenants.py"
+  ]
+ },
+ {
+  "file": "tenants.py",
+  "method": "PATCH",
+  "path": "/api/tenants/me",
+  "func": "update_own_tenant",
+  "lines": 26,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/",
+   "/quality/reconciliation",
+   "/settings/instituicao"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_tenant_responsavel.py",
+   "tests/api/test_tenants.py"
+  ]
+ },
+ {
+  "file": "tenants.py",
+  "method": "GET",
+  "path": "/api/tenants",
+  "func": "list_tenants",
+  "lines": 4,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_tenants.py"
+  ]
+ },
+ {
+  "file": "tenants.py",
+  "method": "POST",
+  "path": "/api/tenants",
+  "func": "create_tenant",
+  "lines": 7,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_tenants.py"
+  ]
+ },
+ {
+  "file": "tenants.py",
+  "method": "GET",
+  "path": "/api/tenants/{}",
+  "func": "get_tenant",
+  "lines": 10,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_tenants.py"
+  ]
+ },
+ {
+  "file": "tenants.py",
+  "method": "PATCH",
+  "path": "/api/tenants/{}",
+  "func": "update_tenant",
+  "lines": 12,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_tenants.py"
+  ]
+ },
+ {
+  "file": "users.py",
+  "method": "GET",
+  "path": "/api/users",
+  "func": "list_users",
+  "lines": 4,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/users"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_tenants.py"
+  ]
+ },
+ {
+  "file": "users.py",
+  "method": "POST",
+  "path": "/api/users",
+  "func": "create_user",
+  "lines": 28,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/users"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_tenants.py"
+  ]
+ },
+ {
+  "file": "users.py",
+  "method": "GET",
+  "path": "/api/users/me",
+  "func": "get_me",
+  "lines": 4,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [],
+  "e2e": [
+   "13-identidade.spec.ts"
+  ],
+  "backref": [
+   "tests/api/test_auth_admin.py",
+   "tests/api/test_tenants.py"
+  ]
+ },
+ {
+  "file": "users.py",
+  "method": "GET",
+  "path": "/api/users/me/tenants",
+  "func": "list_my_tenants",
+  "lines": 25,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "users.py",
+  "method": "PATCH",
+  "path": "/api/users/me/onboarding",
+  "func": "patch_me_onboarding",
+  "lines": 8,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/",
+   "/cadoc-3026",
+   "/cadoc-3040",
+   "/cadoc-3040/[reference_period]",
+   "/cadoc-3044",
+   "/cadoc-3050",
+   "/onboarding",
+   "/quality"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "users.py",
+  "method": "POST",
+  "path": "/api/users/me/password",
+  "func": "change_my_password",
+  "lines": 16,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/change-password"
+  ],
+  "e2e": [],
+  "backref": [
+   "backend/auth/middleware.py",
+   "tests/api/test_auth_admin.py"
+  ]
+ },
+ {
+  "file": "users.py",
+  "method": "PATCH",
+  "path": "/api/users/{}",
+  "func": "update_user",
+  "lines": 46,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/settings/users"
+  ],
+  "e2e": [],
+  "backref": [
+   "tests/api/test_tenants.py"
+  ]
+ },
+ {
+  "file": "validacao.py",
+  "method": "GET",
+  "path": "/api/validacao/{}/{}",
+  "func": "validacao",
+  "lines": 6,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/",
+   "/rc18"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "validator.py",
+  "method": "GET",
+  "path": "/api/validator/info",
+  "func": "validator_info",
+  "lines": 10,
+  "stores": [],
+  "tasks": [],
+  "guard": false,
+  "front": [
+   "/cadoc-3040/[reference_period]",
+   "/cadoc-3040/[reference_period]/retificacao",
+   "/cadoc-3044"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "validator.py",
+  "method": "GET",
+  "path": "/api/admin/validator/status",
+  "func": "validator_status",
+  "lines": 5,
+  "stores": [
+   "ValidatorVersionStore",
+   "validator_version_store"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/validador"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "validator.py",
+  "method": "POST",
+  "path": "/api/admin/validator/impact",
+  "func": "validator_impact",
+  "lines": 3,
+  "stores": [],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/validador"
+  ],
+  "e2e": [],
+  "backref": []
+ },
+ {
+  "file": "validator.py",
+  "method": "POST",
+  "path": "/api/admin/validator/apply",
+  "func": "validator_apply",
+  "lines": 15,
+  "stores": [
+   "AdminAuditStore",
+   "ValidatorVersionStore",
+   "admin_store",
+   "validator_version_store"
+  ],
+  "tasks": [],
+  "guard": true,
+  "front": [
+   "/admin/validador"
+  ],
+  "e2e": [],
+  "backref": []
+ }
+]

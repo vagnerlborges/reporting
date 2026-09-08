@@ -1,0 +1,560 @@
+[
+ {
+  "path": ".claude",
+  "files": 22,
+  "lines": 1353,
+  "level": 0
+ },
+ {
+  "path": ".claude/agents",
+  "files": 3,
+  "lines": 90,
+  "level": 1
+ },
+ {
+  "path": ".claude/commands",
+  "files": 1,
+  "lines": 9,
+  "level": 1
+ },
+ {
+  "path": ".claude/hooks",
+  "files": 3,
+  "lines": 298,
+  "level": 1
+ },
+ {
+  "path": ".claude/skills",
+  "files": 13,
+  "lines": 854,
+  "level": 1
+ },
+ {
+  "path": ".ruff_cache",
+  "files": 0,
+  "lines": 0,
+  "level": 0
+ },
+ {
+  "path": ".sdd",
+  "files": 1,
+  "lines": 60,
+  "level": 0
+ },
+ {
+  "path": ".sdd/REP-77",
+  "files": 1,
+  "lines": 60,
+  "level": 1
+ },
+ {
+  "path": ".superpowers",
+  "files": 43,
+  "lines": 5562,
+  "level": 0
+ },
+ {
+  "path": ".superpowers/sdd",
+  "files": 43,
+  "lines": 5562,
+  "level": 1
+ },
+ {
+  "path": "backend",
+  "files": 377,
+  "lines": 51349,
+  "level": 0
+ },
+ {
+  "path": "backend/ai",
+  "files": 3,
+  "lines": 194,
+  "level": 1
+ },
+ {
+  "path": "backend/api",
+  "files": 49,
+  "lines": 12089,
+  "level": 1
+ },
+ {
+  "path": "backend/audit",
+  "files": 2,
+  "lines": 44,
+  "level": 1
+ },
+ {
+  "path": "backend/auth",
+  "files": 4,
+  "lines": 252,
+  "level": 1
+ },
+ {
+  "path": "backend/cadoc_adapters",
+  "files": 18,
+  "lines": 884,
+  "level": 1
+ },
+ {
+  "path": "backend/cli",
+  "files": 8,
+  "lines": 493,
+  "level": 1
+ },
+ {
+  "path": "backend/config",
+  "files": 2,
+  "lines": 185,
+  "level": 1
+ },
+ {
+  "path": "backend/contabil_transforms",
+  "files": 4,
+  "lines": 107,
+  "level": 1
+ },
+ {
+  "path": "backend/demo",
+  "files": 16,
+  "lines": 1541,
+  "level": 1
+ },
+ {
+  "path": "backend/engine",
+  "files": 8,
+  "lines": 848,
+  "level": 1
+ },
+ {
+  "path": "backend/flows",
+  "files": 35,
+  "lines": 3397,
+  "level": 1
+ },
+ {
+  "path": "backend/governance",
+  "files": 2,
+  "lines": 8,
+  "level": 1
+ },
+ {
+  "path": "backend/integrations",
+  "files": 1,
+  "lines": 0,
+  "level": 1
+ },
+ {
+  "path": "backend/pecld",
+  "files": 7,
+  "lines": 337,
+  "level": 1
+ },
+ {
+  "path": "backend/plugins",
+  "files": 56,
+  "lines": 7698,
+  "level": 1
+ },
+ {
+  "path": "backend/processing",
+  "files": 4,
+  "lines": 357,
+  "level": 1
+ },
+ {
+  "path": "backend/quality",
+  "files": 38,
+  "lines": 3283,
+  "level": 1
+ },
+ {
+  "path": "backend/services",
+  "files": 15,
+  "lines": 1287,
+  "level": 1
+ },
+ {
+  "path": "backend/storage",
+  "files": 66,
+  "lines": 9362,
+  "level": 1
+ },
+ {
+  "path": "backend/worker",
+  "files": 31,
+  "lines": 7237,
+  "level": 1
+ },
+ {
+  "path": "backend/workflow",
+  "files": 6,
+  "lines": 1542,
+  "level": 1
+ },
+ {
+  "path": "deploy",
+  "files": 672,
+  "lines": 70737,
+  "level": 0
+ },
+ {
+  "path": "deploy/cadoc-validator",
+  "files": 2,
+  "lines": 463,
+  "level": 1
+ },
+ {
+  "path": "deploy/k8s",
+  "files": 26,
+  "lines": 1705,
+  "level": 1
+ },
+ {
+  "path": "deploy/terraform",
+  "files": 641,
+  "lines": 68153,
+  "level": 1
+ },
+ {
+  "path": "docs",
+  "files": 328,
+  "lines": 110342,
+  "level": 0
+ },
+ {
+  "path": "docs/07-09-2026",
+  "files": 2,
+  "lines": 225,
+  "level": 1
+ },
+ {
+  "path": "docs/analytics",
+  "files": 1,
+  "lines": 209,
+  "level": 1
+ },
+ {
+  "path": "docs/arquitetura",
+  "files": 3,
+  "lines": 1175,
+  "level": 1
+ },
+ {
+  "path": "docs/entregaveis-pm",
+  "files": 9,
+  "lines": 634,
+  "level": 1
+ },
+ {
+  "path": "docs/estrategia",
+  "files": 2,
+  "lines": 214,
+  "level": 1
+ },
+ {
+  "path": "docs/informes",
+  "files": 34,
+  "lines": 1084,
+  "level": 1
+ },
+ {
+  "path": "docs/manuais",
+  "files": 5,
+  "lines": 1099,
+  "level": 1
+ },
+ {
+  "path": "docs/pesquisa",
+  "files": 1,
+  "lines": 215,
+  "level": 1
+ },
+ {
+  "path": "docs/pocs",
+  "files": 5,
+  "lines": 565,
+  "level": 1
+ },
+ {
+  "path": "docs/rc18-cliente",
+  "files": 1,
+  "lines": 19,
+  "level": 1
+ },
+ {
+  "path": "docs/rc18-gaps",
+  "files": 5,
+  "lines": 576,
+  "level": 1
+ },
+ {
+  "path": "docs/roadmap",
+  "files": 26,
+  "lines": 4130,
+  "level": 1
+ },
+ {
+  "path": "docs/runbooks",
+  "files": 1,
+  "lines": 160,
+  "level": 1
+ },
+ {
+  "path": "docs/seguranca",
+  "files": 5,
+  "lines": 338,
+  "level": 1
+ },
+ {
+  "path": "docs/superpowers",
+  "files": 216,
+  "lines": 97278,
+  "level": 1
+ },
+ {
+  "path": "e2e",
+  "files": 65,
+  "lines": 10259,
+  "level": 0
+ },
+ {
+  "path": "e2e/.auth",
+  "files": 2,
+  "lines": 76,
+  "level": 1
+ },
+ {
+  "path": "e2e/seed",
+  "files": 2,
+  "lines": 893,
+  "level": 1
+ },
+ {
+  "path": "e2e/test-results",
+  "files": 1,
+  "lines": 4,
+  "level": 1
+ },
+ {
+  "path": "e2e/tests",
+  "files": 53,
+  "lines": 8750,
+  "level": 1
+ },
+ {
+  "path": "frontend",
+  "files": 200,
+  "lines": 33837,
+  "level": 0
+ },
+ {
+  "path": "frontend/app",
+  "files": 70,
+  "lines": 14438,
+  "level": 1
+ },
+ {
+  "path": "frontend/components",
+  "files": 65,
+  "lines": 7180,
+  "level": 1
+ },
+ {
+  "path": "frontend/lib",
+  "files": 59,
+  "lines": 4126,
+  "level": 1
+ },
+ {
+  "path": "infra",
+  "files": 2,
+  "lines": 341,
+  "level": 0
+ },
+ {
+  "path": "migrations",
+  "files": 5,
+  "lines": 1126,
+  "level": 0
+ },
+ {
+  "path": "migrations/versions",
+  "files": 3,
+  "lines": 840,
+  "level": 1
+ },
+ {
+  "path": "migrations_tenant",
+  "files": 7,
+  "lines": 1822,
+  "level": 0
+ },
+ {
+  "path": "migrations_tenant/versions",
+  "files": 3,
+  "lines": 1551,
+  "level": 1
+ },
+ {
+  "path": "scripts",
+  "files": 3,
+  "lines": 72,
+  "level": 0
+ },
+ {
+  "path": "tests",
+  "files": 572,
+  "lines": 53807,
+  "level": 0
+ },
+ {
+  "path": "tests/adapters",
+  "files": 7,
+  "lines": 253,
+  "level": 1
+ },
+ {
+  "path": "tests/ai",
+  "files": 5,
+  "lines": 97,
+  "level": 1
+ },
+ {
+  "path": "tests/api",
+  "files": 124,
+  "lines": 11969,
+  "level": 1
+ },
+ {
+  "path": "tests/audit",
+  "files": 1,
+  "lines": 59,
+  "level": 1
+ },
+ {
+  "path": "tests/auth",
+  "files": 10,
+  "lines": 526,
+  "level": 1
+ },
+ {
+  "path": "tests/cadoc_adapters",
+  "files": 8,
+  "lines": 571,
+  "level": 1
+ },
+ {
+  "path": "tests/cli",
+  "files": 5,
+  "lines": 389,
+  "level": 1
+ },
+ {
+  "path": "tests/config",
+  "files": 2,
+  "lines": 65,
+  "level": 1
+ },
+ {
+  "path": "tests/contabil_transforms",
+  "files": 3,
+  "lines": 81,
+  "level": 1
+ },
+ {
+  "path": "tests/demo",
+  "files": 18,
+  "lines": 1587,
+  "level": 1
+ },
+ {
+  "path": "tests/deploy",
+  "files": 3,
+  "lines": 121,
+  "level": 1
+ },
+ {
+  "path": "tests/e2e",
+  "files": 2,
+  "lines": 93,
+  "level": 1
+ },
+ {
+  "path": "tests/engine",
+  "files": 24,
+  "lines": 2366,
+  "level": 1
+ },
+ {
+  "path": "tests/flows",
+  "files": 49,
+  "lines": 3913,
+  "level": 1
+ },
+ {
+  "path": "tests/governance",
+  "files": 2,
+  "lines": 8,
+  "level": 1
+ },
+ {
+  "path": "tests/migrations",
+  "files": 3,
+  "lines": 192,
+  "level": 1
+ },
+ {
+  "path": "tests/pecld",
+  "files": 13,
+  "lines": 359,
+  "level": 1
+ },
+ {
+  "path": "tests/plugins",
+  "files": 38,
+  "lines": 2644,
+  "level": 1
+ },
+ {
+  "path": "tests/processing",
+  "files": 4,
+  "lines": 343,
+  "level": 1
+ },
+ {
+  "path": "tests/quality",
+  "files": 43,
+  "lines": 2801,
+  "level": 1
+ },
+ {
+  "path": "tests/services",
+  "files": 14,
+  "lines": 1303,
+  "level": 1
+ },
+ {
+  "path": "tests/storage",
+  "files": 102,
+  "lines": 11457,
+  "level": 1
+ },
+ {
+  "path": "tests/worker",
+  "files": 74,
+  "lines": 10293,
+  "level": 1
+ },
+ {
+  "path": "tests/workflow",
+  "files": 13,
+  "lines": 1495,
+  "level": 1
+ },
+ {
+  "path": "valx",
+  "files": 0,
+  "lines": 0,
+  "level": 0
+ }
+]

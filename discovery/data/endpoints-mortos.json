@@ -1,0 +1,93 @@
+[
+ {
+  "method": "GET",
+  "path": "/api/bcb/check/{}",
+  "file": "bcb.py",
+  "func": "check_pending_issues",
+  "lines": 6
+ },
+ {
+  "method": "POST",
+  "path": "/api/cosif-plano",
+  "file": "cosif_plano.py",
+  "func": "upload_tenant",
+  "lines": 13
+ },
+ {
+  "method": "DELETE",
+  "path": "/api/cosif-plano",
+  "file": "cosif_plano.py",
+  "func": "remover_override",
+  "lines": 7
+ },
+ {
+  "method": "GET",
+  "path": "/api/cosif-plano",
+  "file": "cosif_plano.py",
+  "func": "status_override",
+  "lines": 4
+ },
+ {
+  "method": "POST",
+  "path": "/api/reports/acknowledgments/{}/confirm",
+  "file": "distribution.py",
+  "func": "confirm_acknowledgment",
+  "lines": 12
+ },
+ {
+  "method": "POST",
+  "path": "/api/engine3040/responsavel",
+  "file": "engine3040.py",
+  "func": "set_responsavel_competencia",
+  "lines": 33
+ },
+ {
+  "method": "POST",
+  "path": "/api/painel/{}/{}/aferir",
+  "file": "painel.py",
+  "func": "aferir",
+  "lines": 33
+ },
+ {
+  "method": "POST",
+  "path": "/api/policy/reviews/{}/reject",
+  "file": "policy.py",
+  "func": "reject_review",
+  "lines": 7
+ },
+ {
+  "method": "PUT",
+  "path": "/api/quality/dimensions/{}",
+  "file": "quality.py",
+  "func": "update_dimension",
+  "lines": 17
+ },
+ {
+  "method": "POST",
+  "path": "/api/quality/reports/generate",
+  "file": "quality.py",
+  "func": "generate_report",
+  "lines": 11
+ },
+ {
+  "method": "GET",
+  "path": "/api/retification/history",
+  "file": "retification.py",
+  "func": "history",
+  "lines": 4
+ },
+ {
+  "method": "POST",
+  "path": "/api/retification/{}/link-document",
+  "file": "retification.py",
+  "func": "link_document",
+  "lines": 13
+ },
+ {
+  "method": "GET",
+  "path": "/api/users/me/tenants",
+  "file": "users.py",
+  "func": "list_my_tenants",
+  "lines": 25
+ }
+]

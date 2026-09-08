@@ -1,0 +1,824 @@
+{
+ "names": [
+  "acuracia",
+  "completude",
+  "consistencia",
+  "confiabilidade",
+  "integridade",
+  "rastreabilidade",
+  "tempestividade",
+  "acessibilidade",
+  "adaptabilidade",
+  "clareza",
+  "comparabilidade",
+  "relevancia"
+ ],
+ "weights": {
+  "acuracia": 15,
+  "completude": 12,
+  "consistencia": 12,
+  "tempestividade": 12,
+  "rastreabilidade": 10,
+  "integridade": 10,
+  "confiabilidade": 8,
+  "comparabilidade": 5,
+  "clareza": 5,
+  "acessibilidade": 4,
+  "adaptabilidade": 4,
+  "relevancia": 3
+ },
+ "kind": {
+  "acuracia": "medida",
+  "completude": "medida",
+  "consistencia": "medida",
+  "confiabilidade": "medida",
+  "integridade": "binaria",
+  "rastreabilidade": "medida",
+  "tempestividade": "medida",
+  "acessibilidade": "derivada",
+  "adaptabilidade": "derivada",
+  "clareza": "medida",
+  "comparabilidade": "medida",
+  "relevancia": "medida"
+ },
+ "eval": {
+  "acuracia": {
+   "funcs": [
+    "evaluate_accuracy"
+   ],
+   "entradas": [
+    "business_errors",
+    "schema_errors",
+    "total_records"
+   ],
+   "lines": 20
+  },
+  "completude": {
+   "funcs": [
+    "evaluate_completeness"
+   ],
+   "entradas": [
+    "filled_fields",
+    "filled_required",
+    "required_fields",
+    "total_fields"
+   ],
+   "lines": 21
+  },
+  "consistencia": {
+   "funcs": [
+    "evaluate_consistency"
+   ],
+   "entradas": [
+    "cross_validation_errors",
+    "period_comparison_errors",
+    "total_checks"
+   ],
+   "lines": 18
+  },
+  "confiabilidade": {
+   "funcs": [
+    "evaluate_reliability"
+   ],
+   "entradas": [
+    "rejections",
+    "resubmissions",
+    "total_submissions"
+   ],
+   "lines": 18
+  },
+  "integridade": {
+   "funcs": [
+    "evaluate_integrity"
+   ],
+   "entradas": [
+    "file_hash_valid",
+    "truncation_detected"
+   ],
+   "lines": 14
+  },
+  "rastreabilidade": {
+   "funcs": [
+    "evaluate_traceability"
+   ],
+   "entradas": [
+    "has_lineage",
+    "lineage_coverage"
+   ],
+   "lines": 17
+  },
+  "tempestividade": {
+   "funcs": [
+    "evaluate_timeliness"
+   ],
+   "entradas": [
+    "deadline",
+    "pts_por_dia",
+    "submitted_at"
+   ],
+   "lines": 23
+  },
+  "acessibilidade": {
+   "funcs": [
+    "evaluate_accessibility"
+   ],
+   "entradas": [
+    "api_available",
+    "export_formats"
+   ],
+   "lines": 18
+  },
+  "adaptabilidade": {
+   "funcs": [
+    "evaluate_adaptability"
+   ],
+   "entradas": [
+    "normative_changes_handled",
+    "schema_version_current",
+    "total_changes"
+   ],
+   "lines": 21
+  },
+  "clareza": {
+   "funcs": [
+    "evaluate_clarity"
+   ],
+   "entradas": [
+    "dictionary_coverage"
+   ],
+   "lines": 8
+  },
+  "comparabilidade": {
+   "funcs": [
+    "evaluate_comparability"
+   ],
+   "entradas": [
+    "current_records",
+    "faixa_pct",
+    "previous_period_records"
+   ],
+   "lines": 27
+  },
+  "relevancia": {
+   "funcs": [
+    "evaluate_relevance"
+   ],
+   "entradas": [
+    "required_fields_sent",
+    "total_required"
+   ],
+   "lines": 15
+  }
+ },
+ "mods": [
+  {
+   "file": "backend/quality/alerts.py",
+   "lines": 98,
+   "acoplado": false,
+   "sinais": {}
+  },
+  {
+   "file": "backend/quality/capabilities.py",
+   "lines": 27,
+   "acoplado": true,
+   "sinais": {
+    "\"3040\"": 2,
+    "\"3044\"": 2
+   }
+  },
+  {
+   "file": "backend/quality/consistency.py",
+   "lines": 96,
+   "acoplado": true,
+   "sinais": {
+    "\"3040\"": 1,
+    "\"3044\"": 1
+   }
+  },
+  {
+   "file": "backend/quality/cosif_amarracoes.py",
+   "lines": 73,
+   "acoplado": false,
+   "sinais": {}
+  },
+  {
+   "file": "backend/quality/coverage.py",
+   "lines": 11,
+   "acoplado": false,
+   "sinais": {}
+  },
+  {
+   "file": "backend/quality/data_contract_report.py",
+   "lines": 57,
+   "acoplado": false,
+   "sinais": {}
+  },
+  {
+   "file": "backend/quality/data_contract_service.py",
+   "lines": 37,
+   "acoplado": true,
+   "sinais": {
+    "backend.flows": 2,
+    "cadoc_registry": 1
+   }
+  },
+  {
+   "file": "backend/quality/deadlines.py",
+   "lines": 70,
+   "acoplado": true,
+   "sinais": {
+    "\"3040\"": 1,
+    "\"3044\"": 1
+   }
+  },
+  {
+   "file": "backend/quality/dictionary.py",
+   "lines": 74,
+   "acoplado": true,
+   "sinais": {
+    "\"3040\"": 4,
+    "backend.plugins": 2,
+    "\"3044\"": 2,
+    "cadoc_3040": 1,
+    "cadoc_3044": 1,
+    "'3040'": 1
+   }
+  },
+  {
+   "file": "backend/quality/dimensions.py",
+   "lines": 415,
+   "acoplado": false,
+   "sinais": {}
+  },
+  {
+   "file": "backend/quality/dossie_service.py",
+   "lines": 114,
+   "acoplado": true,
+   "sinais": {
+    "backend.flows": 1,
+    "cadoc_arquivados": 1
+   }
+  },
+  {
+   "file": "backend/quality/lineage.py",
+   "lines": 60,
+   "acoplado": false,
+   "sinais": {}
+  },
+  {
+   "file": "backend/quality/onboarding_service.py",
+   "lines": 19,
+   "acoplado": true,
+   "sinais": {
+    "backend.flows": 1
+   }
+  },
+  {
+   "file": "backend/quality/pdf_hash.py",
+   "lines": 74,
+   "acoplado": false,
+   "sinais": {}
+  },
+  {
+   "file": "backend/quality/periods.py",
+   "lines": 17,
+   "acoplado": false,
+   "sinais": {}
+  },
+  {
+   "file": "backend/quality/reconciliation.py",
+   "lines": 198,
+   "acoplado": true,
+   "sinais": {
+    "cadoc_by_cat": 3
+   }
+  },
+  {
+   "file": "backend/quality/reconciliation_service.py",
+   "lines": 299,
+   "acoplado": true,
+   "sinais": {
+    "cadoc_rows": 5,
+    "\"3040\"": 4,
+    "\"3044\"": 2,
+    "backend.plugins": 2,
+    "cadoc_3050": 1,
+    "cadoc_3026": 1
+   }
+  },
+  {
+   "file": "backend/quality/report.py",
+   "lines": 414,
+   "acoplado": false,
+   "sinais": {}
+  },
+  {
+   "file": "backend/quality/report_service.py",
+   "lines": 76,
+   "acoplado": true,
+   "sinais": {
+    "\"3040\"": 1,
+    "\"3044\"": 1
+   }
+  },
+  {
+   "file": "backend/quality/scorer.py",
+   "lines": 43,
+   "acoplado": false,
+   "sinais": {}
+  },
+  {
+   "file": "backend/quality/seeding.py",
+   "lines": 71,
+   "acoplado": true,
+   "sinais": {
+    "backend.api": 1,
+    "cadoc_types": 1,
+    "backend.flows": 1,
+    "\"3040\"": 1
+   }
+  },
+  {
+   "file": "backend/quality/submissions.py",
+   "lines": 50,
+   "acoplado": true,
+   "sinais": {
+    "backend.api": 1,
+    "backend.worker": 1
+   }
+  },
+  {
+   "file": "backend/quality/validation_levels.py",
+   "lines": 28,
+   "acoplado": true,
+   "sinais": {
+    "\"3040\"": 1,
+    "\"3044\"": 1
+   }
+  },
+  {
+   "file": "backend/quality/contabil/rollup.py",
+   "lines": 41,
+   "acoplado": false,
+   "sinais": {}
+  },
+  {
+   "file": "backend/quality/context/base.py",
+   "lines": 13,
+   "acoplado": false,
+   "sinais": {}
+  },
+  {
+   "file": "backend/quality/context/builder_3040.py",
+   "lines": 170,
+   "acoplado": true,
+   "sinais": {
+    "\"3040\"": 7,
+    "backend.api": 4
+   }
+  },
+  {
+   "file": "backend/quality/context/builder_3044.py",
+   "lines": 158,
+   "acoplado": true,
+   "sinais": {
+    "\"3044\"": 7,
+    "backend.api": 4
+   }
+  },
+  {
+   "file": "backend/quality/context/registry.py",
+   "lines": 45,
+   "acoplado": false,
+   "sinais": {}
+  },
+  {
+   "file": "backend/quality/correlations/adapters.py",
+   "lines": 122,
+   "acoplado": true,
+   "sinais": {
+    "backend.flows": 1
+   }
+  },
+  {
+   "file": "backend/quality/correlations/annotations.py",
+   "lines": 20,
+   "acoplado": false,
+   "sinais": {}
+  },
+  {
+   "file": "backend/quality/correlations/catalog.py",
+   "lines": 90,
+   "acoplado": true,
+   "sinais": {
+    "\"3040\"": 4,
+    "\"3050\"": 1,
+    "\"3026\"": 1
+   }
+  },
+  {
+   "file": "backend/quality/correlations/classify.py",
+   "lines": 16,
+   "acoplado": false,
+   "sinais": {}
+  },
+  {
+   "file": "backend/quality/correlations/engine.py",
+   "lines": 66,
+   "acoplado": false,
+   "sinais": {}
+  },
+  {
+   "file": "backend/quality/correlations/evaluators.py",
+   "lines": 120,
+   "acoplado": true,
+   "sinais": {
+    "\"3040\"": 2
+   }
+  }
+ ],
+ "saidas": [
+  {
+   "de": "backend/quality/data_contract_service.py",
+   "para": "backend.flows.cadoc_registry",
+   "pkg": "flows",
+   "importa": "get_flow_spec"
+  },
+  {
+   "de": "backend/quality/data_contract_service.py",
+   "para": "backend.flows.data_contract",
+   "pkg": "flows",
+   "importa": "catalogo_canonico, montar_contrato"
+  },
+  {
+   "de": "backend/quality/deadlines.py",
+   "para": "backend.storage.postgres",
+   "pkg": "storage",
+   "importa": "get_connection"
+  },
+  {
+   "de": "backend/quality/dictionary.py",
+   "para": "backend.plugins.cadoc_3040.schema",
+   "pkg": "plugins",
+   "importa": "("
+  },
+  {
+   "de": "backend/quality/dictionary.py",
+   "para": "backend.plugins.cadoc_3044.schema",
+   "pkg": "plugins",
+   "importa": "EVENT_FIELDS"
+  },
+  {
+   "de": "backend/quality/dossie_service.py",
+   "para": "backend.flows.dossie",
+   "pkg": "flows",
+   "importa": "intervalo_de, montar_manifesto, montar_zip"
+  },
+  {
+   "de": "backend/quality/onboarding_service.py",
+   "para": "backend.flows.onboarding_readiness",
+   "pkg": "flows",
+   "importa": "overview_item"
+  },
+  {
+   "de": "backend/quality/pdf_hash.py",
+   "para": "backend.storage.document_hash_store",
+   "pkg": "storage",
+   "importa": "DocumentHashStore"
+  },
+  {
+   "de": "backend/quality/reconciliation_service.py",
+   "para": "backend.contabil_transforms",
+   "pkg": "contabil_transforms",
+   "importa": "registry"
+  },
+  {
+   "de": "backend/quality/reconciliation_service.py",
+   "para": "backend.plugins.cadoc_3050.equivalencia",
+   "pkg": "plugins",
+   "importa": "codigos_3040_para_modalidade"
+  },
+  {
+   "de": "backend/quality/reconciliation_service.py",
+   "para": "backend.plugins.cadoc_3026.engine",
+   "pkg": "plugins",
+   "importa": "selector"
+  },
+  {
+   "de": "backend/quality/seeding.py",
+   "para": "backend.api.deps",
+   "pkg": "api",
+   "importa": "get_quality_store"
+  },
+  {
+   "de": "backend/quality/seeding.py",
+   "para": "backend.flows.calendario_bancario",
+   "pkg": "flows",
+   "importa": "add_dias_uteis"
+  },
+  {
+   "de": "backend/quality/submissions.py",
+   "para": "backend.api.deps",
+   "pkg": "api",
+   "importa": "get_submission_store"
+  },
+  {
+   "de": "backend/quality/submissions.py",
+   "para": "backend.services.tenant_features",
+   "pkg": "services",
+   "importa": "tenant_features"
+  },
+  {
+   "de": "backend/quality/submissions.py",
+   "para": "backend.worker.tasks.quality_task",
+   "pkg": "worker",
+   "importa": "assess_quality"
+  },
+  {
+   "de": "backend/quality/context/builder_3040.py",
+   "para": "backend.api.deps",
+   "pkg": "api",
+   "importa": "get_document3040_store"
+  },
+  {
+   "de": "backend/quality/context/builder_3040.py",
+   "para": "backend.api.deps",
+   "pkg": "api",
+   "importa": "get_mov3040_store"
+  },
+  {
+   "de": "backend/quality/context/builder_3040.py",
+   "para": "backend.api.deps",
+   "pkg": "api",
+   "importa": "get_quality_store"
+  },
+  {
+   "de": "backend/quality/context/builder_3040.py",
+   "para": "backend.api.deps",
+   "pkg": "api",
+   "importa": "get_submission_store"
+  },
+  {
+   "de": "backend/quality/context/builder_3044.py",
+   "para": "backend.api.deps",
+   "pkg": "api",
+   "importa": "get_document_store"
+  },
+  {
+   "de": "backend/quality/context/builder_3044.py",
+   "para": "backend.api.deps",
+   "pkg": "api",
+   "importa": "get_mov3044_store"
+  },
+  {
+   "de": "backend/quality/context/builder_3044.py",
+   "para": "backend.api.deps",
+   "pkg": "api",
+   "importa": "get_quality_store"
+  },
+  {
+   "de": "backend/quality/context/builder_3044.py",
+   "para": "backend.api.deps",
+   "pkg": "api",
+   "importa": "get_submission_store"
+  },
+  {
+   "de": "backend/quality/correlations/adapters.py",
+   "para": "backend.flows.periods",
+   "pkg": "flows",
+   "importa": "business_days_of_month, weeks_of_month"
+  }
+ ],
+ "recon": [
+  {
+   "file": "backend/api/routes/reconciliation.py",
+   "hits": 53,
+   "lines": 287
+  },
+  {
+   "file": "backend/flows/resolvers.py",
+   "hits": 44,
+   "lines": 201
+  },
+  {
+   "file": "backend/quality/reconciliation_service.py",
+   "hits": 23,
+   "lines": 299
+  },
+  {
+   "file": "backend/demo/blocks/communication.py",
+   "hits": 21,
+   "lines": 114
+  },
+  {
+   "file": "backend/api/routes/painel.py",
+   "hits": 20,
+   "lines": 956
+  },
+  {
+   "file": "backend/quality/correlations/evaluators.py",
+   "hits": 20,
+   "lines": 120
+  },
+  {
+   "file": "backend/storage/reconciliation_store.py",
+   "hits": 20,
+   "lines": 131
+  },
+  {
+   "file": "backend/worker/tasks/engine3026_tasks.py",
+   "hits": 17,
+   "lines": 391
+  },
+  {
+   "file": "backend/flows/data_adapter.py",
+   "hits": 15,
+   "lines": 190
+  },
+  {
+   "file": "backend/api/routes/engine3040.py",
+   "hits": 13,
+   "lines": 1421
+  },
+  {
+   "file": "backend/api/deps.py",
+   "hits": 12,
+   "lines": 423
+  },
+  {
+   "file": "backend/flows/cadoc_registry.py",
+   "hits": 9,
+   "lines": 176
+  },
+  {
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "hits": 9,
+   "lines": 1449
+  },
+  {
+   "file": "backend/api/routes/engine3026.py",
+   "hits": 8,
+   "lines": 252
+  },
+  {
+   "file": "backend/api/routes/engine3050.py",
+   "hits": 8,
+   "lines": 278
+  },
+  {
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "hits": 8,
+   "lines": 1314
+  },
+  {
+   "file": "backend/quality/correlations/classify.py",
+   "hits": 7,
+   "lines": 16
+  },
+  {
+   "file": "backend/quality/data_contract_service.py",
+   "hits": 5,
+   "lines": 37
+  },
+  {
+   "file": "backend/quality/reconciliation.py",
+   "hits": 5,
+   "lines": 198
+  },
+  {
+   "file": "backend/api/routes/pecld.py",
+   "hits": 4,
+   "lines": 94
+  },
+  {
+   "file": "backend/demo/blocks/sources.py",
+   "hits": 4,
+   "lines": 215
+  },
+  {
+   "file": "backend/plugins/cadoc_3050/equivalencia.py",
+   "hits": 4,
+   "lines": 890
+  },
+  {
+   "file": "backend/quality/cosif_amarracoes.py",
+   "hits": 4,
+   "lines": 73
+  },
+  {
+   "file": "backend/storage/mov3040_store.py",
+   "hits": 4,
+   "lines": 608
+  },
+  {
+   "file": "backend/quality/correlations/adapters.py",
+   "hits": 3,
+   "lines": 122
+  },
+  {
+   "file": "backend/quality/correlations/annotations.py",
+   "hits": 3,
+   "lines": 20
+  },
+  {
+   "file": "backend/api/main.py",
+   "hits": 2,
+   "lines": 297
+  },
+  {
+   "file": "backend/api/routes/correlations.py",
+   "hits": 2,
+   "lines": 174
+  },
+  {
+   "file": "backend/contabil_transforms/contabil_csv_cosif.py",
+   "hits": 2,
+   "lines": 61
+  },
+  {
+   "file": "backend/demo/blocks/documents.py",
+   "hits": 2,
+   "lines": 319
+  },
+  {
+   "file": "backend/flows/data_contract.py",
+   "hits": 2,
+   "lines": 80
+  },
+  {
+   "file": "backend/pecld/engine.py",
+   "hits": 2,
+   "lines": 87
+  },
+  {
+   "file": "backend/plugins/cadoc_3026/engine/selector.py",
+   "hits": 2,
+   "lines": 105
+  },
+  {
+   "file": "backend/quality/correlations/catalog.py",
+   "hits": 2,
+   "lines": 90
+  },
+  {
+   "file": "backend/quality/correlations/engine.py",
+   "hits": 2,
+   "lines": 66
+  },
+  {
+   "file": "backend/storage/correlation_store.py",
+   "hits": 2,
+   "lines": 82
+  },
+  {
+   "file": "backend/demo/runner.py",
+   "hits": 1,
+   "lines": 111
+  },
+  {
+   "file": "backend/demo/blocks/governance.py",
+   "hits": 1,
+   "lines": 69
+  },
+  {
+   "file": "backend/flows/cockpit.py",
+   "hits": 1,
+   "lines": 24
+  },
+  {
+   "file": "backend/flows/periods.py",
+   "hits": 1,
+   "lines": 287
+  },
+  {
+   "file": "backend/plugins/base.py",
+   "hits": 1,
+   "lines": 43
+  },
+  {
+   "file": "backend/plugins/cadoc_3050/layout_v11.py",
+   "hits": 1,
+   "lines": 370
+  },
+  {
+   "file": "backend/storage/contabil_mapping_store.py",
+   "hits": 1,
+   "lines": 44
+  },
+  {
+   "file": "backend/storage/mov3050_store.py",
+   "hits": 1,
+   "lines": 199
+  },
+  {
+   "file": "backend/storage/operational_competencia_store.py",
+   "hits": 1,
+   "lines": 280
+  },
+  {
+   "file": "backend/storage/policy_store.py",
+   "hits": 1,
+   "lines": 257
+  }
+ ]
+}

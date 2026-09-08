@@ -1,0 +1,1082 @@
+{
+ "tasks": [
+  {
+   "name": "backend.worker.tasks.alert_task.check_deadlines",
+   "func": "check_deadlines",
+   "module": "backend/worker/tasks/alert_task.py",
+   "lines": 16,
+   "opts": {
+    "name": "backend.worker.tasks.alert_task.check_deadlines"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.alert_task.check_quality_scores",
+   "func": "check_quality_scores",
+   "module": "backend/worker/tasks/alert_task.py",
+   "lines": 21,
+   "opts": {
+    "name": "backend.worker.tasks.alert_task.check_quality_scores"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.alert_task.check_stuck_jobs",
+   "func": "check_stuck_jobs",
+   "module": "backend/worker/tasks/alert_task.py",
+   "lines": 46,
+   "opts": {
+    "name": "backend.worker.tasks.alert_task.check_stuck_jobs"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.alert_task.check_schema_drift",
+   "func": "check_schema_drift",
+   "module": "backend/worker/tasks/alert_task.py",
+   "lines": 7,
+   "opts": {
+    "name": "backend.worker.tasks.alert_task.check_schema_drift"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.alert_task.check_manifestacoes",
+   "func": "check_manifestacoes",
+   "module": "backend/worker/tasks/alert_task.py",
+   "lines": 17,
+   "opts": {
+    "name": "backend.worker.tasks.alert_task.check_manifestacoes"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.alert_task.check_report_due",
+   "func": "check_report_due",
+   "module": "backend/worker/tasks/alert_task.py",
+   "lines": 20,
+   "opts": {
+    "name": "backend.worker.tasks.alert_task.check_report_due"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.bacen_ciclo_task.processar_veredito",
+   "func": "processar_veredito",
+   "module": "backend/worker/tasks/bacen_ciclo_task.py",
+   "lines": 3,
+   "opts": {
+    "name": "backend.worker.tasks.bacen_ciclo_task.processar_veredito"
+   },
+   "callers": [
+    "rota"
+   ],
+   "caller_src": [
+    "backend/api/routes/bacen_ciclo.py"
+   ],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.backup_task.backup_validator_artifacts",
+   "func": "backup_validator_artifacts",
+   "module": "backend/worker/tasks/backup_task.py",
+   "lines": 15,
+   "opts": {
+    "name": "backend.worker.tasks.backup_task.backup_validator_artifacts"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.backup_task.run_backup",
+   "func": "run_backup",
+   "module": "backend/worker/tasks/backup_task.py",
+   "lines": 39,
+   "opts": {
+    "name": "backend.worker.tasks.backup_task.run_backup"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.backup_task.check_backup_stale",
+   "func": "check_backup_stale",
+   "module": "backend/worker/tasks/backup_task.py",
+   "lines": 4,
+   "opts": {
+    "name": "backend.worker.tasks.backup_task.check_backup_stale"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.backup_task.verify_latest_backup",
+   "func": "verify_latest_backup",
+   "module": "backend/worker/tasks/backup_task.py",
+   "lines": 18,
+   "opts": {
+    "name": "backend.worker.tasks.backup_task.verify_latest_backup"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.cosif_tasks.process_cosif_file",
+   "func": "process_cosif_file",
+   "module": "backend/worker/tasks/cosif_tasks.py",
+   "lines": 28,
+   "opts": {
+    "name": "backend.worker.tasks.cosif_tasks.process_cosif_file"
+   },
+   "callers": [
+    "rota"
+   ],
+   "caller_src": [
+    "backend/api/routes/cosif.py"
+   ],
+   "queue": "import.file",
+   "route_origin": "spec(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.customer_engagement_task.engajar_clientes",
+   "func": "engajar_clientes",
+   "module": "backend/worker/tasks/customer_engagement_task.py",
+   "lines": 13,
+   "opts": {
+    "name": "backend.worker.tasks.customer_engagement_task.engajar_clientes"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.distribution_task.send_report_emails",
+   "func": "send_report_emails",
+   "module": "backend/worker/tasks/distribution_task.py",
+   "lines": 13,
+   "opts": {
+    "name": "backend.worker.tasks.distribution_task.send_report_emails"
+   },
+   "callers": [
+    "rota"
+   ],
+   "caller_src": [
+    "backend/api/routes/distribution.py"
+   ],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.distribution_task.check_pending_acknowledgments",
+   "func": "check_pending_acknowledgments",
+   "module": "backend/worker/tasks/distribution_task.py",
+   "lines": 11,
+   "opts": {
+    "name": "backend.worker.tasks.distribution_task.check_pending_acknowledgments"
+   },
+   "callers": [],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.engine3026_tasks.process_3026_file",
+   "func": "process_3026_file",
+   "module": "backend/worker/tasks/engine3026_tasks.py",
+   "lines": 17,
+   "opts": {
+    "name": "backend.worker.tasks.engine3026_tasks.process_3026_file"
+   },
+   "callers": [
+    "rota"
+   ],
+   "caller_src": [
+    "backend/api/routes/engine3026.py"
+   ],
+   "queue": "import.file",
+   "route_origin": "spec(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.engine3026_tasks.consolidate_3026",
+   "func": "consolidate_3026",
+   "module": "backend/worker/tasks/engine3026_tasks.py",
+   "lines": 31,
+   "opts": {
+    "name": "backend.worker.tasks.engine3026_tasks.consolidate_3026"
+   },
+   "callers": [
+    "rota"
+   ],
+   "caller_src": [
+    "backend/api/routes/engine3026.py"
+   ],
+   "queue": "cadoc.generate",
+   "route_origin": "spec"
+  },
+  {
+   "name": "backend.worker.tasks.engine3026_tasks.alert_prazo_3026",
+   "func": "alert_prazo_3026",
+   "module": "backend/worker/tasks/engine3026_tasks.py",
+   "lines": 38,
+   "opts": {
+    "name": "backend.worker.tasks.engine3026_tasks.alert_prazo_3026"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "spec(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.engine3040_tasks.consolidate_3040",
+   "func": "consolidate_3040",
+   "module": "backend/worker/tasks/engine3040_tasks.py",
+   "lines": 42,
+   "opts": {
+    "name": "backend.worker.tasks.engine3040_tasks.consolidate_3040"
+   },
+   "callers": [
+    "rota"
+   ],
+   "caller_src": [
+    "backend/api/routes/engine3040.py",
+    "backend/api/routes/retification.py"
+   ],
+   "queue": "import.file",
+   "route_origin": "spec(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.engine3040_tasks.process_3040_file",
+   "func": "process_3040_file",
+   "module": "backend/worker/tasks/engine3040_tasks.py",
+   "lines": 35,
+   "opts": {
+    "name": "backend.worker.tasks.engine3040_tasks.process_3040_file"
+   },
+   "callers": [
+    "rota"
+   ],
+   "caller_src": [
+    "backend/api/routes/engine3040.py"
+   ],
+   "queue": "import.file",
+   "route_origin": "spec(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.engine3040_tasks.sftp_watch_3040",
+   "func": "sftp_watch_3040",
+   "module": "backend/worker/tasks/engine3040_tasks.py",
+   "lines": 93,
+   "opts": {
+    "name": "backend.worker.tasks.engine3040_tasks.sftp_watch_3040"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "spec(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.engine3040_tasks.alert_prazo_3040",
+   "func": "alert_prazo_3040",
+   "module": "backend/worker/tasks/engine3040_tasks.py",
+   "lines": 67,
+   "opts": {
+    "name": "backend.worker.tasks.engine3040_tasks.alert_prazo_3040"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "spec(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.engine3044_tasks.process_3044_file",
+   "func": "process_3044_file",
+   "module": "backend/worker/tasks/engine3044_tasks.py",
+   "lines": 35,
+   "opts": {
+    "name": "backend.worker.tasks.engine3044_tasks.process_3044_file"
+   },
+   "callers": [
+    "rota"
+   ],
+   "caller_src": [
+    "backend/api/routes/engine3044.py"
+   ],
+   "queue": "import.file",
+   "route_origin": "spec(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.engine3044_tasks.regenerate_partial_3044",
+   "func": "regenerate_partial_3044",
+   "module": "backend/worker/tasks/engine3044_tasks.py",
+   "lines": 35,
+   "opts": {
+    "name": "backend.worker.tasks.engine3044_tasks.regenerate_partial_3044"
+   },
+   "callers": [],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "spec(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.engine3044_tasks.alert_fonte_pendente",
+   "func": "alert_fonte_pendente",
+   "module": "backend/worker/tasks/engine3044_tasks.py",
+   "lines": 37,
+   "opts": {
+    "name": "backend.worker.tasks.engine3044_tasks.alert_fonte_pendente"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "spec(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.engine3044_tasks.alert_prazo_documento",
+   "func": "alert_prazo_documento",
+   "module": "backend/worker/tasks/engine3044_tasks.py",
+   "lines": 38,
+   "opts": {
+    "name": "backend.worker.tasks.engine3044_tasks.alert_prazo_documento"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "spec(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.engine3044_tasks.sftp_watch",
+   "func": "sftp_watch",
+   "module": "backend/worker/tasks/engine3044_tasks.py",
+   "lines": 92,
+   "opts": {
+    "name": "backend.worker.tasks.engine3044_tasks.sftp_watch"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "spec(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.engine3044_tasks.consolidate_3044",
+   "func": "consolidate_3044",
+   "module": "backend/worker/tasks/engine3044_tasks.py",
+   "lines": 38,
+   "opts": {
+    "name": "backend.worker.tasks.engine3044_tasks.consolidate_3044"
+   },
+   "callers": [
+    "rota"
+   ],
+   "caller_src": [
+    "backend/api/routes/engine3044.py"
+   ],
+   "queue": "import.file",
+   "route_origin": "spec(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.engine3050_tasks.process_3050_file",
+   "func": "process_3050_file",
+   "module": "backend/worker/tasks/engine3050_tasks.py",
+   "lines": 29,
+   "opts": {
+    "name": "backend.worker.tasks.engine3050_tasks.process_3050_file"
+   },
+   "callers": [
+    "rota"
+   ],
+   "caller_src": [
+    "backend/api/routes/engine3050.py"
+   ],
+   "queue": "import.file",
+   "route_origin": "spec(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.engine3050_tasks.consolidate_3050",
+   "func": "consolidate_3050",
+   "module": "backend/worker/tasks/engine3050_tasks.py",
+   "lines": 34,
+   "opts": {
+    "name": "backend.worker.tasks.engine3050_tasks.consolidate_3050"
+   },
+   "callers": [
+    "rota"
+   ],
+   "caller_src": [
+    "backend/api/routes/engine3050.py"
+   ],
+   "queue": "cadoc.generate",
+   "route_origin": "spec"
+  },
+  {
+   "name": "backend.worker.tasks.engine3050_tasks.sftp_watch_3050",
+   "func": "sftp_watch_3050",
+   "module": "backend/worker/tasks/engine3050_tasks.py",
+   "lines": 43,
+   "opts": {
+    "name": "backend.worker.tasks.engine3050_tasks.sftp_watch_3050"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "spec(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.engine3050_tasks.alert_prazo_3050",
+   "func": "alert_prazo_3050",
+   "module": "backend/worker/tasks/engine3050_tasks.py",
+   "lines": 57,
+   "opts": {
+    "name": "backend.worker.tasks.engine3050_tasks.alert_prazo_3050"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "spec(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.governance_task.auto_gerar_relatorios_semestrais",
+   "func": "auto_gerar_relatorios_semestrais",
+   "module": "backend/worker/tasks/governance_task.py",
+   "lines": 30,
+   "opts": {
+    "name": "backend.worker.tasks.governance_task.auto_gerar_relatorios_semestrais"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.governance_task.arquivar_cadoc_worm",
+   "func": "arquivar_cadoc_worm",
+   "module": "backend/worker/tasks/governance_task.py",
+   "lines": 42,
+   "opts": {
+    "name": "backend.worker.tasks.governance_task.arquivar_cadoc_worm"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.import_task.process_import",
+   "func": "process_import",
+   "module": "backend/worker/tasks/import_task.py",
+   "lines": 3,
+   "opts": {
+    "name": "backend.worker.tasks.import_task.process_import"
+   },
+   "callers": [],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.ingestion_task.check_ingestion",
+   "func": "check_ingestion",
+   "module": "backend/worker/tasks/ingestion_task.py",
+   "lines": 2,
+   "opts": {
+    "name": "backend.worker.tasks.ingestion_task.check_ingestion"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.moat_task.harvest_moat",
+   "func": "harvest_moat",
+   "module": "backend/worker/tasks/moat_task.py",
+   "lines": 44,
+   "opts": {
+    "name": "backend.worker.tasks.moat_task.harvest_moat"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.notification_task.send_notification",
+   "func": "send_notification",
+   "module": "backend/worker/tasks/notification_task.py",
+   "lines": 12,
+   "opts": {
+    "name": "backend.worker.tasks.notification_task.send_notification"
+   },
+   "callers": [
+    "task"
+   ],
+   "caller_src": [
+    "backend/worker/app.py"
+   ],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.ops_task.generate_obligations",
+   "func": "generate_obligations",
+   "module": "backend/worker/tasks/ops_task.py",
+   "lines": 2,
+   "opts": {
+    "name": "backend.worker.tasks.ops_task.generate_obligations"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.ops_task.check_obligation_deadlines",
+   "func": "check_obligation_deadlines",
+   "module": "backend/worker/tasks/ops_task.py",
+   "lines": 2,
+   "opts": {
+    "name": "backend.worker.tasks.ops_task.check_obligation_deadlines"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.ops_task.backfill_sla_assign",
+   "func": "backfill_sla_assign",
+   "module": "backend/worker/tasks/ops_task.py",
+   "lines": 2,
+   "opts": {
+    "name": "backend.worker.tasks.ops_task.backfill_sla_assign"
+   },
+   "callers": [],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.ops_task.sweep_sftp_processing",
+   "func": "sweep_sftp_processing",
+   "module": "backend/worker/tasks/ops_task.py",
+   "lines": 4,
+   "opts": {
+    "name": "backend.worker.tasks.ops_task.sweep_sftp_processing"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.pecld_tasks.compute_pecld",
+   "func": "compute_pecld",
+   "module": "backend/worker/tasks/pecld_tasks.py",
+   "lines": 3,
+   "opts": {
+    "name": "backend.worker.tasks.pecld_tasks.compute_pecld"
+   },
+   "callers": [
+    "rota"
+   ],
+   "caller_src": [
+    "backend/api/routes/pecld.py"
+   ],
+   "queue": "quality.assess",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.quality_task.assess_quality",
+   "func": "assess_quality",
+   "module": "backend/worker/tasks/quality_task.py",
+   "lines": 14,
+   "opts": {
+    "name": "backend.worker.tasks.quality_task.assess_quality"
+   },
+   "callers": [
+    "outro"
+   ],
+   "caller_src": [
+    "backend/quality/submissions.py"
+   ],
+   "queue": "quality.assess",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.radar_task.check_regulatory_versions",
+   "func": "check_regulatory_versions",
+   "module": "backend/worker/tasks/radar_task.py",
+   "lines": 2,
+   "opts": {
+    "name": "backend.worker.tasks.radar_task.check_regulatory_versions"
+   },
+   "callers": [
+    "beat",
+    "rota"
+   ],
+   "caller_src": [
+    "backend/api/routes/operations.py"
+   ],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.radar_task.assess_regulatory_change",
+   "func": "assess_regulatory_change",
+   "module": "backend/worker/tasks/radar_task.py",
+   "lines": 2,
+   "opts": {
+    "name": "backend.worker.tasks.radar_task.assess_regulatory_change"
+   },
+   "callers": [
+    "rota",
+    "task"
+   ],
+   "caller_src": [
+    "backend/api/routes/operations.py",
+    "backend/worker/tasks/radar_web_task.py"
+   ],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.radar_web_task.check_web_sources",
+   "func": "check_web_sources",
+   "module": "backend/worker/tasks/radar_web_task.py",
+   "lines": 2,
+   "opts": {
+    "name": "backend.worker.tasks.radar_web_task.check_web_sources"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.radar_web_task.web_sweep",
+   "func": "web_sweep",
+   "module": "backend/worker/tasks/radar_web_task.py",
+   "lines": 3,
+   "opts": {
+    "name": "backend.worker.tasks.radar_web_task.web_sweep",
+    "soft_time_limit": "900",
+    "time_limit": "960"
+   },
+   "callers": [
+    "beat",
+    "rota"
+   ],
+   "caller_src": [
+    "backend/api/routes/operations.py"
+   ],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.remediacao_task.diagnose_incident",
+   "func": "diagnose_incident",
+   "module": "backend/worker/tasks/remediacao_task.py",
+   "lines": 2,
+   "opts": {
+    "name": "backend.worker.tasks.remediacao_task.diagnose_incident"
+   },
+   "callers": [
+    "rota"
+   ],
+   "caller_src": [
+    "backend/api/routes/operations.py"
+   ],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.remediacao_task.diagnose_pending_incidents",
+   "func": "diagnose_pending_incidents",
+   "module": "backend/worker/tasks/remediacao_task.py",
+   "lines": 2,
+   "opts": {
+    "name": "backend.worker.tasks.remediacao_task.diagnose_pending_incidents"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.schema_migration_task.migrate_tenant_schema",
+   "func": "migrate_tenant_schema",
+   "module": "backend/worker/tasks/schema_migration_task.py",
+   "lines": 6,
+   "opts": {
+    "name": "backend.worker.tasks.schema_migration_task.migrate_tenant_schema",
+    "bind": "True",
+    "max_retries": "MAX_RETRIES"
+   },
+   "callers": [],
+   "caller_src": [],
+   "queue": "schema.migrate",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.schema_migration_task.sweep_tenant_schemas",
+   "func": "sweep_tenant_schemas",
+   "module": "backend/worker/tasks/schema_migration_task.py",
+   "lines": 22,
+   "opts": {
+    "name": "backend.worker.tasks.schema_migration_task.sweep_tenant_schemas"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "schema.migrate",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.tenant_purge_task.purge_deleted_tenants",
+   "func": "purge_deleted_tenants",
+   "module": "backend/worker/tasks/tenant_purge_task.py",
+   "lines": 2,
+   "opts": {
+    "name": "backend.worker.tasks.tenant_purge_task.purge_deleted_tenants"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.validate_task.validate_submission",
+   "func": "validate_submission",
+   "module": "backend/worker/tasks/validate_task.py",
+   "lines": 3,
+   "opts": {
+    "name": "backend.worker.tasks.validate_task.validate_submission"
+   },
+   "callers": [],
+   "caller_src": [],
+   "queue": "cadoc.validate",
+   "route_origin": "manual(glob)"
+  },
+  {
+   "name": "backend.worker.tasks.validator_update_task.check_scr_validator_update",
+   "func": "check_scr_validator_update",
+   "module": "backend/worker/tasks/validator_update_task.py",
+   "lines": 32,
+   "opts": {
+    "name": "backend.worker.tasks.validator_update_task.check_scr_validator_update"
+   },
+   "callers": [
+    "beat"
+   ],
+   "caller_src": [],
+   "queue": "import.file",
+   "route_origin": "manual(glob)"
+  }
+ ],
+ "beat": {
+  "check-deadlines": {
+   "task": "backend.worker.tasks.alert_task.check_deadlines",
+   "schedule": 3600.0
+  },
+  "check-quality-scores": {
+   "task": "backend.worker.tasks.alert_task.check_quality_scores",
+   "schedule": 86400.0
+  },
+  "check-report-due": {
+   "task": "backend.worker.tasks.alert_task.check_report_due",
+   "schedule": 86400.0
+  },
+  "check-manifestacoes": {
+   "task": "backend.worker.tasks.alert_task.check_manifestacoes",
+   "schedule": 86400.0
+  },
+  "check-schema-drift": {
+   "task": "backend.worker.tasks.alert_task.check_schema_drift",
+   "schedule": 86400.0
+  },
+  "check-stuck-jobs": {
+   "task": "backend.worker.tasks.alert_task.check_stuck_jobs",
+   "schedule": 1800.0
+  },
+  "sftp-watch-3044": {
+   "task": "backend.worker.tasks.engine3044_tasks.sftp_watch",
+   "schedule": 300.0
+  },
+  "alert-fonte-pendente-3044": {
+   "task": "backend.worker.tasks.engine3044_tasks.alert_fonte_pendente",
+   "schedule": 1800.0
+  },
+  "alert-prazo-documento-3044": {
+   "task": "backend.worker.tasks.engine3044_tasks.alert_prazo_documento",
+   "schedule": 86400.0
+  },
+  "sftp-watch-3040": {
+   "task": "backend.worker.tasks.engine3040_tasks.sftp_watch_3040",
+   "schedule": 300.0
+  },
+  "alert-prazo-3040": {
+   "task": "backend.worker.tasks.engine3040_tasks.alert_prazo_3040",
+   "schedule": 86400.0
+  },
+  "sftp-watch-3050": {
+   "task": "backend.worker.tasks.engine3050_tasks.sftp_watch_3050",
+   "schedule": 300.0
+  },
+  "alert-prazo-3050": {
+   "task": "backend.worker.tasks.engine3050_tasks.alert_prazo_3050",
+   "schedule": 86400.0
+  },
+  "alert-prazo-3026": {
+   "task": "backend.worker.tasks.engine3026_tasks.alert_prazo_3026",
+   "schedule": 86400.0
+  },
+  "backup-diario": {
+   "task": "backend.worker.tasks.backup_task.run_backup",
+   "schedule": 86400.0
+  },
+  "check-backup-stale": {
+   "task": "backend.worker.tasks.backup_task.check_backup_stale",
+   "schedule": 21600.0
+  },
+  "verify-backup-semanal": {
+   "task": "backend.worker.tasks.backup_task.verify_latest_backup",
+   "schedule": 604800.0
+  },
+  "backup-validador-semanal": {
+   "task": "backend.worker.tasks.backup_task.backup_validator_artifacts",
+   "schedule": 604800.0
+  },
+  "sweep-tenant-schemas": {
+   "task": "backend.worker.tasks.schema_migration_task.sweep_tenant_schemas",
+   "schedule": 900.0
+  },
+  "purge-deleted-tenants": {
+   "task": "backend.worker.tasks.tenant_purge_task.purge_deleted_tenants",
+   "schedule": 86400.0
+  },
+  "ops-generate-obligations": {
+   "task": "backend.worker.tasks.ops_task.generate_obligations",
+   "schedule": 86400.0
+  },
+  "ops-check-deadlines": {
+   "task": "backend.worker.tasks.ops_task.check_obligation_deadlines",
+   "schedule": 7200.0
+  },
+  "ops-sweep-sftp-processing": {
+   "task": "backend.worker.tasks.ops_task.sweep_sftp_processing",
+   "schedule": 21600.0
+  },
+  "ops-check-ingestion": {
+   "task": "backend.worker.tasks.ingestion_task.check_ingestion",
+   "schedule": 900.0
+  },
+  "radar-check-versions": {
+   "task": "backend.worker.tasks.radar_task.check_regulatory_versions",
+   "schedule": 86400.0
+  },
+  "radar-check-web-sources": {
+   "task": "backend.worker.tasks.radar_web_task.check_web_sources",
+   "schedule": 86400.0
+  },
+  "radar-web-sweep": {
+   "task": "backend.worker.tasks.radar_web_task.web_sweep",
+   "schedule": 604800.0
+  },
+  "remediacao-diagnose-pending": {
+   "task": "backend.worker.tasks.remediacao_task.diagnose_pending_incidents",
+   "schedule": 1200.0
+  },
+  "engajar-clientes-diario": {
+   "task": "backend.worker.tasks.customer_engagement_task.engajar_clientes",
+   "schedule": 86400.0
+  },
+  "harvest-moat-diario": {
+   "task": "backend.worker.tasks.moat_task.harvest_moat",
+   "schedule": 86400.0
+  },
+  "auto-semestral-diario": {
+   "task": "backend.worker.tasks.governance_task.auto_gerar_relatorios_semestrais",
+   "schedule": 86400.0
+  },
+  "arquivar-cadoc-worm-semanal": {
+   "task": "backend.worker.tasks.governance_task.arquivar_cadoc_worm",
+   "schedule": 604800.0
+  },
+  "check-validador-scr-semanal": {
+   "task": "backend.worker.tasks.validator_update_task.check_scr_validator_update",
+   "schedule": 604800.0
+  }
+ },
+ "routes_manual": {
+  "backend.worker.tasks.import_task.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.validate_task.*": {
+   "queue": "cadoc.validate"
+  },
+  "backend.worker.tasks.quality_task.*": {
+   "queue": "quality.assess"
+  },
+  "backend.worker.tasks.distribution_task.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.backup_task.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.notification_task.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.alert_task.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.ops_task.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.tenant_purge_task.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.schema_migration_task.*": {
+   "queue": "schema.migrate"
+  },
+  "backend.worker.tasks.ingestion_task.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.radar_task.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.radar_web_task.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.remediacao_task.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.bacen_ciclo_task.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.customer_engagement_task.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.governance_task.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.moat_task.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.pecld_tasks.*": {
+   "queue": "quality.assess"
+  },
+  "backend.worker.tasks.validator_update_task.*": {
+   "queue": "import.file"
+  }
+ },
+ "derived": {
+  "backend.worker.tasks.cosif_tasks.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.engine3026_tasks.consolidate_3026": {
+   "queue": "cadoc.generate"
+  },
+  "backend.worker.tasks.engine3026_tasks.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.engine3050_tasks.consolidate_3050": {
+   "queue": "cadoc.generate"
+  },
+  "backend.worker.tasks.engine3050_tasks.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.engine3040_tasks.*": {
+   "queue": "import.file"
+  },
+  "backend.worker.tasks.engine3044_tasks.*": {
+   "queue": "import.file"
+  }
+ },
+ "derived_err": null
+}

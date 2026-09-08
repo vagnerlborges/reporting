@@ -1,0 +1,468 @@
+............................ssssssssssssssssss.......................... [  2%]
+....................sss...............................sssssssssssss..... [  4%]
+..ssssssssssssssssssssssssss........s........s...ss.........ss..s...ss.s [  6%]
+..............sssssssss..............sssssssssssssssssssssssssssssssssss [  8%]
+s...........ssssssss......ssssssssssss.....ssssssssssss.....sssss....... [ 11%]
+.....sssssssssssssssss..........s....s..sss.............ssssssssssssssss [ 13%]
+sssssssss...sss.......sssssssss.................sssssssssssss.....sssss. [ 15%]
+....................ssssssssssssssssssssssssssssssss.................... [ 17%]
+.....sssssss...sssssssssssss.......ssss.......ssssss.s.s....ss.......... [ 20%]
+...............sssss..............ssssss................................ [ 22%]
+...........................................ssssssssssssssssssssssssssss. [ 24%]
+.sssssssssssssssssssssssssssssssssssssssssss.................sssssssssss [ 26%]
+sssssss............s.................................................... [ 28%]
+........................................................................ [ 31%]
+........................................................................ [ 33%]
+...................ssss......................................sssssssssss [ 35%]
+sss...........................................................ssssssssss [ 37%]
+........................................................................ [ 40%]
+........................................................................ [ 42%]
+........................................................................ [ 44%]
+........................................................................ [ 46%]
+.......................................ss........ss.....ss....ss........ [ 49%]
+........................sss............................................. [ 51%]
+........................................................................ [ 53%]
+........................................................................ [ 55%]
+........................................................................ [ 57%]
+...................ss................................................... [ 60%]
+...........ss........................................................... [ 62%]
+..................sss................................................... [ 64%]
+........................................s..................ss....sssssss [ 66%]
+sss.ssssssssssssss....sssssss..ss....sss...sssssss...................... [ 69%]
+ssssssssssssssssssssssssssss..............ss....ssssssssssssssssssssss.. [ 71%]
+....sssssss..sss.......ssssss............ssssss.ssss.sssssssssssssssssss [ 73%]
+.......ssssss...ssss........ss.sssssss................s................. [ 75%]
+...sssssssssssss..sssss..ssss...ssEEEEEssssssssssssssssssss..ssss....... [ 78%]
+sssss...................s..............ssssssss......................... [ 80%]
+...sss...................ssssssss...............................s....... [ 82%]
+................ss.................s........ssssssss.................... [ 84%]
+........................ss.ss.ssss..............s....................... [ 86%]
+................s.....................................ssssssss....s..... [ 89%]
+..........................ss..ssssss.....sssssssss...................... [ 91%]
+.................xx..................................................... [ 93%]
+........................................................................ [ 95%]
+........................................................................ [ 98%]
+..............................................................           [100%]
+=================================== ERRORS ====================================
+________________ ERROR at setup of test_entrada_limpa_e_suja_1 ________________
+
+    @pytest.fixture(autouse=True)
+    def _public():
+        # `reports` tem FK para admin.document_types: sem o schema público, o DDL do
+        # tenant não aplica. Mesmo padrão dos testes de tests/api.
+>       ensure_admin_schema()
+
+tests\storage\test_tenant_fixture_isolamento.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+backend\storage\postgres.py:201: in ensure_admin_schema
+    _upgrade_admin()
+backend\storage\postgres.py:165: in _upgrade_admin
+    command.upgrade(admin_config(), "head")
+C:\Python314\Lib\site-packages\alembic\command.py:487: in upgrade
+    script.run_env()
+C:\Python314\Lib\site-packages\alembic\script\base.py:550: in run_env
+    util.load_python_file(self.dir, "env.py")
+C:\Python314\Lib\site-packages\alembic\util\pyfiles.py:114: in load_python_file
+    module = load_module_py(module_id, path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Python314\Lib\site-packages\alembic\util\pyfiles.py:132: in load_module_py
+    spec.loader.exec_module(module)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap_external>:759: in exec_module
+    ???
+<frozen importlib._bootstrap>:491: in _call_with_frames_removed
+    ???
+migrations\env.py:162: in <module>
+    run_migrations_online()
+migrations\env.py:145: in run_migrations_online
+    _adotar_cadeia_legada(connection)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+connection = <sqlalchemy.engine.base.Connection object at 0x0000023104603620>
+
+    def _adotar_cadeia_legada(connection) -> None:
+        """Reescreve o ponteiro de versão de um ambiente pré-squash para o baseline."""
+        from sqlalchemy import text
+    
+        # `commit()` em TODA saída: um SELECT já abre transação no SQLAlchemy 2.0, e deixá-la
+        # aberta faz o Alembic rodar dentro dela — no fim da conexão vem rollback e a base
+        # virgem fica VAZIA com o log dizendo "Running upgrade". Custou um ensaio descobrir.
+        try:
+            existe = connection.execute(
+                text("SELECT to_regclass('admin.alembic_version') IS NOT NULL")
+            ).scalar()
+            if not existe:
+                return  # base virgem: a cadeia roda do zero
+    
+            atual = connection.execute(
+                text("SELECT version_num FROM admin.alembic_version")
+            ).scalar()
+            if atual is None or atual == _BASELINE:
+                return
+    
+            from alembic.script import ScriptDirectory
+    
+            conhecidas = {
+                r.revision for r in ScriptDirectory.from_config(config).walk_revisions()
+            }
+            if atual in conhecidas:
+                return  # revisão da cadeia atual: nada a fazer
+    
+            if atual != _LEGACY_HEAD:
+>               raise RuntimeError(
+                    f"admin.alembic_version = {atual!r}, que não pertence à cadeia atual nem "
+                    f"é a head legada ({_LEGACY_HEAD!r}). Este ambiente ficou entre as duas "
+                    "cadeias: leve-o até a head legada com a versão ANTERIOR do código e só "
+                    "então aplique esta. Aplicar agora pularia migrations e deixaria drift "
+                    "silencioso."
+                )
+E               RuntimeError: admin.alembic_version = '0007_document_dependencies', que não pertence à cadeia atual nem é a head legada ('0010_merge_heads_0009'). Este ambiente ficou entre as duas cadeias: leve-o até a head legada com a versão ANTERIOR do código e só então aplique esta. Aplicar agora pularia migrations e deixaria drift silencioso.
+
+migrations\env.py:94: RuntimeError
+________________ ERROR at setup of test_entrada_limpa_e_suja_2 ________________
+
+    @pytest.fixture(autouse=True)
+    def _public():
+        # `reports` tem FK para admin.document_types: sem o schema público, o DDL do
+        # tenant não aplica. Mesmo padrão dos testes de tests/api.
+>       ensure_admin_schema()
+
+tests\storage\test_tenant_fixture_isolamento.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+backend\storage\postgres.py:201: in ensure_admin_schema
+    _upgrade_admin()
+backend\storage\postgres.py:165: in _upgrade_admin
+    command.upgrade(admin_config(), "head")
+C:\Python314\Lib\site-packages\alembic\command.py:487: in upgrade
+    script.run_env()
+C:\Python314\Lib\site-packages\alembic\script\base.py:550: in run_env
+    util.load_python_file(self.dir, "env.py")
+C:\Python314\Lib\site-packages\alembic\util\pyfiles.py:114: in load_python_file
+    module = load_module_py(module_id, path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Python314\Lib\site-packages\alembic\util\pyfiles.py:132: in load_module_py
+    spec.loader.exec_module(module)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap_external>:759: in exec_module
+    ???
+<frozen importlib._bootstrap>:491: in _call_with_frames_removed
+    ???
+migrations\env.py:162: in <module>
+    run_migrations_online()
+migrations\env.py:145: in run_migrations_online
+    _adotar_cadeia_legada(connection)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+connection = <sqlalchemy.engine.base.Connection object at 0x0000023104782AD0>
+
+    def _adotar_cadeia_legada(connection) -> None:
+        """Reescreve o ponteiro de versão de um ambiente pré-squash para o baseline."""
+        from sqlalchemy import text
+    
+        # `commit()` em TODA saída: um SELECT já abre transação no SQLAlchemy 2.0, e deixá-la
+        # aberta faz o Alembic rodar dentro dela — no fim da conexão vem rollback e a base
+        # virgem fica VAZIA com o log dizendo "Running upgrade". Custou um ensaio descobrir.
+        try:
+            existe = connection.execute(
+                text("SELECT to_regclass('admin.alembic_version') IS NOT NULL")
+            ).scalar()
+            if not existe:
+                return  # base virgem: a cadeia roda do zero
+    
+            atual = connection.execute(
+                text("SELECT version_num FROM admin.alembic_version")
+            ).scalar()
+            if atual is None or atual == _BASELINE:
+                return
+    
+            from alembic.script import ScriptDirectory
+    
+            conhecidas = {
+                r.revision for r in ScriptDirectory.from_config(config).walk_revisions()
+            }
+            if atual in conhecidas:
+                return  # revisão da cadeia atual: nada a fazer
+    
+            if atual != _LEGACY_HEAD:
+>               raise RuntimeError(
+                    f"admin.alembic_version = {atual!r}, que não pertence à cadeia atual nem "
+                    f"é a head legada ({_LEGACY_HEAD!r}). Este ambiente ficou entre as duas "
+                    "cadeias: leve-o até a head legada com a versão ANTERIOR do código e só "
+                    "então aplique esta. Aplicar agora pularia migrations e deixaria drift "
+                    "silencioso."
+                )
+E               RuntimeError: admin.alembic_version = '0007_document_dependencies', que não pertence à cadeia atual nem é a head legada ('0010_merge_heads_0009'). Este ambiente ficou entre as duas cadeias: leve-o até a head legada com a versão ANTERIOR do código e só então aplique esta. Aplicar agora pularia migrations e deixaria drift silencioso.
+
+migrations\env.py:94: RuntimeError
+________________ ERROR at setup of test_entrada_limpa_e_suja_3 ________________
+
+    @pytest.fixture(autouse=True)
+    def _public():
+        # `reports` tem FK para admin.document_types: sem o schema público, o DDL do
+        # tenant não aplica. Mesmo padrão dos testes de tests/api.
+>       ensure_admin_schema()
+
+tests\storage\test_tenant_fixture_isolamento.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+backend\storage\postgres.py:201: in ensure_admin_schema
+    _upgrade_admin()
+backend\storage\postgres.py:165: in _upgrade_admin
+    command.upgrade(admin_config(), "head")
+C:\Python314\Lib\site-packages\alembic\command.py:487: in upgrade
+    script.run_env()
+C:\Python314\Lib\site-packages\alembic\script\base.py:550: in run_env
+    util.load_python_file(self.dir, "env.py")
+C:\Python314\Lib\site-packages\alembic\util\pyfiles.py:114: in load_python_file
+    module = load_module_py(module_id, path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Python314\Lib\site-packages\alembic\util\pyfiles.py:132: in load_module_py
+    spec.loader.exec_module(module)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap_external>:759: in exec_module
+    ???
+<frozen importlib._bootstrap>:491: in _call_with_frames_removed
+    ???
+migrations\env.py:162: in <module>
+    run_migrations_online()
+migrations\env.py:145: in run_migrations_online
+    _adotar_cadeia_legada(connection)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+connection = <sqlalchemy.engine.base.Connection object at 0x000002310479DE00>
+
+    def _adotar_cadeia_legada(connection) -> None:
+        """Reescreve o ponteiro de versão de um ambiente pré-squash para o baseline."""
+        from sqlalchemy import text
+    
+        # `commit()` em TODA saída: um SELECT já abre transação no SQLAlchemy 2.0, e deixá-la
+        # aberta faz o Alembic rodar dentro dela — no fim da conexão vem rollback e a base
+        # virgem fica VAZIA com o log dizendo "Running upgrade". Custou um ensaio descobrir.
+        try:
+            existe = connection.execute(
+                text("SELECT to_regclass('admin.alembic_version') IS NOT NULL")
+            ).scalar()
+            if not existe:
+                return  # base virgem: a cadeia roda do zero
+    
+            atual = connection.execute(
+                text("SELECT version_num FROM admin.alembic_version")
+            ).scalar()
+            if atual is None or atual == _BASELINE:
+                return
+    
+            from alembic.script import ScriptDirectory
+    
+            conhecidas = {
+                r.revision for r in ScriptDirectory.from_config(config).walk_revisions()
+            }
+            if atual in conhecidas:
+                return  # revisão da cadeia atual: nada a fazer
+    
+            if atual != _LEGACY_HEAD:
+>               raise RuntimeError(
+                    f"admin.alembic_version = {atual!r}, que não pertence à cadeia atual nem "
+                    f"é a head legada ({_LEGACY_HEAD!r}). Este ambiente ficou entre as duas "
+                    "cadeias: leve-o até a head legada com a versão ANTERIOR do código e só "
+                    "então aplique esta. Aplicar agora pularia migrations e deixaria drift "
+                    "silencioso."
+                )
+E               RuntimeError: admin.alembic_version = '0007_document_dependencies', que não pertence à cadeia atual nem é a head legada ('0010_merge_heads_0009'). Este ambiente ficou entre as duas cadeias: leve-o até a head legada com a versão ANTERIOR do código e só então aplique esta. Aplicar agora pularia migrations e deixaria drift silencioso.
+
+migrations\env.py:94: RuntimeError
+_____ ERROR at setup of test_sementes_sobrevivem_ao_reset_com_fidelidade ______
+
+    @pytest.fixture(autouse=True)
+    def _public():
+        # `reports` tem FK para admin.document_types: sem o schema público, o DDL do
+        # tenant não aplica. Mesmo padrão dos testes de tests/api.
+>       ensure_admin_schema()
+
+tests\storage\test_tenant_fixture_isolamento.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+backend\storage\postgres.py:201: in ensure_admin_schema
+    _upgrade_admin()
+backend\storage\postgres.py:165: in _upgrade_admin
+    command.upgrade(admin_config(), "head")
+C:\Python314\Lib\site-packages\alembic\command.py:487: in upgrade
+    script.run_env()
+C:\Python314\Lib\site-packages\alembic\script\base.py:550: in run_env
+    util.load_python_file(self.dir, "env.py")
+C:\Python314\Lib\site-packages\alembic\util\pyfiles.py:114: in load_python_file
+    module = load_module_py(module_id, path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Python314\Lib\site-packages\alembic\util\pyfiles.py:132: in load_module_py
+    spec.loader.exec_module(module)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap_external>:759: in exec_module
+    ???
+<frozen importlib._bootstrap>:491: in _call_with_frames_removed
+    ???
+migrations\env.py:162: in <module>
+    run_migrations_online()
+migrations\env.py:145: in run_migrations_online
+    _adotar_cadeia_legada(connection)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+connection = <sqlalchemy.engine.base.Connection object at 0x0000023104763130>
+
+    def _adotar_cadeia_legada(connection) -> None:
+        """Reescreve o ponteiro de versão de um ambiente pré-squash para o baseline."""
+        from sqlalchemy import text
+    
+        # `commit()` em TODA saída: um SELECT já abre transação no SQLAlchemy 2.0, e deixá-la
+        # aberta faz o Alembic rodar dentro dela — no fim da conexão vem rollback e a base
+        # virgem fica VAZIA com o log dizendo "Running upgrade". Custou um ensaio descobrir.
+        try:
+            existe = connection.execute(
+                text("SELECT to_regclass('admin.alembic_version') IS NOT NULL")
+            ).scalar()
+            if not existe:
+                return  # base virgem: a cadeia roda do zero
+    
+            atual = connection.execute(
+                text("SELECT version_num FROM admin.alembic_version")
+            ).scalar()
+            if atual is None or atual == _BASELINE:
+                return
+    
+            from alembic.script import ScriptDirectory
+    
+            conhecidas = {
+                r.revision for r in ScriptDirectory.from_config(config).walk_revisions()
+            }
+            if atual in conhecidas:
+                return  # revisão da cadeia atual: nada a fazer
+    
+            if atual != _LEGACY_HEAD:
+>               raise RuntimeError(
+                    f"admin.alembic_version = {atual!r}, que não pertence à cadeia atual nem "
+                    f"é a head legada ({_LEGACY_HEAD!r}). Este ambiente ficou entre as duas "
+                    "cadeias: leve-o até a head legada com a versão ANTERIOR do código e só "
+                    "então aplique esta. Aplicar agora pularia migrations e deixaria drift "
+                    "silencioso."
+                )
+E               RuntimeError: admin.alembic_version = '0007_document_dependencies', que não pertence à cadeia atual nem é a head legada ('0010_merge_heads_0009'). Este ambiente ficou entre as duas cadeias: leve-o até a head legada com a versão ANTERIOR do código e só então aplique esta. Aplicar agora pularia migrations e deixaria drift silencioso.
+
+migrations\env.py:94: RuntimeError
+________ ERROR at setup of test_estrutura_do_schema_permanece_completa ________
+
+    @pytest.fixture(autouse=True)
+    def _public():
+        # `reports` tem FK para admin.document_types: sem o schema público, o DDL do
+        # tenant não aplica. Mesmo padrão dos testes de tests/api.
+>       ensure_admin_schema()
+
+tests\storage\test_tenant_fixture_isolamento.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+backend\storage\postgres.py:201: in ensure_admin_schema
+    _upgrade_admin()
+backend\storage\postgres.py:165: in _upgrade_admin
+    command.upgrade(admin_config(), "head")
+C:\Python314\Lib\site-packages\alembic\command.py:487: in upgrade
+    script.run_env()
+C:\Python314\Lib\site-packages\alembic\script\base.py:550: in run_env
+    util.load_python_file(self.dir, "env.py")
+C:\Python314\Lib\site-packages\alembic\util\pyfiles.py:114: in load_python_file
+    module = load_module_py(module_id, path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Python314\Lib\site-packages\alembic\util\pyfiles.py:132: in load_module_py
+    spec.loader.exec_module(module)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap_external>:759: in exec_module
+    ???
+<frozen importlib._bootstrap>:491: in _call_with_frames_removed
+    ???
+migrations\env.py:162: in <module>
+    run_migrations_online()
+migrations\env.py:145: in run_migrations_online
+    _adotar_cadeia_legada(connection)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+connection = <sqlalchemy.engine.base.Connection object at 0x0000023104B4E050>
+
+    def _adotar_cadeia_legada(connection) -> None:
+        """Reescreve o ponteiro de versão de um ambiente pré-squash para o baseline."""
+        from sqlalchemy import text
+    
+        # `commit()` em TODA saída: um SELECT já abre transação no SQLAlchemy 2.0, e deixá-la
+        # aberta faz o Alembic rodar dentro dela — no fim da conexão vem rollback e a base
+        # virgem fica VAZIA com o log dizendo "Running upgrade". Custou um ensaio descobrir.
+        try:
+            existe = connection.execute(
+                text("SELECT to_regclass('admin.alembic_version') IS NOT NULL")
+            ).scalar()
+            if not existe:
+                return  # base virgem: a cadeia roda do zero
+    
+            atual = connection.execute(
+                text("SELECT version_num FROM admin.alembic_version")
+            ).scalar()
+            if atual is None or atual == _BASELINE:
+                return
+    
+            from alembic.script import ScriptDirectory
+    
+            conhecidas = {
+                r.revision for r in ScriptDirectory.from_config(config).walk_revisions()
+            }
+            if atual in conhecidas:
+                return  # revisão da cadeia atual: nada a fazer
+    
+            if atual != _LEGACY_HEAD:
+>               raise RuntimeError(
+                    f"admin.alembic_version = {atual!r}, que não pertence à cadeia atual nem "
+                    f"é a head legada ({_LEGACY_HEAD!r}). Este ambiente ficou entre as duas "
+                    "cadeias: leve-o até a head legada com a versão ANTERIOR do código e só "
+                    "então aplique esta. Aplicar agora pularia migrations e deixaria drift "
+                    "silencioso."
+                )
+E               RuntimeError: admin.alembic_version = '0007_document_dependencies', que não pertence à cadeia atual nem é a head legada ('0010_merge_heads_0009'). Este ambiente ficou entre as duas cadeias: leve-o até a head legada com a versão ANTERIOR do código e só então aplique esta. Aplicar agora pularia migrations e deixaria drift silencioso.
+
+migrations\env.py:94: RuntimeError
+============================== warnings summary ===============================
+..\..\Python314\Lib\site-packages\slowapi\extension.py:720
+..\..\Python314\Lib\site-packages\slowapi\extension.py:720
+..\..\Python314\Lib\site-packages\slowapi\extension.py:720
+..\..\Python314\Lib\site-packages\slowapi\extension.py:720
+  C:\Python314\Lib\site-packages\slowapi\extension.py:720: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead
+    if asyncio.iscoroutinefunction(func):
+
+tests/api/test_layout_spec_routes.py::test_validate_layout_spec_invalido_422
+  C:\Git\dattos-regulatory-reporting\tests\api\test_layout_spec_routes.py:41: StarletteDeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+    _validate_layout_spec({"layout_spec": [{"name": "xx", "width": 0, "type": "Z"}]}, "cadoc_3040")
+
+tests/api/test_layout_spec_routes.py::test_validate_layout_spec_tipo_de_fonte_errado_422
+  C:\Git\dattos-regulatory-reporting\tests\api\test_layout_spec_routes.py:47: StarletteDeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+    _validate_layout_spec({"layout_spec": [{"name": "x", "width": 1, "type": "A"}]}, "upload")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================ slowest 15 durations =============================
+4.39s call     tests/processing/test_cadoc3026_consolidation_decimal.py::test_exposicao_no_limiar_qualifica_igual_a_funcao_pura
+4.12s call     tests/api/test_auth.py::test_ready_check
+4.01s setup    tests/api/test_rate_limit_auth.py::test_limiter_usa_storage_redis
+1.09s call     tests/worker/test_notification_mailpit.py::test_remetente_correto_na_caixa
+1.07s call     tests/worker/test_notification_mailpit.py::test_itens_consolidados_chegam_completos
+1.07s call     tests/worker/test_notification_mailpit.py::test_link_de_acao_chega_clicavel_e_em_texto
+1.07s call     tests/worker/test_notification_mailpit.py::test_mensagem_tem_as_duas_partes
+1.06s call     tests/worker/test_notification_mailpit.py::test_email_critico_tambem_chega_formatado
+1.06s call     tests/worker/test_notification_mailpit.py::test_html_nao_pede_recurso_externo
+1.04s call     tests/worker/test_notification_mailpit.py::test_acentuacao_sobrevive_ao_transporte
+1.02s call     tests/workflow/test_email_contract_estrutural.py::test_so_a_camada_de_notificacao_toca_a_task_crua
+0.83s call     tests/services/test_sftp_provisioning.py::test_hash_password_confere_via_bcrypt
+0.61s call     tests/services/test_sftp_provisioning.py::test_merge_gera_para_novos_e_preserva_existentes
+0.54s call     tests/workflow/test_email_guards.py::test_sem_subject_ou_corpo_inline_fora_do_modulo_de_templates
+0.53s call     tests/api/test_admin_sftp.py::test_sftp_provision_gera_conf_dirs_e_credenciais
+=========================== short test summary info ===========================
+ERROR tests/storage/test_tenant_fixture_isolamento.py::test_entrada_limpa_e_suja_1
+ERROR tests/storage/test_tenant_fixture_isolamento.py::test_entrada_limpa_e_suja_2
+ERROR tests/storage/test_tenant_fixture_isolamento.py::test_entrada_limpa_e_suja_3
+ERROR tests/storage/test_tenant_fixture_isolamento.py::test_sementes_sobrevivem_ao_reset_com_fidelidade
+ERROR tests/storage/test_tenant_fixture_isolamento.py::test_estrutura_do_schema_permanece_completa
+2497 passed, 726 skipped, 2 xfailed, 6 warnings, 5 errors in 49.49s
+Exception ignored while calling deallocator <function ConnectionPool.__del__ at 0x000002316923C0F0>:
+Traceback (most recent call last):
+  File "C:\Python314\Lib\site-packages\psycopg_pool\pool.py", line 126, in __del__
+  File "C:\Python314\Lib\site-packages\psycopg_pool\_acompat.py", line 152, in gather
+  File "C:\Python314\Lib\threading.py", line 1133, in join
+PythonFinalizationError: cannot join thread at interpreter shutdown
+EXIT=1

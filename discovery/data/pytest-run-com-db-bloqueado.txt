@@ -1,0 +1,73 @@
+[limpeza] 1 schema(s) de teste removido(s)
+
+=================================== ERRORS ====================================
+_______________ ERROR collecting tests/api/test_bacen_ciclo.py ________________
+tests\api\test_bacen_ciclo.py:28: in <module>
+    ensure_admin_schema()
+backend\storage\postgres.py:201: in ensure_admin_schema
+    _upgrade_admin()
+backend\storage\postgres.py:165: in _upgrade_admin
+    command.upgrade(admin_config(), "head")
+C:\Python314\Lib\site-packages\alembic\command.py:487: in upgrade
+    script.run_env()
+C:\Python314\Lib\site-packages\alembic\script\base.py:550: in run_env
+    util.load_python_file(self.dir, "env.py")
+C:\Python314\Lib\site-packages\alembic\util\pyfiles.py:114: in load_python_file
+    module = load_module_py(module_id, path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Python314\Lib\site-packages\alembic\util\pyfiles.py:132: in load_module_py
+    spec.loader.exec_module(module)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap_external>:759: in exec_module
+    ???
+<frozen importlib._bootstrap>:491: in _call_with_frames_removed
+    ???
+migrations\env.py:162: in <module>
+    run_migrations_online()
+migrations\env.py:145: in run_migrations_online
+    _adotar_cadeia_legada(connection)
+migrations\env.py:94: in _adotar_cadeia_legada
+    raise RuntimeError(
+E   RuntimeError: admin.alembic_version = '0007_document_dependencies', que não pertence à cadeia atual nem é a head legada ('0010_merge_heads_0009'). Este ambiente ficou entre as duas cadeias: leve-o até a head legada com a versão ANTERIOR do código e só então aplique esta. Aplicar agora pularia migrations e deixaria drift silencioso.
+_____________ ERROR collecting tests/api/test_login_happy_path.py _____________
+tests\api\test_login_happy_path.py:29: in <module>
+    ensure_admin_schema()
+backend\storage\postgres.py:201: in ensure_admin_schema
+    _upgrade_admin()
+backend\storage\postgres.py:165: in _upgrade_admin
+    command.upgrade(admin_config(), "head")
+C:\Python314\Lib\site-packages\alembic\command.py:487: in upgrade
+    script.run_env()
+C:\Python314\Lib\site-packages\alembic\script\base.py:550: in run_env
+    util.load_python_file(self.dir, "env.py")
+C:\Python314\Lib\site-packages\alembic\util\pyfiles.py:114: in load_python_file
+    module = load_module_py(module_id, path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Python314\Lib\site-packages\alembic\util\pyfiles.py:132: in load_module_py
+    spec.loader.exec_module(module)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap_external>:759: in exec_module
+    ???
+<frozen importlib._bootstrap>:491: in _call_with_frames_removed
+    ???
+migrations\env.py:162: in <module>
+    run_migrations_online()
+migrations\env.py:145: in run_migrations_online
+    _adotar_cadeia_legada(connection)
+migrations\env.py:94: in _adotar_cadeia_legada
+    raise RuntimeError(
+E   RuntimeError: admin.alembic_version = '0007_document_dependencies', que não pertence à cadeia atual nem é a head legada ('0010_merge_heads_0009'). Este ambiente ficou entre as duas cadeias: leve-o até a head legada com a versão ANTERIOR do código e só então aplique esta. Aplicar agora pularia migrations e deixaria drift silencioso.
+============================== warnings summary ===============================
+..\..\Python314\Lib\site-packages\slowapi\extension.py:720
+..\..\Python314\Lib\site-packages\slowapi\extension.py:720
+..\..\Python314\Lib\site-packages\slowapi\extension.py:720
+..\..\Python314\Lib\site-packages\slowapi\extension.py:720
+  C:\Python314\Lib\site-packages\slowapi\extension.py:720: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead
+    if asyncio.iscoroutinefunction(func):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+ERROR tests/api/test_bacen_ciclo.py - RuntimeError: admin.alembic_version = '...
+ERROR tests/api/test_login_happy_path.py - RuntimeError: admin.alembic_versio...
+!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!
+4 warnings, 2 errors in 8.44s

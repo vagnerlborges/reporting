@@ -1,0 +1,1438 @@
+{
+ "funcs": [
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "_cnpj_if",
+   "sig": "_cnpj_if(cnpj)",
+   "kind": "funcao",
+   "lines": 3,
+   "norm_len": 74
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "classificar_linha_3040",
+   "sig": "classificar_linha_3040(rec)",
+   "kind": "funcao",
+   "lines": 16,
+   "norm_len": 384
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "filtrar_operacoes_3040",
+   "sig": "filtrar_operacoes_3040(operacoes)",
+   "kind": "funcao",
+   "lines": 8,
+   "norm_len": 71
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "pares_com_linha_fisica",
+   "sig": "pares_com_linha_fisica(adapter, raw, meta)",
+   "kind": "funcao",
+   "lines": 10,
+   "norm_len": 159
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "filtrar_operacoes_3040_enumeradas",
+   "sig": "filtrar_operacoes_3040_enumeradas(pares)",
+   "kind": "funcao",
+   "lines": 16,
+   "norm_len": 221
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "_build_validate_emit_3040",
+   "sig": "_build_validate_emit_3040(tenant_id, schema, reference_period, operacoes, tipo_envio, cnpj_if, tenant, stores=, storage=, jobs=, import_job_id=, validator=, trig=, source_ids=, retification_id=)",
+   "kind": "funcao",
+   "lines": 400,
+   "norm_len": 8696
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "_list_period_jobs_3040",
+   "sig": "_list_period_jobs_3040(schema, reference_period)",
+   "kind": "funcao",
+   "lines": 37,
+   "norm_len": 700
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "find_duplicate_operations",
+   "sig": "find_duplicate_operations(operacoes)",
+   "kind": "funcao",
+   "lines": 9,
+   "norm_len": 187
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "_run_consolidate_3040",
+   "sig": "_run_consolidate_3040(tenant_id, reference_period, stores=, storage=, jobs=, validator=, forcar=, retification_id=)",
+   "kind": "funcao",
+   "lines": 120,
+   "norm_len": 2974
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "consolidate_3040",
+   "sig": "consolidate_3040(tenant_id, reference_period, forcar, retification_id)",
+   "kind": "task",
+   "lines": 42,
+   "norm_len": 994
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "_run_process_3040_file",
+   "sig": "_run_process_3040_file(tenant_id, import_job_id, stores=, storage=, jobs=, validator=, connect=)",
+   "kind": "funcao",
+   "lines": 235,
+   "norm_len": 5802
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "_fontes_status_3040",
+   "sig": "_fontes_status_3040(schema, reference_period)",
+   "kind": "funcao",
+   "lines": 4,
+   "norm_len": 105
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "_maybe_autoconsolidate_3040",
+   "sig": "_maybe_autoconsolidate_3040(tenant_id, import_job_id, result, jobs=)",
+   "kind": "funcao",
+   "lines": 28,
+   "norm_len": 696
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "process_3040_file",
+   "sig": "process_3040_file(tenant_id, import_job_id)",
+   "kind": "task",
+   "lines": 35,
+   "norm_len": 846
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "match_source_3040",
+   "sig": "match_source_3040(filename, sources)",
+   "kind": "funcao",
+   "lines": 5,
+   "norm_len": 93
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "prazo_mensal_proximo",
+   "sig": "prazo_mensal_proximo(hoje, deadline_day, limite_dias)",
+   "kind": "funcao",
+   "lines": 10,
+   "norm_len": 133
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "_competencia_concluida_3040",
+   "sig": "_competencia_concluida_3040(schema, period)",
+   "kind": "funcao",
+   "lines": 20,
+   "norm_len": 430
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "_rejeitar_ingestao_concluida",
+   "sig": "_rejeitar_ingestao_concluida(schema, tenant, src, inbox, rel, period, dests)",
+   "kind": "funcao",
+   "lines": 10,
+   "norm_len": 341
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "_ingest_3040",
+   "sig": "_ingest_3040(schema, tenant, src, inbox, rel, period, dests)",
+   "kind": "funcao",
+   "lines": 64,
+   "norm_len": 1530
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "sftp_watch_3040",
+   "sig": "sftp_watch_3040()",
+   "kind": "task",
+   "lines": 93,
+   "norm_len": 2241
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "alertas_competencias_vencidas",
+   "sig": "alertas_competencias_vencidas(tenant=, schema=, hoje=, comp_store=, regra=, claim=, enviar=)",
+   "kind": "funcao",
+   "lines": 35,
+   "norm_len": 922
+  },
+  {
+   "informe": "3040",
+   "file": "backend/worker/tasks/engine3040_tasks.py",
+   "name": "alert_prazo_3040",
+   "sig": "alert_prazo_3040()",
+   "kind": "task",
+   "lines": 67,
+   "norm_len": 2026
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "_validate_period",
+   "sig": "_validate_period(value)",
+   "kind": "funcao",
+   "lines": 12,
+   "norm_len": 294
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "_extract_file_data_base",
+   "sig": "_extract_file_data_base(content)",
+   "kind": "funcao",
+   "lines": 17,
+   "norm_len": 237
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "fechamento_status",
+   "sig": "fechamento_status(schema, period)",
+   "kind": "funcao",
+   "lines": 17,
+   "norm_len": 428
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "_aviso_competencia_concluida",
+   "sig": "_aviso_competencia_concluida(schema, period, acao)",
+   "kind": "funcao",
+   "lines": 17,
+   "norm_len": 320
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "_responsavel_da_competencia",
+   "sig": "_responsavel_da_competencia(registrada, padrao)",
+   "kind": "funcao",
+   "lines": 8,
+   "norm_len": 55
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "_dias_uteis_com_sinal",
+   "sig": "_dias_uteis_com_sinal(inicio, fim)",
+   "kind": "funcao",
+   "lines": 11,
+   "norm_len": 188
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "_nomes_de_usuarios",
+   "sig": "_nomes_de_usuarios(user_ids)",
+   "kind": "funcao",
+   "lines": 11,
+   "norm_len": 148
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "_descricao_regra_prazo",
+   "sig": "_descricao_regra_prazo(regra)",
+   "kind": "funcao",
+   "lines": 30,
+   "norm_len": 720
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "_prazo_regra_payload",
+   "sig": "_prazo_regra_payload(regra)",
+   "kind": "funcao",
+   "lines": 4,
+   "norm_len": 96
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "list_competencias",
+   "sig": "list_competencias(cursor, limit, ano, situacao, retificacao, user)",
+   "kind": "rota",
+   "lines": 205,
+   "norm_len": 5300
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "set_responsavel_competencia",
+   "sig": "set_responsavel_competencia(req, user)",
+   "kind": "rota",
+   "lines": 33,
+   "norm_len": 1075
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "dev_forcar_homologacao",
+   "sig": "dev_forcar_homologacao(req, user)",
+   "kind": "rota",
+   "lines": 50,
+   "norm_len": 1324
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "historico_competencia",
+   "sig": "historico_competencia(period, user)",
+   "kind": "rota",
+   "lines": 80,
+   "norm_len": 1591
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "month_status",
+   "sig": "month_status(period, user)",
+   "kind": "rota",
+   "lines": 158,
+   "norm_len": 4169
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "source_summary",
+   "sig": "source_summary(period, source_id, user)",
+   "kind": "rota",
+   "lines": 12,
+   "norm_len": 235
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "registros",
+   "sig": "registros(period, view, q, modalidade, page, page_size, user)",
+   "kind": "rota",
+   "lines": 34,
+   "norm_len": 630
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "registros_resumo",
+   "sig": "registros_resumo(period, user)",
+   "kind": "rota",
+   "lines": 12,
+   "norm_len": 235
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "registros_export",
+   "sig": "registros_export(period, view, user)",
+   "kind": "rota",
+   "lines": 60,
+   "norm_len": 1185
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "operacao_lookup",
+   "sig": "operacao_lookup(period, source_id, numero, user)",
+   "kind": "rota",
+   "lines": 12,
+   "norm_len": 275
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "modelo_extrato_3040",
+   "sig": "modelo_extrato_3040(user)",
+   "kind": "rota",
+   "lines": 15,
+   "norm_len": 390
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "upload_3040",
+   "sig": "upload_3040(data_source_id, reference_period, file, confirmar, user)",
+   "kind": "rota",
+   "lines": 127,
+   "norm_len": 3072
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "_competencia_travada",
+   "sig": "_competencia_travada(schema, period)",
+   "kind": "funcao",
+   "lines": 11,
+   "norm_len": 276
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "_retificacao_aberta",
+   "sig": "_retificacao_aberta(schema, period)",
+   "kind": "funcao",
+   "lines": 14,
+   "norm_len": 148
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "_retificacao_parcial_aberta",
+   "sig": "_retificacao_parcial_aberta(schema, period)",
+   "kind": "funcao",
+   "lines": 14,
+   "norm_len": 222
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "_bloquear_se_retificacao_parcial",
+   "sig": "_bloquear_se_retificacao_parcial(schema, period)",
+   "kind": "funcao",
+   "lines": 24,
+   "norm_len": 338
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "delete_imports_3040",
+   "sig": "delete_imports_3040(req, user)",
+   "kind": "rota",
+   "lines": 91,
+   "norm_len": 2419
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "_tem_dados_para_consolidar_3040",
+   "sig": "_tem_dados_para_consolidar_3040(schema, period)",
+   "kind": "funcao",
+   "lines": 14,
+   "norm_len": 243
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "consolidate_endpoint",
+   "sig": "consolidate_endpoint(req, user)",
+   "kind": "rota",
+   "lines": 61,
+   "norm_len": 1483
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "download_document",
+   "sig": "download_document(id, kind, user)",
+   "kind": "rota",
+   "lines": 35,
+   "norm_len": 1093
+  },
+  {
+   "informe": "3040",
+   "file": "backend/api/routes/engine3040.py",
+   "name": "_csv_from_document",
+   "sig": "_csv_from_document(schema, doc)",
+   "kind": "funcao",
+   "lines": 28,
+   "norm_len": 428
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "_dec_default",
+   "sig": "_dec_default(o)",
+   "kind": "funcao",
+   "lines": 5,
+   "norm_len": 59
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "_dec_number_default",
+   "sig": "_dec_number_default(o)",
+   "kind": "funcao",
+   "lines": 7,
+   "norm_len": 61
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "_cnpj_if",
+   "sig": "_cnpj_if(cnpj)",
+   "kind": "funcao",
+   "lines": 3,
+   "norm_len": 74
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "_parse_rows_3044",
+   "sig": "_parse_rows_3044(raw, meta)",
+   "kind": "funcao",
+   "lines": 11,
+   "norm_len": 348
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "_build_and_persist_partial",
+   "sig": "_build_and_persist_partial(schema, meta, rows, import_job_id, stores=, storage=, jobs=)",
+   "kind": "funcao",
+   "lines": 46,
+   "norm_len": 866
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "_run_process_3044_file",
+   "sig": "_run_process_3044_file(tenant_id, import_job_id, stores=, storage=, jobs=, connect=)",
+   "kind": "funcao",
+   "lines": 175,
+   "norm_len": 3526
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "_run_generate_partial_3044",
+   "sig": "_run_generate_partial_3044(tenant_id, import_job_id, stores=, storage=, jobs=)",
+   "kind": "funcao",
+   "lines": 31,
+   "norm_len": 912
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "_fontes_status_3044",
+   "sig": "_fontes_status_3044(schema, reference_date)",
+   "kind": "funcao",
+   "lines": 5,
+   "norm_len": 103
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "_maybe_autoconsolidate",
+   "sig": "_maybe_autoconsolidate(tenant_id, import_job_id, result, jobs=)",
+   "kind": "funcao",
+   "lines": 30,
+   "norm_len": 726
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "process_3044_file",
+   "sig": "process_3044_file(tenant_id, import_job_id)",
+   "kind": "task",
+   "lines": 35,
+   "norm_len": 732
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "regenerate_partial_3044",
+   "sig": "regenerate_partial_3044(tenant_id, import_job_id)",
+   "kind": "task",
+   "lines": 35,
+   "norm_len": 732
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "_advisory_lock",
+   "sig": "_advisory_lock(schema, reference_date)",
+   "kind": "funcao",
+   "lines": 11,
+   "norm_len": 263
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "_run_consolidate_3044",
+   "sig": "_run_consolidate_3044(tenant_id, reference_date, stores=, storage=, jobs=, validator=, forcar=)",
+   "kind": "funcao",
+   "lines": 302,
+   "norm_len": 6647
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "_to_date",
+   "sig": "_to_date(s)",
+   "kind": "funcao",
+   "lines": 5,
+   "norm_len": 104
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "_dec",
+   "sig": "_dec(x)",
+   "kind": "funcao",
+   "lines": 9,
+   "norm_len": 136
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "_to_dec_str",
+   "sig": "_to_dec_str(x)",
+   "kind": "funcao",
+   "lines": 8,
+   "norm_len": 129
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "_datas_ok",
+   "sig": "_datas_ok(data_saldo, remessa)",
+   "kind": "funcao",
+   "lines": 14,
+   "norm_len": 287
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "_valores_ok",
+   "sig": "_valores_ok(saldo_devedor)",
+   "kind": "funcao",
+   "lines": 8,
+   "norm_len": 106
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "flatten_csv",
+   "sig": "flatten_csv(doc, source_file_name)",
+   "kind": "funcao",
+   "lines": 88,
+   "norm_len": 2365
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "dias_uteis_ate",
+   "sig": "dias_uteis_ate(d_from, n)",
+   "kind": "funcao",
+   "lines": 5,
+   "norm_len": 93
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "is_past_cutoff",
+   "sig": "is_past_cutoff(now_hm, cutoff)",
+   "kind": "funcao",
+   "lines": 2,
+   "norm_len": 23
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "sources_sem_arquivo",
+   "sig": "sources_sem_arquivo(sources, received_source_ids, now_hm)",
+   "kind": "funcao",
+   "lines": 12,
+   "norm_len": 206
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "docs_proximos_do_prazo",
+   "sig": "docs_proximos_do_prazo(docs, hoje, limite_dias)",
+   "kind": "funcao",
+   "lines": 19,
+   "norm_len": 317
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "alert_fonte_pendente",
+   "sig": "alert_fonte_pendente()",
+   "kind": "task",
+   "lines": 37,
+   "norm_len": 1452
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "alert_prazo_documento",
+   "sig": "alert_prazo_documento()",
+   "kind": "task",
+   "lines": 38,
+   "norm_len": 1247
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "_ingest_3044",
+   "sig": "_ingest_3044(schema, tenant, src, inbox, rel, ref, dests)",
+   "kind": "funcao",
+   "lines": 55,
+   "norm_len": 1403
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "sftp_watch",
+   "sig": "sftp_watch()",
+   "kind": "task",
+   "lines": 92,
+   "norm_len": 2279
+  },
+  {
+   "informe": "3044",
+   "file": "backend/worker/tasks/engine3044_tasks.py",
+   "name": "consolidate_3044",
+   "sig": "consolidate_3044(tenant_id, reference_date, forcar)",
+   "kind": "task",
+   "lines": 38,
+   "norm_len": 988
+  },
+  {
+   "informe": "3044",
+   "file": "backend/api/routes/engine3044.py",
+   "name": "_validate_iso_date",
+   "sig": "_validate_iso_date(value)",
+   "kind": "funcao",
+   "lines": 9,
+   "norm_len": 166
+  },
+  {
+   "informe": "3044",
+   "file": "backend/api/routes/engine3044.py",
+   "name": "day_status",
+   "sig": "day_status(date, user)",
+   "kind": "rota",
+   "lines": 69,
+   "norm_len": 1782
+  },
+  {
+   "informe": "3044",
+   "file": "backend/api/routes/engine3044.py",
+   "name": "_serialize_line",
+   "sig": "_serialize_line(line)",
+   "kind": "funcao",
+   "lines": 2,
+   "norm_len": 78
+  },
+  {
+   "informe": "3044",
+   "file": "backend/api/routes/engine3044.py",
+   "name": "list_lines",
+   "sig": "list_lines(date, source_id, offset, limit, q, user)",
+   "kind": "rota",
+   "lines": 23,
+   "norm_len": 396
+  },
+  {
+   "informe": "3044",
+   "file": "backend/api/routes/engine3044.py",
+   "name": "_tem_dados_para_consolidar_3044",
+   "sig": "_tem_dados_para_consolidar_3044(schema, reference_date)",
+   "kind": "funcao",
+   "lines": 11,
+   "norm_len": 255
+  },
+  {
+   "informe": "3044",
+   "file": "backend/api/routes/engine3044.py",
+   "name": "consolidate",
+   "sig": "consolidate(req, user)",
+   "kind": "rota",
+   "lines": 37,
+   "norm_len": 959
+  },
+  {
+   "informe": "3044",
+   "file": "backend/api/routes/engine3044.py",
+   "name": "delete_imports",
+   "sig": "delete_imports(req, user)",
+   "kind": "rota",
+   "lines": 40,
+   "norm_len": 1047
+  },
+  {
+   "informe": "3044",
+   "file": "backend/api/routes/engine3044.py",
+   "name": "download_document",
+   "sig": "download_document(id, kind, user)",
+   "kind": "rota",
+   "lines": 40,
+   "norm_len": 1178
+  },
+  {
+   "informe": "3044",
+   "file": "backend/api/routes/engine3044.py",
+   "name": "add_exclusions",
+   "sig": "add_exclusions(req, user)",
+   "kind": "rota",
+   "lines": 23,
+   "norm_len": 609
+  },
+  {
+   "informe": "3044",
+   "file": "backend/api/routes/engine3044.py",
+   "name": "list_exclusions",
+   "sig": "list_exclusions(user)",
+   "kind": "rota",
+   "lines": 5,
+   "norm_len": 90
+  },
+  {
+   "informe": "3044",
+   "file": "backend/api/routes/engine3044.py",
+   "name": "upload_3044",
+   "sig": "upload_3044(data_source_id, reference_date, file, user)",
+   "kind": "rota",
+   "lines": 87,
+   "norm_len": 2218
+  },
+  {
+   "informe": "3050",
+   "file": "backend/worker/tasks/engine3050_tasks.py",
+   "name": "_cnpj_if",
+   "sig": "_cnpj_if(cnpj)",
+   "kind": "funcao",
+   "lines": 3,
+   "norm_len": 74
+  },
+  {
+   "informe": "3050",
+   "file": "backend/worker/tasks/engine3050_tasks.py",
+   "name": "_aggregated_to_rows",
+   "sig": "_aggregated_to_rows(aggregated, reference_period)",
+   "kind": "funcao",
+   "lines": 20,
+   "norm_len": 388
+  },
+  {
+   "informe": "3050",
+   "file": "backend/worker/tasks/engine3050_tasks.py",
+   "name": "_rows_to_aggregated",
+   "sig": "_rows_to_aggregated(rows)",
+   "kind": "funcao",
+   "lines": 32,
+   "norm_len": 803
+  },
+  {
+   "informe": "3050",
+   "file": "backend/worker/tasks/engine3050_tasks.py",
+   "name": "_run_process_3050_file",
+   "sig": "_run_process_3050_file(tenant_id, import_job_id, stores=, storage=, jobs=, validator=, connect=)",
+   "kind": "funcao",
+   "lines": 77,
+   "norm_len": 1617
+  },
+  {
+   "informe": "3050",
+   "file": "backend/worker/tasks/engine3050_tasks.py",
+   "name": "process_3050_file",
+   "sig": "process_3050_file(tenant_id, import_job_id)",
+   "kind": "task",
+   "lines": 29,
+   "norm_len": 681
+  },
+  {
+   "informe": "3050",
+   "file": "backend/worker/tasks/engine3050_tasks.py",
+   "name": "_contato_tenant",
+   "sig": "_contato_tenant(tenant)",
+   "kind": "funcao",
+   "lines": 12,
+   "norm_len": 301
+  },
+  {
+   "informe": "3050",
+   "file": "backend/worker/tasks/engine3050_tasks.py",
+   "name": "_run_consolidate_3050",
+   "sig": "_run_consolidate_3050(tenant_id, reference_period, stores=, storage=, jobs=, validator=, forcar=)",
+   "kind": "funcao",
+   "lines": 145,
+   "norm_len": 3041
+  },
+  {
+   "informe": "3050",
+   "file": "backend/worker/tasks/engine3050_tasks.py",
+   "name": "consolidate_3050",
+   "sig": "consolidate_3050(tenant_id, reference_period, forcar)",
+   "kind": "task",
+   "lines": 34,
+   "norm_len": 789
+  },
+  {
+   "informe": "3050",
+   "file": "backend/worker/tasks/engine3050_tasks.py",
+   "name": "match_source_3050",
+   "sig": "match_source_3050(filename, sources)",
+   "kind": "funcao",
+   "lines": 5,
+   "norm_len": 93
+  },
+  {
+   "informe": "3050",
+   "file": "backend/worker/tasks/engine3050_tasks.py",
+   "name": "semana_alvo_alerta",
+   "sig": "semana_alvo_alerta(hoje)",
+   "kind": "funcao",
+   "lines": 4,
+   "norm_len": 40
+  },
+  {
+   "informe": "3050",
+   "file": "backend/worker/tasks/engine3050_tasks.py",
+   "name": "_ingest_3050",
+   "sig": "_ingest_3050(schema, tenant, src, inbox, rel, period, dests)",
+   "kind": "funcao",
+   "lines": 49,
+   "norm_len": 1268
+  },
+  {
+   "informe": "3050",
+   "file": "backend/worker/tasks/engine3050_tasks.py",
+   "name": "sftp_watch_3050",
+   "sig": "sftp_watch_3050()",
+   "kind": "task",
+   "lines": 43,
+   "norm_len": 979
+  },
+  {
+   "informe": "3050",
+   "file": "backend/worker/tasks/engine3050_tasks.py",
+   "name": "fechamento_sem_mensal",
+   "sig": "fechamento_sem_mensal(schema, week, doc_store)",
+   "kind": "funcao",
+   "lines": 26,
+   "norm_len": 501
+  },
+  {
+   "informe": "3050",
+   "file": "backend/worker/tasks/engine3050_tasks.py",
+   "name": "alert_prazo_3050",
+   "sig": "alert_prazo_3050()",
+   "kind": "task",
+   "lines": 57,
+   "norm_len": 1844
+  },
+  {
+   "informe": "3050",
+   "file": "backend/api/routes/engine3050.py",
+   "name": "_validate_week",
+   "sig": "_validate_week(value)",
+   "kind": "funcao",
+   "lines": 6,
+   "norm_len": 162
+  },
+  {
+   "informe": "3050",
+   "file": "backend/api/routes/engine3050.py",
+   "name": "_fontes_3050",
+   "sig": "_fontes_3050(schema)",
+   "kind": "funcao",
+   "lines": 7,
+   "norm_len": 167
+  },
+  {
+   "informe": "3050",
+   "file": "backend/api/routes/engine3050.py",
+   "name": "week_status",
+   "sig": "week_status(week, user)",
+   "kind": "rota",
+   "lines": 50,
+   "norm_len": 1445
+  },
+  {
+   "informe": "3050",
+   "file": "backend/api/routes/engine3050.py",
+   "name": "source_summary",
+   "sig": "source_summary(week, source_id, user)",
+   "kind": "rota",
+   "lines": 15,
+   "norm_len": 370
+  },
+  {
+   "informe": "3050",
+   "file": "backend/api/routes/engine3050.py",
+   "name": "upload_3050",
+   "sig": "upload_3050(data_source_id, reference_period, file, user)",
+   "kind": "rota",
+   "lines": 45,
+   "norm_len": 1614
+  },
+  {
+   "informe": "3050",
+   "file": "backend/api/routes/engine3050.py",
+   "name": "reconciliation",
+   "sig": "reconciliation(week, user)",
+   "kind": "rota",
+   "lines": 23,
+   "norm_len": 436
+  },
+  {
+   "informe": "3050",
+   "file": "backend/api/routes/engine3050.py",
+   "name": "consolidate_endpoint",
+   "sig": "consolidate_endpoint(week, forcar, user)",
+   "kind": "rota",
+   "lines": 47,
+   "norm_len": 1577
+  },
+  {
+   "informe": "3050",
+   "file": "backend/api/routes/engine3050.py",
+   "name": "document",
+   "sig": "document(week, user)",
+   "kind": "rota",
+   "lines": 15,
+   "norm_len": 460
+  },
+  {
+   "informe": "3050",
+   "file": "backend/api/routes/engine3050.py",
+   "name": "download_document",
+   "sig": "download_document(id, kind, user)",
+   "kind": "rota",
+   "lines": 15,
+   "norm_len": 452
+  },
+  {
+   "informe": "3026",
+   "file": "backend/worker/tasks/engine3026_tasks.py",
+   "name": "_cnpj_if",
+   "sig": "_cnpj_if(cnpj)",
+   "kind": "funcao",
+   "lines": 3,
+   "norm_len": 74
+  },
+  {
+   "informe": "3026",
+   "file": "backend/worker/tasks/engine3026_tasks.py",
+   "name": "_cnpj_3026",
+   "sig": "_cnpj_3026(tenant)",
+   "kind": "funcao",
+   "lines": 6,
+   "norm_len": 124
+  },
+  {
+   "informe": "3026",
+   "file": "backend/worker/tasks/engine3026_tasks.py",
+   "name": "_run_process_3026_file",
+   "sig": "_run_process_3026_file(tenant_id, import_job_id, stores=, storage=, jobs=, validator=, connect=)",
+   "kind": "funcao",
+   "lines": 59,
+   "norm_len": 1405
+  },
+  {
+   "informe": "3026",
+   "file": "backend/worker/tasks/engine3026_tasks.py",
+   "name": "process_3026_file",
+   "sig": "process_3026_file(tenant_id, import_job_id)",
+   "kind": "task",
+   "lines": 17,
+   "norm_len": 544
+  },
+  {
+   "informe": "3026",
+   "file": "backend/worker/tasks/engine3026_tasks.py",
+   "name": "_periodo_3040_dezembro",
+   "sig": "_periodo_3040_dezembro(reference_period)",
+   "kind": "funcao",
+   "lines": 3,
+   "norm_len": 31
+  },
+  {
+   "informe": "3026",
+   "file": "backend/worker/tasks/engine3026_tasks.py",
+   "name": "_conciliacao_serializavel",
+   "sig": "_conciliacao_serializavel(res)",
+   "kind": "funcao",
+   "lines": 10,
+   "norm_len": 144
+  },
+  {
+   "informe": "3026",
+   "file": "backend/worker/tasks/engine3026_tasks.py",
+   "name": "_run_consolidate_3026",
+   "sig": "_run_consolidate_3026(tenant_id, reference_period, stores=, storage=, jobs=, validator=, forcar=)",
+   "kind": "funcao",
+   "lines": 119,
+   "norm_len": 3733
+  },
+  {
+   "informe": "3026",
+   "file": "backend/worker/tasks/engine3026_tasks.py",
+   "name": "consolidate_3026",
+   "sig": "consolidate_3026(tenant_id, reference_period, forcar)",
+   "kind": "task",
+   "lines": 31,
+   "norm_len": 1018
+  },
+  {
+   "informe": "3026",
+   "file": "backend/worker/tasks/engine3026_tasks.py",
+   "name": "alert_prazo_3026",
+   "sig": "alert_prazo_3026()",
+   "kind": "task",
+   "lines": 38,
+   "norm_len": 1340
+  },
+  {
+   "informe": "3026",
+   "file": "backend/api/routes/engine3026.py",
+   "name": "_validate_year",
+   "sig": "_validate_year(value)",
+   "kind": "funcao",
+   "lines": 6,
+   "norm_len": 152
+  },
+  {
+   "informe": "3026",
+   "file": "backend/api/routes/engine3026.py",
+   "name": "_fontes_3026",
+   "sig": "_fontes_3026(schema)",
+   "kind": "funcao",
+   "lines": 7,
+   "norm_len": 167
+  },
+  {
+   "informe": "3026",
+   "file": "backend/api/routes/engine3026.py",
+   "name": "year_status",
+   "sig": "year_status(year, user)",
+   "kind": "rota",
+   "lines": 43,
+   "norm_len": 1171
+  },
+  {
+   "informe": "3026",
+   "file": "backend/api/routes/engine3026.py",
+   "name": "source_summary",
+   "sig": "source_summary(year, source_id, user)",
+   "kind": "rota",
+   "lines": 19,
+   "norm_len": 543
+  },
+  {
+   "informe": "3026",
+   "file": "backend/api/routes/engine3026.py",
+   "name": "upload_3026",
+   "sig": "upload_3026(data_source_id, reference_period, file, user)",
+   "kind": "rota",
+   "lines": 44,
+   "norm_len": 1583
+  },
+  {
+   "informe": "3026",
+   "file": "backend/api/routes/engine3026.py",
+   "name": "reconciliation",
+   "sig": "reconciliation(year, user)",
+   "kind": "rota",
+   "lines": 23,
+   "norm_len": 420
+  },
+  {
+   "informe": "3026",
+   "file": "backend/api/routes/engine3026.py",
+   "name": "consolidate_endpoint",
+   "sig": "consolidate_endpoint(year, user)",
+   "kind": "rota",
+   "lines": 12,
+   "norm_len": 386
+  },
+  {
+   "informe": "3026",
+   "file": "backend/api/routes/engine3026.py",
+   "name": "document",
+   "sig": "document(year, user)",
+   "kind": "rota",
+   "lines": 15,
+   "norm_len": 460
+  },
+  {
+   "informe": "3026",
+   "file": "backend/api/routes/engine3026.py",
+   "name": "download_document",
+   "sig": "download_document(id, kind, user)",
+   "kind": "rota",
+   "lines": 26,
+   "norm_len": 736
+  },
+  {
+   "informe": "cosif",
+   "file": "backend/worker/tasks/cosif_tasks.py",
+   "name": "_serializar_amarracoes",
+   "sig": "_serializar_amarracoes(amarracoes)",
+   "kind": "funcao",
+   "lines": 11,
+   "norm_len": 236
+  },
+  {
+   "informe": "cosif",
+   "file": "backend/worker/tasks/cosif_tasks.py",
+   "name": "_process_cosif",
+   "sig": "_process_cosif(schema=, import_job_id=, meta=, content=, store=)",
+   "kind": "funcao",
+   "lines": 20,
+   "norm_len": 614
+  },
+  {
+   "informe": "cosif",
+   "file": "backend/worker/tasks/cosif_tasks.py",
+   "name": "process_cosif_file",
+   "sig": "process_cosif_file(tenant_id, job_id)",
+   "kind": "task",
+   "lines": 28,
+   "norm_len": 855
+  },
+  {
+   "informe": "cosif",
+   "file": "backend/api/routes/cosif.py",
+   "name": "upload_cosif",
+   "sig": "upload_cosif(document_type, reference_period, file, user)",
+   "kind": "rota",
+   "lines": 54,
+   "norm_len": 1619
+  },
+  {
+   "informe": "cosif",
+   "file": "backend/api/routes/cosif.py",
+   "name": "_gerar_bytes",
+   "sig": "_gerar_bytes(saldos_folhas, plano, document_type=, reference_period=)",
+   "kind": "funcao",
+   "lines": 18,
+   "norm_len": 313
+  },
+  {
+   "informe": "cosif",
+   "file": "backend/api/routes/cosif.py",
+   "name": "generate_cosif",
+   "sig": "generate_cosif(document_type, reference_period, file, transform, delimiter, encoding, user)",
+   "kind": "rota",
+   "lines": 76,
+   "norm_len": 1931
+  },
+  {
+   "informe": "cosif",
+   "file": "backend/api/routes/cosif.py",
+   "name": "_ultimo_resumo",
+   "sig": "_ultimo_resumo(jobs, document_type, reference_period)",
+   "kind": "funcao",
+   "lines": 12,
+   "norm_len": 381
+  },
+  {
+   "informe": "cosif",
+   "file": "backend/api/routes/cosif.py",
+   "name": "list_cosif_documents",
+   "sig": "list_cosif_documents(document_type, reference_period, user)",
+   "kind": "rota",
+   "lines": 32,
+   "norm_len": 1054
+  }
+ ],
+ "pairs": [
+  {
+   "ratio": 0.988,
+   "a": "3050:engine3050.py:_fontes_3050",
+   "b": "3026:engine3026.py:_fontes_3026",
+   "lines_a": 7,
+   "lines_b": 7
+  },
+  {
+   "ratio": 0.974,
+   "a": "3050:engine3050.py:upload_3050",
+   "b": "3026:engine3026.py:upload_3026",
+   "lines_a": 45,
+   "lines_b": 44
+  },
+  {
+   "ratio": 0.962,
+   "a": "3050:engine3050.py:_validate_week",
+   "b": "3026:engine3026.py:_validate_year",
+   "lines_a": 6,
+   "lines_b": 6
+  },
+  {
+   "ratio": 0.904,
+   "a": "3040:engine3040.py:download_document",
+   "b": "3044:engine3044.py:download_document",
+   "lines_a": 35,
+   "lines_b": 40
+  },
+  {
+   "ratio": 0.874,
+   "a": "3040:engine3040_tasks.py:_ingest_3040",
+   "b": "3044:engine3044_tasks.py:_ingest_3044",
+   "lines_a": 64,
+   "lines_b": 55
+  },
+  {
+   "ratio": 0.861,
+   "a": "3040:engine3040_tasks.py:_maybe_autoconsolidate_3040",
+   "b": "3044:engine3044_tasks.py:_maybe_autoconsolidate",
+   "lines_a": 28,
+   "lines_b": 30
+  },
+  {
+   "ratio": 0.837,
+   "a": "3050:engine3050.py:document",
+   "b": "3026:engine3026.py:document",
+   "lines_a": 15,
+   "lines_b": 15
+  },
+  {
+   "ratio": 0.798,
+   "a": "3050:engine3050_tasks.py:consolidate_3050",
+   "b": "3026:engine3026_tasks.py:consolidate_3026",
+   "lines_a": 34,
+   "lines_b": 31
+  },
+  {
+   "ratio": 0.763,
+   "a": "3040:engine3040.py:_tem_dados_para_consolidar_3040",
+   "b": "3044:engine3044.py:_tem_dados_para_consolidar_3044",
+   "lines_a": 14,
+   "lines_b": 11
+  },
+  {
+   "ratio": 0.735,
+   "a": "3040:engine3040_tasks.py:_ingest_3040",
+   "b": "3050:engine3050_tasks.py:_ingest_3050",
+   "lines_a": 64,
+   "lines_b": 49
+  },
+  {
+   "ratio": 0.723,
+   "a": "3044:engine3044_tasks.py:_ingest_3044",
+   "b": "3050:engine3050_tasks.py:_ingest_3050",
+   "lines_a": 55,
+   "lines_b": 49
+  },
+  {
+   "ratio": 0.714,
+   "a": "3044:engine3044.py:upload_3044",
+   "b": "3050:engine3050.py:upload_3050",
+   "lines_a": 87,
+   "lines_b": 45
+  },
+  {
+   "ratio": 0.713,
+   "a": "3044:engine3044.py:upload_3044",
+   "b": "3026:engine3026.py:upload_3026",
+   "lines_a": 87,
+   "lines_b": 44
+  },
+  {
+   "ratio": 0.705,
+   "a": "3050:engine3050.py:download_document",
+   "b": "3026:engine3026.py:download_document",
+   "lines_a": 15,
+   "lines_b": 26
+  }
+ ],
+ "cobertura": {
+  "3040": {
+   "total": 2484,
+   "dup": 141,
+   "nfun": 52,
+   "ndup": 4
+  },
+  "3044": {
+   "total": 1472,
+   "dup": 223,
+   "nfun": 39,
+   "ndup": 5
+  },
+  "3050": {
+   "total": 759,
+   "dup": 171,
+   "nfun": 23,
+   "ndup": 7
+  },
+  "3026": {
+   "total": 481,
+   "dup": 129,
+   "nfun": 18,
+   "ndup": 6
+  },
+  "cosif": {
+   "total": 251,
+   "dup": 0,
+   "nfun": 8,
+   "ndup": 0
+  }
+ },
+ "base_names": [
+  "CadocEngine",
+  "EngineRegistry",
+  "EngineSteps",
+  "__init__",
+  "_run",
+  "alert_prazo",
+  "consolidate",
+  "dispatch",
+  "document_type",
+  "get",
+  "list_types",
+  "prazo_proximo",
+  "process_file",
+  "queue_for",
+  "register",
+  "sftp_watch"
+ ],
+ "base_actions": [
+  "process_file",
+  "consolidate",
+  "sftp_watch",
+  "alert_prazo"
+ ],
+ "usa_base": {
+  "3040": [
+   "backend/engine/cadoc3040.py"
+  ],
+  "3044": [
+   "backend/engine/cadoc3044.py"
+  ],
+  "3050": [
+   "backend/engine/cadoc3050.py"
+  ],
+  "3026": [
+   "backend/worker/tasks/engine3026_tasks.py",
+   "backend/engine/cadoc3026.py"
+  ],
+  "cosif": [
+   "backend/engine/cosif.py"
+  ]
+ }
+}

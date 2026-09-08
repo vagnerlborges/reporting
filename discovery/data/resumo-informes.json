@@ -1,0 +1,81 @@
+[
+ {
+  "informe": "3040",
+  "paginas": 3,
+  "endpoints": 15,
+  "tasks": 4,
+  "linhas_motor": 2870,
+  "linhas_plugin": 1743,
+  "pct_copiado": 6,
+  "bundle": true,
+  "dispatch": false,
+  "ultimo_feat": "556565f 2026-09-04 feat(3040): filtros de retifica\u00c3\u00a7\u00c3\u00a3o e ano tamb\u00c3\u00a9m com ",
+  "rotas_pag": [
+   "/cadoc-3040",
+   "/cadoc-3040/[reference_period]",
+   "/cadoc-3040/[reference_period]/retificacao"
+  ]
+ },
+ {
+  "informe": "3044",
+  "paginas": 2,
+  "endpoints": 9,
+  "tasks": 6,
+  "linhas_motor": 1744,
+  "linhas_plugin": 1382,
+  "pct_copiado": 15,
+  "bundle": true,
+  "dispatch": false,
+  "ultimo_feat": "596bda8 2026-09-04 feat(ciclo): frontend, e2e e docs sem o ponteiro de com",
+  "rotas_pag": [
+   "/cadoc-3044",
+   "/imports/new-3044"
+  ]
+ },
+ {
+  "informe": "3050",
+  "paginas": 1,
+  "endpoints": 7,
+  "tasks": 4,
+  "linhas_motor": 967,
+  "linhas_plugin": 1901,
+  "pct_copiado": 23,
+  "bundle": true,
+  "dispatch": false,
+  "ultimo_feat": "e2d2529 2026-09-01 feat(REP-77): identidade, template HTML, links e consol",
+  "rotas_pag": [
+   "/cadoc-3050"
+  ]
+ },
+ {
+  "informe": "3026",
+  "paginas": 1,
+  "endpoints": 7,
+  "tasks": 3,
+  "linhas_motor": 643,
+  "linhas_plugin": 404,
+  "pct_copiado": 27,
+  "bundle": true,
+  "dispatch": true,
+  "ultimo_feat": "e2d2529 2026-09-01 feat(REP-77): identidade, template HTML, links e consol",
+  "rotas_pag": [
+   "/cadoc-3026"
+  ]
+ },
+ {
+  "informe": "cosif",
+  "paginas": 2,
+  "endpoints": 9,
+  "tasks": 1,
+  "linhas_motor": 436,
+  "linhas_plugin": 199,
+  "pct_copiado": 0,
+  "bundle": true,
+  "dispatch": false,
+  "ultimo_feat": "625507f 2026-08-30 feat(REP-56): cadeias Alembic por base (admin/tenant) e",
+  "rotas_pag": [
+   "/admin/cosif-plano",
+   "/cadoc-cosif"
+  ]
+ }
+]

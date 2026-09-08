@@ -1,0 +1,1063 @@
+[
+ {
+  "page": "frontend/app/(auth)/change-password/page.tsx",
+  "route": "/change-password",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/users/me/password"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 6
+ },
+ {
+  "page": "frontend/app/(auth)/forgot-password/page.tsx",
+  "route": "/forgot-password",
+  "endpoints": [
+   "/api/auth/forgot-password"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 5
+ },
+ {
+  "page": "frontend/app/(auth)/login/page.tsx",
+  "route": "/login",
+  "endpoints": [
+   "/api/auth/login",
+   "/api/auth/logout",
+   "/api/auth/refresh"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 6
+ },
+ {
+  "page": "frontend/app/(auth)/reset-password/page.tsx",
+  "route": "/reset-password",
+  "endpoints": [
+   "/api/auth/reset-password"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 5
+ },
+ {
+  "page": "frontend/app/(dashboard)/audit/page.tsx",
+  "route": "/audit",
+  "endpoints": [
+   "/api/audit/actions",
+   "/api/audit/events",
+   "/api/audit/events.csv{}",
+   "/api/auth/logout",
+   "/api/auth/refresh"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 7
+ },
+ {
+  "page": "frontend/app/(dashboard)/bcb/page.tsx",
+  "route": "/bcb",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/bcb/communications",
+   "/api/bcb/communications/{}/approve",
+   "/api/bcb/communications/{}/mark-sent",
+   "/api/bcb/communications/{}/pacote.zip",
+   "/api/setup/reportes"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 8
+ },
+ {
+  "page": "frontend/app/(dashboard)/cadoc-3026/page.tsx",
+  "route": "/cadoc-3026",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/engine3026/consolidate",
+   "/api/engine3026/documents/{}/download",
+   "/api/engine3026/upload",
+   "/api/engine3026/year-status",
+   "/api/onboarding/status",
+   "/api/setup/reportes",
+   "/api/setup/reportes/reference_period",
+   "/api/users/me/onboarding"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 16
+ },
+ {
+  "page": "frontend/app/(dashboard)/cadoc-3040/[reference_period]/page.tsx",
+  "route": "/cadoc-3040/[reference_period]",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/engine3040/consolidate",
+   "/api/engine3040/dev/forcar-homologacao",
+   "/api/engine3040/documents/{}/download",
+   "/api/engine3040/historico",
+   "/api/engine3040/historico.",
+   "/api/engine3040/imports/delete",
+   "/api/engine3040/imports/delete.",
+   "/api/engine3040/modelo-extrato",
+   "/api/engine3040/month-status",
+   "/api/engine3040/operacao",
+   "/api/engine3040/registros",
+   "/api/engine3040/registros/export",
+   "/api/engine3040/registros/resumo",
+   "/api/engine3040/source-summary",
+   "/api/engine3040/upload",
+   "/api/onboarding/status",
+   "/api/painel/3040/{}/aprovar",
+   "/api/painel/3040/{}/enviar",
+   "/api/users/me/onboarding",
+   "/api/validator/info"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 33
+ },
+ {
+  "page": "frontend/app/(dashboard)/cadoc-3040/[reference_period]/retificacao/page.tsx",
+  "route": "/cadoc-3040/[reference_period]/retificacao",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/engine3040/consolidate",
+   "/api/engine3040/dev/forcar-homologacao",
+   "/api/engine3040/documents/{}/download",
+   "/api/engine3040/imports/delete",
+   "/api/engine3040/imports/delete.",
+   "/api/engine3040/modelo-extrato",
+   "/api/engine3040/operacao",
+   "/api/engine3040/source-summary",
+   "/api/engine3040/upload",
+   "/api/retification",
+   "/api/retification/context",
+   "/api/retification/{rid}/consolidate",
+   "/api/retification/{}/3042/download",
+   "/api/retification/{}/cancelar",
+   "/api/retification/{}/consolidate",
+   "/api/retification/{}/enviar",
+   "/api/retification/{}/gerar-3042",
+   "/api/retification/{}/metodo",
+   "/api/validator/info"
+  ],
+  "types": [
+   "auth.ts",
+   "retification.ts"
+  ],
+  "files_walked": 23
+ },
+ {
+  "page": "frontend/app/(dashboard)/cadoc-3040/page.tsx",
+  "route": "/cadoc-3040",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/engine3040/competencias",
+   "/api/engine3040/historico",
+   "/api/engine3040/historico.",
+   "/api/engine3040/imports/delete.",
+   "/api/onboarding/status",
+   "/api/setup/reportes",
+   "/api/setup/reportes/reference_period",
+   "/api/users/me/onboarding"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 24
+ },
+ {
+  "page": "frontend/app/(dashboard)/cadoc-3044/page.tsx",
+  "route": "/cadoc-3044",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/engine3044/consolidate",
+   "/api/engine3044/day-status",
+   "/api/engine3044/documents/{}/download",
+   "/api/engine3044/exclusions",
+   "/api/engine3044/imports/delete",
+   "/api/engine3044/lines",
+   "/api/engine3044/upload",
+   "/api/onboarding/status",
+   "/api/setup/reportes",
+   "/api/setup/reportes/reference_period",
+   "/api/users/me/onboarding",
+   "/api/validator/info"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 19
+ },
+ {
+  "page": "frontend/app/(dashboard)/cadoc-3050/page.tsx",
+  "route": "/cadoc-3050",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/engine3050/consolidate",
+   "/api/engine3050/documents/{}/download",
+   "/api/engine3050/reconciliation",
+   "/api/engine3050/upload",
+   "/api/engine3050/week-status",
+   "/api/onboarding/status",
+   "/api/setup/reportes",
+   "/api/setup/reportes/reference_period",
+   "/api/users/me/onboarding"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 16
+ },
+ {
+  "page": "frontend/app/(dashboard)/cadoc-cosif/page.tsx",
+  "route": "/cadoc-cosif",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/cosif/documents",
+   "/api/cosif/generate",
+   "/api/cosif/upload",
+   "/api/setup/reportes"
+  ],
+  "types": [
+   "auth.ts",
+   "cosif.ts"
+  ],
+  "files_walked": 7
+ },
+ {
+  "page": "frontend/app/(dashboard)/calendario/page.tsx",
+  "route": "/calendario",
+  "endpoints": [],
+  "types": [],
+  "files_walked": 1
+ },
+ {
+  "page": "frontend/app/(dashboard)/compliance/manifestacoes/page.tsx",
+  "route": "/compliance/manifestacoes",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/manifestacoes",
+   "/api/manifestacoes/export.csv",
+   "/api/manifestacoes/{}/transicao",
+   "/api/manifestacoes{}"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 6
+ },
+ {
+  "page": "frontend/app/(dashboard)/compliance/page.tsx",
+  "route": "/compliance",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/painel/saude"
+  ],
+  "types": [
+   "auth.ts",
+   "painel.ts"
+  ],
+  "files_walked": 3
+ },
+ {
+  "page": "frontend/app/(dashboard)/corrective/page.tsx",
+  "route": "/corrective",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/corrective/dashboard",
+   "/api/corrective/issues",
+   "/api/corrective/issues/{}",
+   "/api/corrective/issues/{}/plans",
+   "/api/corrective/issues/{}/resolve",
+   "/api/corrective/issues{}",
+   "/api/corrective/plans/{}/approve",
+   "/api/corrective/plans/{}/complete",
+   "/api/setup/reportes"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 7
+ },
+ {
+  "page": "frontend/app/(dashboard)/cycle/page.tsx",
+  "route": "/cycle",
+  "endpoints": [],
+  "types": [],
+  "files_walked": 1
+ },
+ {
+  "page": "frontend/app/(dashboard)/distribution/page.tsx",
+  "route": "/distribution",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/reports/distributions",
+   "/api/reports/distributions/dashboard",
+   "/api/reports/recipients",
+   "/api/reports/recipients/{}"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 6
+ },
+ {
+  "page": "frontend/app/(dashboard)/guia/page.tsx",
+  "route": "/guia",
+  "endpoints": [],
+  "types": [],
+  "files_walked": 5
+ },
+ {
+  "page": "frontend/app/(dashboard)/imports/new-3044/page.tsx",
+  "route": "/imports/new-3044",
+  "endpoints": [],
+  "types": [],
+  "files_walked": 1
+ },
+ {
+  "page": "frontend/app/(dashboard)/imports/new/page.tsx",
+  "route": "/imports/new",
+  "endpoints": [],
+  "types": [],
+  "files_walked": 1
+ },
+ {
+  "page": "frontend/app/(dashboard)/lgpd/page.tsx",
+  "route": "/lgpd",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/lgpd/access-log",
+   "/api/lgpd/anonimizar",
+   "/api/setup/reportes"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 7
+ },
+ {
+  "page": "frontend/app/(dashboard)/onboarding/page.tsx",
+  "route": "/onboarding",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/onboarding/depara-aplicar",
+   "/api/onboarding/depara-sugerido",
+   "/api/onboarding/perfis-aplicar",
+   "/api/onboarding/perfis-sugeridos",
+   "/api/onboarding/prontidao",
+   "/api/onboarding/status",
+   "/api/setup/reportes",
+   "/api/users/me/onboarding"
+  ],
+  "types": [
+   "auth.ts",
+   "onboarding-m5.ts"
+  ],
+  "files_walked": 13
+ },
+ {
+  "page": "frontend/app/(dashboard)/page.tsx",
+  "route": "/",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/calendario",
+   "/api/calendario/3044/{}",
+   "/api/onboarding/status",
+   "/api/painel",
+   "/api/painel/saude",
+   "/api/painel/{}/{}/arquivos.zip",
+   "/api/painel/{}/{}/enviar",
+   "/api/painel/{}/{}/reabrir",
+   "/api/painel/{}/{}/reprovar",
+   "/api/tenants/me",
+   "/api/users/me/onboarding",
+   "/api/validacao/{}/{}"
+  ],
+  "types": [
+   "auth.ts",
+   "painel.ts"
+  ],
+  "files_walked": 23
+ },
+ {
+  "page": "frontend/app/(dashboard)/pecld/page.tsx",
+  "route": "/pecld",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/pecld/calcular",
+   "/api/pecld/resultado"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 7
+ },
+ {
+  "page": "frontend/app/(dashboard)/policy/page.tsx",
+  "route": "/policy",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/policy/reviews",
+   "/api/policy/reviews/status",
+   "/api/policy/reviews/{}/approve",
+   "/api/policy/reviews/{}/submit",
+   "/api/policy/versions",
+   "/api/policy/versions/current"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 6
+ },
+ {
+  "page": "frontend/app/(dashboard)/quality/dictionary/page.tsx",
+  "route": "/quality/dictionary",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/dictionary",
+   "/api/dictionary/{}",
+   "/api/dictionary/{}/{}",
+   "/api/setup/reportes"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 8
+ },
+ {
+  "page": "frontend/app/(dashboard)/quality/indicios/page.tsx",
+  "route": "/quality/indicios",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/correlations",
+   "/api/correlations/items/corretiva",
+   "/api/correlations/items/justificar",
+   "/api/correlations/run"
+  ],
+  "types": [
+   "auth.ts",
+   "indicios.ts"
+  ],
+  "files_walked": 6
+ },
+ {
+  "page": "frontend/app/(dashboard)/quality/lineage/page.tsx",
+  "route": "/quality/lineage",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/lineage/submission/{}",
+   "/api/lineage/submissions",
+   "/api/setup/reportes"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 8
+ },
+ {
+  "page": "frontend/app/(dashboard)/quality/page.tsx",
+  "route": "/quality",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/onboarding/status",
+   "/api/quality/assess-now",
+   "/api/quality/completude-detail",
+   "/api/quality/dashboard{}",
+   "/api/quality/reports",
+   "/api/users/me/onboarding"
+  ],
+  "types": [
+   "auth.ts",
+   "quality.ts"
+  ],
+  "files_walked": 16
+ },
+ {
+  "page": "frontend/app/(dashboard)/quality/reconciliation/[id]/page.tsx",
+  "route": "/quality/reconciliation/[id]",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/reconciliation/items/{}/corretiva",
+   "/api/reconciliation/items/{}/justificar",
+   "/api/reconciliation/{}"
+  ],
+  "types": [
+   "auth.ts",
+   "reconciliation.ts"
+  ],
+  "files_walked": 7
+ },
+ {
+  "page": "frontend/app/(dashboard)/quality/reconciliation/conciliar/page.tsx",
+  "route": "/quality/reconciliation/conciliar",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/reconciliation/contabil",
+   "/api/reconciliation/contabil-config",
+   "/api/reconciliation/contabil-mapping",
+   "/api/reconciliation/contabil-mapping/csv",
+   "/api/reconciliation/contabil-mapping/template.csv",
+   "/api/reconciliation/contabil/dispensa",
+   "/api/reconciliation/items/{}/corretiva",
+   "/api/reconciliation/items/{}/justificar",
+   "/api/reconciliation/origem",
+   "/api/reconciliation/scoped"
+  ],
+  "types": [
+   "auth.ts",
+   "reconciliation.ts"
+  ],
+  "files_walked": 7
+ },
+ {
+  "page": "frontend/app/(dashboard)/quality/reconciliation/page.tsx",
+  "route": "/quality/reconciliation",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/reconciliation",
+   "/api/tenants/me"
+  ],
+  "types": [
+   "auth.ts",
+   "reconciliation.ts"
+  ],
+  "files_walked": 5
+ },
+ {
+  "page": "frontend/app/(dashboard)/quality/reports/[id]/page.tsx",
+  "route": "/quality/reports/[id]",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/reports/distributions",
+   "/api/reports/distributions/{}",
+   "/api/reports/distributions/{}/send",
+   "/api/reports/semestrais/{}",
+   "/api/reports/semestrais/{}/pdf"
+  ],
+  "types": [
+   "auth.ts",
+   "report.ts"
+  ],
+  "files_walked": 6
+ },
+ {
+  "page": "frontend/app/(dashboard)/quality/reports/page.tsx",
+  "route": "/quality/reports",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/reports/distributions/dashboard",
+   "/api/reports/semestrais",
+   "/api/reports/semestrais/generate"
+  ],
+  "types": [
+   "auth.ts",
+   "report.ts"
+  ],
+  "files_walked": 6
+ },
+ {
+  "page": "frontend/app/(dashboard)/quality/reports/recipients/page.tsx",
+  "route": "/quality/reports/recipients",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/reports/recipients",
+   "/api/reports/recipients/{}"
+  ],
+  "types": [
+   "auth.ts",
+   "report.ts"
+  ],
+  "files_walked": 6
+ },
+ {
+  "page": "frontend/app/(dashboard)/quality/retifications/page.tsx",
+  "route": "/quality/retifications",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/bacen-ciclo/pendentes",
+   "/api/bacen-ciclo/submissions/{}/ciclo",
+   "/api/bacen-ciclo/submissions/{}/protocolo",
+   "/api/bacen-ciclo/submissions/{}/retorno",
+   "/api/retification",
+   "/api/retification/{}/{}",
+   "/api/setup/reportes"
+  ],
+  "types": [
+   "auth.ts",
+   "bacen-ciclo.ts",
+   "retification.ts"
+  ],
+  "files_walked": 10
+ },
+ {
+  "page": "frontend/app/(dashboard)/rc18/page.tsx",
+  "route": "/rc18",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/painel",
+   "/api/painel/{}/historico",
+   "/api/painel/{}/{}/arquivos.zip",
+   "/api/painel/{}/{}/enviar",
+   "/api/painel/{}/{}/reprovar",
+   "/api/validacao/{}/{}"
+  ],
+  "types": [
+   "auth.ts",
+   "painel.ts"
+  ],
+  "files_walked": 12
+ },
+ {
+  "page": "frontend/app/(dashboard)/settings/competencia-inicial/page.tsx",
+  "route": "/settings/competencia-inicial",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/setup/reference_period-inicial"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 6
+ },
+ {
+  "page": "frontend/app/(dashboard)/settings/contrato-dados/page.tsx",
+  "route": "/settings/contrato-dados",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/data-contracts",
+   "/api/data-contracts/emitir",
+   "/api/data-contracts/preview",
+   "/api/data-contracts/{}/download",
+   "/api/setup/reportes"
+  ],
+  "types": [
+   "auth.ts",
+   "contrato.ts"
+  ],
+  "files_walked": 7
+ },
+ {
+  "page": "frontend/app/(dashboard)/settings/data-sources/page.tsx",
+  "route": "/settings/data-sources",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/data-sources",
+   "/api/data-sources/layout-catalog/{}",
+   "/api/data-sources/preview-mapping",
+   "/api/data-sources/{}",
+   "/api/setup/reportes"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 7
+ },
+ {
+  "page": "frontend/app/(dashboard)/settings/director/page.tsx",
+  "route": "/settings/director",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/quality/director"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 6
+ },
+ {
+  "page": "frontend/app/(dashboard)/settings/governance/page.tsx",
+  "route": "/settings/governance",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/governance/config"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 6
+ },
+ {
+  "page": "frontend/app/(dashboard)/settings/instituicao/page.tsx",
+  "route": "/settings/instituicao",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/tenants/me"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 6
+ },
+ {
+  "page": "frontend/app/(dashboard)/settings/page.tsx",
+  "route": "/settings",
+  "endpoints": [],
+  "types": [],
+  "files_walked": 1
+ },
+ {
+  "page": "frontend/app/(dashboard)/settings/sftp/page.tsx",
+  "route": "/settings/sftp",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/sftp/me",
+   "/api/sftp/me/keys"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 7
+ },
+ {
+  "page": "frontend/app/(dashboard)/settings/users/page.tsx",
+  "route": "/settings/users",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/users",
+   "/api/users/{}"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 7
+ },
+ {
+  "page": "frontend/app/admin/audit/page.tsx",
+  "route": "/admin/audit",
+  "endpoints": [
+   "/api/admin/audit",
+   "/api/admin/tenants",
+   "/api/auth/logout",
+   "/api/auth/refresh"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 6
+ },
+ {
+  "page": "frontend/app/admin/cosif-plano/page.tsx",
+  "route": "/admin/cosif-plano",
+  "endpoints": [
+   "/api/admin/cosif-plano",
+   "/api/admin/cosif-plano/sync",
+   "/api/admin/cosif-plano/versions",
+   "/api/auth/logout",
+   "/api/auth/refresh"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 7
+ },
+ {
+  "page": "frontend/app/admin/gestao/page.tsx",
+  "route": "/admin/gestao",
+  "endpoints": [
+   "/api/admin/tenants",
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/operations/gestao",
+   "/api/operations/gestao/recalcular-abertos",
+   "/api/operations/gestao/sla-policies"
+  ],
+  "types": [
+   "auth.ts",
+   "gestao.ts"
+  ],
+  "files_walked": 7
+ },
+ {
+  "page": "frontend/app/admin/ingestao/page.tsx",
+  "route": "/admin/ingestao",
+  "endpoints": [
+   "/api/admin/tenants",
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/operations/ingestao"
+  ],
+  "types": [
+   "auth.ts",
+   "operations.ts"
+  ],
+  "files_walked": 4
+ },
+ {
+  "page": "frontend/app/admin/moat/page.tsx",
+  "route": "/admin/moat",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/moat/fingerprints",
+   "/api/moat/regulatorio",
+   "/api/moat/remediacao"
+  ],
+  "types": [
+   "auth.ts",
+   "moat.ts"
+  ],
+  "files_walked": 3
+ },
+ {
+  "page": "frontend/app/admin/operations/page.tsx",
+  "route": "/admin/operations",
+  "endpoints": [
+   "/api/admin/tenants",
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/operations/incidents",
+   "/api/operations/incidents/{}/assign",
+   "/api/operations/incidents/{}/diagnosticar",
+   "/api/operations/incidents/{}/resolve",
+   "/api/operations/obligations"
+  ],
+  "types": [
+   "auth.ts",
+   "operations.ts"
+  ],
+  "files_walked": 9
+ },
+ {
+  "page": "frontend/app/admin/page.tsx",
+  "route": "/admin",
+  "endpoints": [
+   "/api/admin/document-types",
+   "/api/admin/tenants/{}/impersonate",
+   "/api/admin/tenants/{}/{}",
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/operations/cockpit",
+   "/api/operations/onboarding",
+   "/api/operations/profiles",
+   "/api/operations/profiles/{}",
+   "/api/operations/radar/badge"
+  ],
+  "types": [
+   "auth.ts",
+   "onboarding-m5.ts",
+   "operations.ts"
+  ],
+  "files_walked": 7
+ },
+ {
+  "page": "frontend/app/admin/radar/page.tsx",
+  "route": "/admin/radar",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/operations/radar",
+   "/api/operations/radar/varredura-web",
+   "/api/operations/radar/verificar",
+   "/api/operations/radar/{}/avaliar",
+   "/api/operations/radar/{}/review"
+  ],
+  "types": [
+   "auth.ts",
+   "operations.ts"
+  ],
+  "files_walked": 6
+ },
+ {
+  "page": "frontend/app/admin/reportes/page.tsx",
+  "route": "/admin/reportes",
+  "endpoints": [
+   "/api/admin/document-types",
+   "/api/admin/document-types/{}",
+   "/api/auth/logout",
+   "/api/auth/refresh"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 4
+ },
+ {
+  "page": "frontend/app/admin/schema-versions/page.tsx",
+  "route": "/admin/schema-versions",
+  "endpoints": [
+   "/api/admin/schema-versions",
+   "/api/admin/schema-versions/migrate",
+   "/api/admin/schema-versions/{}/drift",
+   "/api/admin/schema-versions/{}/migrate",
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/schema-version/me"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 5
+ },
+ {
+  "page": "frontend/app/admin/sftp/page.tsx",
+  "route": "/admin/sftp",
+  "endpoints": [
+   "/api/admin/sftp/provision",
+   "/api/admin/sftp/status",
+   "/api/admin/sftp/tenants/{}/reset-password",
+   "/api/auth/logout",
+   "/api/auth/refresh"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 7
+ },
+ {
+  "page": "frontend/app/admin/tenants/[id]/page.tsx",
+  "route": "/admin/tenants/[id]",
+  "endpoints": [
+   "/api/admin/audit",
+   "/api/admin/document-types",
+   "/api/admin/sftp/status",
+   "/api/admin/sftp/tenants/{}/reset-password",
+   "/api/admin/tenants/{}",
+   "/api/admin/tenants/{}/cancel-deletion",
+   "/api/admin/tenants/{}/delete",
+   "/api/admin/tenants/{}/rc18",
+   "/api/admin/tenants/{}/setup-steps/{}",
+   "/api/admin/tenants/{}/users",
+   "/api/admin/tenants/{}/users/{}/resend-invite",
+   "/api/admin/tenants/{}/users/{}/send-reset-link",
+   "/api/admin/users/{}",
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/governance/dossie",
+   "/api/governance/dossie/{}/download",
+   "/api/operations/incidents/{}/diagnosticar",
+   "/api/operations/incidents/{}/resolve",
+   "/api/operations/portfolios",
+   "/api/operations/portfolios/{}",
+   "/api/operations/profiles",
+   "/api/operations/profiles/{}",
+   "/api/operations/tenant/{}",
+   "/api/operations/tenant/{}/engajamento",
+   "/api/operations/tenant/{}/engajar"
+  ],
+  "types": [
+   "auth.ts",
+   "operations.ts"
+  ],
+  "files_walked": 10
+ },
+ {
+  "page": "frontend/app/admin/tenants/new/page.tsx",
+  "route": "/admin/tenants/new",
+  "endpoints": [
+   "/api/admin/tenants",
+   "/api/auth/logout",
+   "/api/auth/refresh"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 6
+ },
+ {
+  "page": "frontend/app/admin/validador/page.tsx",
+  "route": "/admin/validador",
+  "endpoints": [
+   "/api/admin/validator/apply",
+   "/api/admin/validator/impact",
+   "/api/admin/validator/status",
+   "/api/auth/logout",
+   "/api/auth/refresh"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 7
+ },
+ {
+  "page": "frontend/app/reports/ack/[tenant_id]/[token]/page.tsx",
+  "route": "/reports/ack/[tenant_id]/[token]",
+  "endpoints": [
+   "/api/public/reports/ack/{}/{}",
+   "/api/public/reports/ack/{}/{}/confirmar",
+   "/api/public/reports/ack/{}/{}/enviar-codigo"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 5
+ },
+ {
+  "page": "frontend/app/setup/page.tsx",
+  "route": "/setup",
+  "endpoints": [
+   "/api/auth/logout",
+   "/api/auth/refresh",
+   "/api/setup/institution",
+   "/api/setup/institution/confirm",
+   "/api/setup/reportes",
+   "/api/setup/reportes/inputs",
+   "/api/setup/reportes/inputs/{}",
+   "/api/setup/reportes/reference_period",
+   "/api/setup/responsavel-remessa"
+  ],
+  "types": [
+   "auth.ts"
+  ],
+  "files_walked": 20
+ },
+ {
+  "page": "frontend/app/verificar/[tenant_id]/[sha256]/page.tsx",
+  "route": "/verificar/[tenant_id]/[sha256]",
+  "endpoints": [
+   "/api/public/reports/verificar/{}/{}"
+  ],
+  "types": [],
+  "files_walked": 1
+ }
+]

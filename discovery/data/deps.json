@@ -1,0 +1,707 @@
+{
+ "nodes": [
+  {
+   "id": "ai",
+   "out_degree": 1,
+   "in_degree": 2,
+   "impact_radius": 17
+  },
+  {
+   "id": "api",
+   "out_degree": 16,
+   "in_degree": 6,
+   "impact_radius": 17
+  },
+  {
+   "id": "audit",
+   "out_degree": 1,
+   "in_degree": 2,
+   "impact_radius": 17
+  },
+  {
+   "id": "auth",
+   "out_degree": 2,
+   "in_degree": 1,
+   "impact_radius": 17
+  },
+  {
+   "id": "cadoc_adapters",
+   "out_degree": 1,
+   "in_degree": 4,
+   "impact_radius": 17
+  },
+  {
+   "id": "cli",
+   "out_degree": 5,
+   "in_degree": 1,
+   "impact_radius": 17
+  },
+  {
+   "id": "config",
+   "out_degree": 0,
+   "in_degree": 10,
+   "impact_radius": 18
+  },
+  {
+   "id": "contabil_transforms",
+   "out_degree": 1,
+   "in_degree": 2,
+   "impact_radius": 17
+  },
+  {
+   "id": "demo",
+   "out_degree": 7,
+   "in_degree": 1,
+   "impact_radius": 17
+  },
+  {
+   "id": "engine",
+   "out_degree": 3,
+   "in_degree": 1,
+   "impact_radius": 17
+  },
+  {
+   "id": "flows",
+   "out_degree": 4,
+   "in_degree": 8,
+   "impact_radius": 17
+  },
+  {
+   "id": "governance",
+   "out_degree": 0,
+   "in_degree": 1,
+   "impact_radius": 17
+  },
+  {
+   "id": "integrations",
+   "out_degree": 0,
+   "in_degree": 0,
+   "impact_radius": 0
+  },
+  {
+   "id": "pecld",
+   "out_degree": 1,
+   "in_degree": 3,
+   "impact_radius": 17
+  },
+  {
+   "id": "plugins",
+   "out_degree": 4,
+   "in_degree": 8,
+   "impact_radius": 17
+  },
+  {
+   "id": "processing",
+   "out_degree": 1,
+   "in_degree": 0,
+   "impact_radius": 0
+  },
+  {
+   "id": "quality",
+   "out_degree": 7,
+   "in_degree": 6,
+   "impact_radius": 17
+  },
+  {
+   "id": "services",
+   "out_degree": 4,
+   "in_degree": 6,
+   "impact_radius": 17
+  },
+  {
+   "id": "storage",
+   "out_degree": 5,
+   "in_degree": 11,
+   "impact_radius": 17
+  },
+  {
+   "id": "worker",
+   "out_degree": 13,
+   "in_degree": 4,
+   "impact_radius": 17
+  },
+  {
+   "id": "workflow",
+   "out_degree": 3,
+   "in_degree": 2,
+   "impact_radius": 17
+  }
+ ],
+ "edges": [
+  {
+   "from": "ai",
+   "to": "config",
+   "weight": 1
+  },
+  {
+   "from": "api",
+   "to": "ai",
+   "weight": 2
+  },
+  {
+   "from": "api",
+   "to": "audit",
+   "weight": 38
+  },
+  {
+   "from": "api",
+   "to": "auth",
+   "weight": 43
+  },
+  {
+   "from": "api",
+   "to": "cadoc_adapters",
+   "weight": 2
+  },
+  {
+   "from": "api",
+   "to": "cli",
+   "weight": 2
+  },
+  {
+   "from": "api",
+   "to": "config",
+   "weight": 14
+  },
+  {
+   "from": "api",
+   "to": "contabil_transforms",
+   "weight": 2
+  },
+  {
+   "from": "api",
+   "to": "flows",
+   "weight": 66
+  },
+  {
+   "from": "api",
+   "to": "governance",
+   "weight": 5
+  },
+  {
+   "from": "api",
+   "to": "pecld",
+   "weight": 1
+  },
+  {
+   "from": "api",
+   "to": "plugins",
+   "weight": 19
+  },
+  {
+   "from": "api",
+   "to": "quality",
+   "weight": 20
+  },
+  {
+   "from": "api",
+   "to": "services",
+   "weight": 28
+  },
+  {
+   "from": "api",
+   "to": "storage",
+   "weight": 130
+  },
+  {
+   "from": "api",
+   "to": "worker",
+   "weight": 26
+  },
+  {
+   "from": "api",
+   "to": "workflow",
+   "weight": 3
+  },
+  {
+   "from": "audit",
+   "to": "storage",
+   "weight": 1
+  },
+  {
+   "from": "auth",
+   "to": "api",
+   "weight": 2
+  },
+  {
+   "from": "auth",
+   "to": "config",
+   "weight": 1
+  },
+  {
+   "from": "cadoc_adapters",
+   "to": "plugins",
+   "weight": 10
+  },
+  {
+   "from": "cli",
+   "to": "api",
+   "weight": 1
+  },
+  {
+   "from": "cli",
+   "to": "config",
+   "weight": 1
+  },
+  {
+   "from": "cli",
+   "to": "demo",
+   "weight": 4
+  },
+  {
+   "from": "cli",
+   "to": "services",
+   "weight": 1
+  },
+  {
+   "from": "cli",
+   "to": "storage",
+   "weight": 14
+  },
+  {
+   "from": "contabil_transforms",
+   "to": "quality",
+   "weight": 1
+  },
+  {
+   "from": "demo",
+   "to": "cadoc_adapters",
+   "weight": 2
+  },
+  {
+   "from": "demo",
+   "to": "config",
+   "weight": 1
+  },
+  {
+   "from": "demo",
+   "to": "flows",
+   "weight": 5
+  },
+  {
+   "from": "demo",
+   "to": "plugins",
+   "weight": 1
+  },
+  {
+   "from": "demo",
+   "to": "quality",
+   "weight": 3
+  },
+  {
+   "from": "demo",
+   "to": "services",
+   "weight": 1
+  },
+  {
+   "from": "demo",
+   "to": "storage",
+   "weight": 27
+  },
+  {
+   "from": "engine",
+   "to": "flows",
+   "weight": 7
+  },
+  {
+   "from": "engine",
+   "to": "plugins",
+   "weight": 6
+  },
+  {
+   "from": "engine",
+   "to": "worker",
+   "weight": 12
+  },
+  {
+   "from": "flows",
+   "to": "plugins",
+   "weight": 2
+  },
+  {
+   "from": "flows",
+   "to": "quality",
+   "weight": 2
+  },
+  {
+   "from": "flows",
+   "to": "services",
+   "weight": 1
+  },
+  {
+   "from": "flows",
+   "to": "storage",
+   "weight": 4
+  },
+  {
+   "from": "pecld",
+   "to": "storage",
+   "weight": 3
+  },
+  {
+   "from": "plugins",
+   "to": "cadoc_adapters",
+   "weight": 1
+  },
+  {
+   "from": "plugins",
+   "to": "config",
+   "weight": 1
+  },
+  {
+   "from": "plugins",
+   "to": "flows",
+   "weight": 1
+  },
+  {
+   "from": "plugins",
+   "to": "storage",
+   "weight": 2
+  },
+  {
+   "from": "processing",
+   "to": "plugins",
+   "weight": 1
+  },
+  {
+   "from": "quality",
+   "to": "api",
+   "weight": 10
+  },
+  {
+   "from": "quality",
+   "to": "contabil_transforms",
+   "weight": 2
+  },
+  {
+   "from": "quality",
+   "to": "flows",
+   "weight": 6
+  },
+  {
+   "from": "quality",
+   "to": "plugins",
+   "weight": 4
+  },
+  {
+   "from": "quality",
+   "to": "services",
+   "weight": 1
+  },
+  {
+   "from": "quality",
+   "to": "storage",
+   "weight": 2
+  },
+  {
+   "from": "quality",
+   "to": "worker",
+   "weight": 1
+  },
+  {
+   "from": "services",
+   "to": "api",
+   "weight": 2
+  },
+  {
+   "from": "services",
+   "to": "config",
+   "weight": 4
+  },
+  {
+   "from": "services",
+   "to": "flows",
+   "weight": 3
+  },
+  {
+   "from": "services",
+   "to": "storage",
+   "weight": 7
+  },
+  {
+   "from": "storage",
+   "to": "api",
+   "weight": 1
+  },
+  {
+   "from": "storage",
+   "to": "config",
+   "weight": 6
+  },
+  {
+   "from": "storage",
+   "to": "flows",
+   "weight": 2
+  },
+  {
+   "from": "storage",
+   "to": "pecld",
+   "weight": 1
+  },
+  {
+   "from": "storage",
+   "to": "quality",
+   "weight": 4
+  },
+  {
+   "from": "worker",
+   "to": "ai",
+   "weight": 1
+  },
+  {
+   "from": "worker",
+   "to": "api",
+   "weight": 41
+  },
+  {
+   "from": "worker",
+   "to": "audit",
+   "weight": 4
+  },
+  {
+   "from": "worker",
+   "to": "cadoc_adapters",
+   "weight": 18
+  },
+  {
+   "from": "worker",
+   "to": "config",
+   "weight": 17
+  },
+  {
+   "from": "worker",
+   "to": "engine",
+   "weight": 5
+  },
+  {
+   "from": "worker",
+   "to": "flows",
+   "weight": 33
+  },
+  {
+   "from": "worker",
+   "to": "pecld",
+   "weight": 1
+  },
+  {
+   "from": "worker",
+   "to": "plugins",
+   "weight": 27
+  },
+  {
+   "from": "worker",
+   "to": "quality",
+   "weight": 16
+  },
+  {
+   "from": "worker",
+   "to": "services",
+   "weight": 21
+  },
+  {
+   "from": "worker",
+   "to": "storage",
+   "weight": 144
+  },
+  {
+   "from": "worker",
+   "to": "workflow",
+   "weight": 54
+  },
+  {
+   "from": "workflow",
+   "to": "config",
+   "weight": 2
+  },
+  {
+   "from": "workflow",
+   "to": "storage",
+   "weight": 6
+  },
+  {
+   "from": "workflow",
+   "to": "worker",
+   "weight": 4
+  }
+ ],
+ "cycles": [
+  "api -> audit -> storage -> api",
+  "api -> audit -> storage -> flows -> quality -> api",
+  "api -> audit -> storage -> flows -> quality -> services -> api",
+  "api -> audit -> storage -> flows -> quality -> worker -> api",
+  "api -> audit -> storage -> flows -> services -> api",
+  "api -> auth -> api",
+  "api -> cadoc_adapters -> plugins -> flows -> quality -> api",
+  "api -> cadoc_adapters -> plugins -> flows -> quality -> services -> api",
+  "api -> cadoc_adapters -> plugins -> flows -> quality -> worker -> api",
+  "api -> cli -> api",
+  "api -> cli -> demo -> quality -> api",
+  "api -> cli -> demo -> quality -> services -> api",
+  "api -> cli -> demo -> quality -> worker -> api",
+  "api -> cli -> demo -> services -> api",
+  "api -> cli -> services -> api",
+  "api -> worker -> api",
+  "audit -> storage -> api -> audit",
+  "audit -> storage -> api -> cadoc_adapters -> plugins -> flows -> quality -> worker -> audit",
+  "audit -> storage -> flows -> quality -> worker -> audit",
+  "auth -> api -> auth",
+  "cadoc_adapters -> plugins -> cadoc_adapters",
+  "cadoc_adapters -> plugins -> flows -> quality -> api -> cadoc_adapters",
+  "cadoc_adapters -> plugins -> flows -> quality -> api -> cli -> demo -> cadoc_adapters",
+  "cadoc_adapters -> plugins -> flows -> quality -> api -> worker -> cadoc_adapters",
+  "cadoc_adapters -> plugins -> flows -> quality -> worker -> cadoc_adapters",
+  "cli -> api -> cli",
+  "contabil_transforms -> quality -> api -> contabil_transforms",
+  "contabil_transforms -> quality -> contabil_transforms",
+  "demo -> cadoc_adapters -> plugins -> flows -> quality -> api -> cli -> demo",
+  "engine -> flows -> plugins -> storage -> api -> cli -> demo -> quality -> worker -> engine",
+  "flows -> plugins -> flows",
+  "flows -> plugins -> storage -> api -> cli -> demo -> flows",
+  "flows -> plugins -> storage -> api -> cli -> demo -> quality -> flows",
+  "flows -> plugins -> storage -> api -> cli -> demo -> quality -> services -> flows",
+  "flows -> plugins -> storage -> api -> cli -> demo -> quality -> worker -> engine -> flows",
+  "flows -> plugins -> storage -> api -> cli -> demo -> quality -> worker -> flows",
+  "flows -> plugins -> storage -> api -> flows",
+  "flows -> plugins -> storage -> flows",
+  "flows -> quality -> api -> audit -> storage -> flows",
+  "flows -> quality -> api -> cli -> demo -> flows",
+  "flows -> quality -> api -> cli -> demo -> services -> flows",
+  "flows -> quality -> api -> cli -> services -> flows",
+  "flows -> quality -> api -> flows",
+  "flows -> quality -> api -> worker -> engine -> flows",
+  "flows -> quality -> api -> worker -> flows",
+  "flows -> quality -> flows",
+  "flows -> quality -> services -> flows",
+  "flows -> quality -> worker -> engine -> flows",
+  "flows -> quality -> worker -> flows",
+  "flows -> services -> flows",
+  "pecld -> storage -> api -> cadoc_adapters -> plugins -> flows -> quality -> worker -> pecld",
+  "pecld -> storage -> api -> pecld",
+  "pecld -> storage -> pecld",
+  "plugins -> cadoc_adapters -> plugins",
+  "plugins -> flows -> plugins",
+  "plugins -> flows -> quality -> api -> cli -> demo -> plugins",
+  "plugins -> flows -> quality -> api -> plugins",
+  "plugins -> flows -> quality -> api -> worker -> engine -> plugins",
+  "plugins -> flows -> quality -> api -> worker -> plugins",
+  "plugins -> flows -> quality -> plugins",
+  "plugins -> flows -> quality -> worker -> engine -> plugins",
+  "plugins -> flows -> quality -> worker -> plugins",
+  "plugins -> storage -> api -> cli -> demo -> plugins",
+  "plugins -> storage -> api -> cli -> demo -> quality -> plugins",
+  "plugins -> storage -> api -> cli -> demo -> quality -> worker -> engine -> plugins",
+  "plugins -> storage -> api -> cli -> demo -> quality -> worker -> plugins",
+  "plugins -> storage -> api -> plugins",
+  "quality -> api -> audit -> storage -> flows -> quality",
+  "quality -> api -> audit -> storage -> quality",
+  "quality -> api -> cli -> demo -> quality",
+  "quality -> api -> contabil_transforms -> quality",
+  "quality -> api -> quality",
+  "quality -> api -> worker -> quality",
+  "quality -> contabil_transforms -> quality",
+  "quality -> worker -> quality",
+  "services -> api -> audit -> storage -> flows -> quality -> services",
+  "services -> api -> audit -> storage -> flows -> quality -> worker -> services",
+  "services -> api -> audit -> storage -> flows -> services",
+  "services -> api -> cli -> demo -> services",
+  "services -> api -> cli -> services",
+  "services -> api -> services",
+  "storage -> api -> audit -> storage",
+  "storage -> api -> cadoc_adapters -> plugins -> flows -> quality -> services -> storage",
+  "storage -> api -> cadoc_adapters -> plugins -> flows -> quality -> storage",
+  "storage -> api -> cadoc_adapters -> plugins -> flows -> quality -> worker -> pecld -> storage",
+  "storage -> api -> cadoc_adapters -> plugins -> flows -> quality -> worker -> storage",
+  "storage -> api -> cadoc_adapters -> plugins -> flows -> quality -> worker -> workflow -> storage",
+  "storage -> api -> cadoc_adapters -> plugins -> flows -> storage",
+  "storage -> api -> cadoc_adapters -> plugins -> storage",
+  "storage -> api -> cli -> demo -> quality -> services -> storage",
+  "storage -> api -> cli -> demo -> quality -> storage",
+  "storage -> api -> cli -> demo -> quality -> worker -> pecld -> storage",
+  "storage -> api -> cli -> demo -> quality -> worker -> storage",
+  "storage -> api -> cli -> demo -> quality -> worker -> workflow -> storage",
+  "storage -> api -> cli -> demo -> storage",
+  "storage -> api -> cli -> storage",
+  "storage -> api -> storage",
+  "storage -> flows -> plugins -> storage",
+  "storage -> flows -> quality -> services -> storage",
+  "storage -> flows -> quality -> storage",
+  "storage -> flows -> quality -> worker -> pecld -> storage",
+  "storage -> flows -> quality -> worker -> storage",
+  "storage -> flows -> quality -> worker -> workflow -> storage",
+  "storage -> flows -> services -> storage",
+  "storage -> flows -> storage",
+  "storage -> pecld -> storage",
+  "worker -> api -> audit -> storage -> flows -> quality -> worker",
+  "worker -> api -> worker",
+  "worker -> api -> workflow -> worker",
+  "worker -> engine -> worker",
+  "worker -> workflow -> worker",
+  "workflow -> storage -> api -> cadoc_adapters -> plugins -> flows -> quality -> worker -> workflow",
+  "workflow -> storage -> api -> workflow"
+ ],
+ "external": {
+  "alembic": [
+   "storage"
+  ],
+  "anthropic": [
+   "ai"
+  ],
+  "bcrypt": [
+   "services",
+   "storage"
+  ],
+  "boto3": [
+   "storage",
+   "worker"
+  ],
+  "celery": [
+   "worker"
+  ],
+  "duckdb": [
+   "processing"
+  ],
+  "fastapi": [
+   "api",
+   "auth"
+  ],
+  "fitz": [
+   "storage"
+  ],
+  "httpx": [
+   "services"
+  ],
+  "jose": [
+   "auth"
+  ],
+  "lxml": [
+   "plugins"
+  ],
+  "psycopg": [
+   "storage"
+  ],
+  "pydantic": [
+   "api",
+   "config"
+  ],
+  "pypdf": [
+   "quality"
+  ],
+  "redis": [
+   "api"
+  ],
+  "reportlab": [
+   "api",
+   "quality"
+  ],
+  "requests": [
+   "ai",
+   "api",
+   "plugins",
+   "storage",
+   "worker"
+  ],
+  "slowapi": [
+   "api"
+  ]
+ }
+}
